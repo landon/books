@@ -372,8 +372,9 @@ We define a network $g$ on the set $Z \DefinedAs \set{s,t} \cup V(G) \cup L(V(G)
 By Theorem \ref{MaxFlowMinCut}, there is a flow $f$ on $Z$ with $f \le g$ such that $\size{f} = \card{g}$ and $f(a,b) \in \IN$ for all $(a,b) \in Z\times Z$.
 Let $X \subseteq Z \setminus \set{t}$ with $s \in X$.  If $P = X \cap V(G)$ and $Q = X \cap L(V(G))$, then
 \begin{align*}
-\card{X, Z\setminus X}_g &\ge \card{P, Z\setminus X}_g + \card{Q, Z\setminus X}_g\\
-&=\card{P} + \card{Q, Z\setminus X}_g\\
+\card{X, Z\setminus X}_g &= \card{P, Z\setminus X}_g + \card{Q, Z\setminus X}_g + \card{\set{s}, Z\setminus X}_g\\
+&=\card{P} + \card{Q, Z\setminus X}_g + \card{L(V(G))\setminus Q}\\
+&=\card{P} + \card{L(V(G)\setminus P) \cap Q} + \card{L(V(G))\setminus Q}\\
 \end{align*}
 \end{proof}
 
