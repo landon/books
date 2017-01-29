@@ -5,9 +5,9 @@
 \contentsline {section}{\tocsection {}{}{list coloring}}{5}
 \contentsline {section}{\tocsection {}{}{flows}}{7}
 \contentsline {section}{\tocsection {}{}{a few flow applications}}{9}
-\contentsline {section}{\tocsection {}{}{kernel magic}}{9}
-\contentsline {section}{\tocsection {}{}{a few kernel magic applications}}{9}
-\contentsline {section}{\tocsection {}{}{combinatorial nullstellensatz}}{9}
+\contentsline {section}{\tocsection {}{}{kernel magic}}{10}
+\contentsline {section}{\tocsection {}{}{a few kernel magic applications}}{10}
+\contentsline {section}{\tocsection {}{}{combinatorial nullstellensatz}}{10}
 \contentsline {section}{\tocsection {}{}{the graph polynomial}}{10}
 \contentsline {section}{\tocsection {}{}{a coefficient formula}}{11}
 \contentsline {chapter}{\tocchapter {Chapter}{}{partitions and vertex shuffling}}{13}

@@ -363,19 +363,31 @@ If $L$ is a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ 
 Let $L$ be a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$.  
 We define a network $g$ on the set $Z \DefinedAs \set{s,t} \cup V(G) \cup L(V(G))$ by
 \[g(a, b) \DefinedAs  \begin{cases} 
-      1 & a = s \text{ and } b \in  L(V(G)),\\
-      1 & a = t \text{ and } b \in  V(G),\\
-	  1 & b \in V(G) \text{ and } a \in L(b),\\
+      1 & a = s \text{ and } b \in  V(G))\\
+      1 & a = t \text{ and } b \in  L(V(G)),\\
+	  1 & a \in V(G) \text{ and } b \in L(a),\\
       0 & \text{otherwise} .
    \end{cases}
 \]
-By Theorem \ref{MaxFlowMinCut}, there is a flow $f$ on $Z$ with $f \le g$ such that $\size{f} = \card{g}$ and $f(a,b) \in \IN$ for all $(a,b) \in Z\times Z$.
-Let $X \subseteq Z \setminus \set{t}$ with $s \in X$.  If $P = X \cap V(G)$ and $Q = X \cap L(V(G))$, then
+Let $X \subseteq Z \setminus \set{t}$ with $s \in X$.  If $P = X \cap L(V(G))$ and $Q = X \cap V(G)$, then
 \begin{align*}
 \card{X, Z\setminus X}_g &= \card{P, Z\setminus X}_g + \card{Q, Z\setminus X}_g + \card{\set{s}, Z\setminus X}_g\\
-&=\card{P} + \card{Q, Z\setminus X}_g + \card{L(V(G))\setminus Q}\\
-&=\card{P} + \card{L(V(G)\setminus P) \cap Q} + \card{L(V(G))\setminus Q}\\
+&\ge \card{P, Z\setminus X}_g + \card{Q} - \card{P} + \card{\set{s}, Z\setminus X}_g\\
+&=\card{P} + \card{Q} - \card{P} + \card{V(G)\setminus Q}\\
+&=\card{Q} + \card{V(G)\setminus Q}\\
+&= \card{G}.
 \end{align*}
+Hence $\card{g} \ge \card{G}$.  By Theorem \ref{MaxFlowMinCut}, there is a flow $f$ on $Z$ with $f \le g$ such that $\size{f} = \card{g}$.  But then
+\begin{align*}
+\card{\set{s}, V(G)}_f &=  \card{\set{s}, Z}_f \\
+&= \card{\set{s}, Z}_f - \card{Z, \set{s}}\\
+&=\size{f}\\
+&= \card{g}\\
+&\ge\card{G}.
+\end{align*}
+Hence $f(s,v) = 1$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \in V(G)$, there is $c_v \in L(V(G))$ such that $g(v, c_v) \ge f(v, c_v) = 1$ and hence $c_v \in L(v)$.
+Coloring each $v \in V(G)$ with $c_v$ gives an $L$-coloring of $G$ since if $c_v = c_w$, the fact that $f$ is a flow implies 
+$\card{Z, \set{c_v}} = \card{\set{c_v}, Z} = f(c_v, t) = 1$ and hence $v = w$.
 \end{proof}
 
 \section*{kernel magic}
