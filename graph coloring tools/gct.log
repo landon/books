@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.22)  29 JAN 2017 11:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.22)  29 JAN 2017 16:02
 entering extended mode
 **C:/Users/landon/Documents/GitHub/books/graph*coloring*tools/gct.tex
 ("C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex"
@@ -596,7 +596,7 @@ two letters. (See Chapter 27 of The TeXbook.)
  [7] [8] [9]
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:388: LaTeX 
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:410: LaTeX 
 Error: Environment EulerianOrientationsLemma undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -607,9 +607,8 @@ or  <return>  to continue without it.
 
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:391: LaTeX 
-Error: \begin{proof} on input line 166 ended by \end{EulerianOrientationsLemma}
-.
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:413: LaTeX 
+Error: \begin{document} ended by \end{EulerianOrientationsLemma}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help
@@ -620,20 +619,20 @@ or  <return>  to continue without it.
 
 [10]
 [11]
-[12
+[12]
+partitions and vertex shuffling
+
+[13
 
 
 ]
-partitions and vertex shuffling
-
-[13]
 [14
 
 
 ]
 independent transversals
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:436: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:458: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -642,7 +641,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:438: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:460: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -651,7 +650,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:443: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:465: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -660,7 +659,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:457: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:479: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -671,7 +670,7 @@ and I'll forget about whatever was undefined.
  [15]
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:507: LaTeX 
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:529: LaTeX 
 Error: Environment defn undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -682,8 +681,8 @@ or  <return>  to continue without it.
 
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:510: LaTeX 
-Error: \begin{proof} on input line 166 ended by \end{defn}.
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:532: LaTeX 
+Error: \begin{document} ended by \end{defn}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help
@@ -700,7 +699,7 @@ or  <return>  to continue without it.
 ]
 vertex transitive graphs
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:565: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:587: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -709,7 +708,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:566: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:588: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -718,7 +717,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:566: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:588: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -727,7 +726,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:567: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:589: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -736,7 +735,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:568: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:590: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -745,7 +744,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:568: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:590: Missin
 g { inserted
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -753,7 +752,7 @@ so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:568: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:590: Missin
 g } inserted
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -762,7 +761,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:570: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:592: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -771,7 +770,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:570: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:592: Missin
 g { inserted
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -779,7 +778,7 @@ so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:570: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:592: Missin
 g } inserted
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -793,18 +792,18 @@ my insertion and my current dilemma will both disappear.
 ]
 coloring edges
 Package marginnote Info: Margin note 27.1 is on absolute page 27
-(marginnote)              on input line 586.
+(marginnote)              on input line 608.
 Package marginnote Info: xpos seems to be 158.12285pt,
-(marginnote)             \marginnoterightadjust ignored on input line 586.
+(marginnote)             \marginnoterightadjust ignored on input line 608.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:586: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:608: Missin
 g number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:586: Illega
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:608: Illega
 l unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -814,18 +813,18 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: Margin note 27.2 is on absolute page 27
-(marginnote)              on input line 586.
+(marginnote)              on input line 608.
 Package marginnote Info: xpos seems to be 181.84404pt,
-(marginnote)             \marginnoterightadjust ignored on input line 586.
+(marginnote)             \marginnoterightadjust ignored on input line 608.
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:586: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:608: Missin
 g number, treated as zero
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:586: Illega
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:608: Illega
 l unit of measure (pt inserted)
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -835,53 +834,37 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 Package marginnote Info: Margin note 27.3 is on absolute page 27
-(marginnote)              on input line 587.
+(marginnote)              on input line 609.
 Package marginnote Info: xpos seems to be 237.76854pt,
-(marginnote)             \marginnoterightadjust ignored on input line 587.
- [21] [22]
-
-
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/gct.tex:665: LaTeX 
-Error: \begin{proof} on input line 166 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-[23]
-("C:\Users\landon\Documents\GitHub\books\graph coloring tools\gct.aux") )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 166 (\begingroup)
-### bottom level 
+(marginnote)             \marginnoterightadjust ignored on input line 609.
+ [21] [22] [23]
+("C:\Users\landon\Documents\GitHub\books\graph coloring tools\gct.aux") ) 
 Here is how much of TeX's memory you used:
- 2583 strings out of 493921
- 30766 string characters out of 3147279
- 94123 words of memory out of 3000000
- 5723 multiletter control sequences out of 15000+200000
+ 2584 strings out of 493921
+ 30781 string characters out of 3147279
+ 94133 words of memory out of 3000000
+ 5724 multiletter control sequences out of 15000+200000
  10697 words of font info for 41 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
- 34i,11n,31p,724b,385s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on gct.pdf (29 pages, 288981 bytes).
+ 34i,11n,31p,724b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/symbols/msbm7.pfb>
+Output written on gct.pdf (29 pages, 291826 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

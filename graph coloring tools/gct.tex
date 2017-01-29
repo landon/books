@@ -189,7 +189,7 @@ $x_3 \in X \setminus \set{x_1,x_2}$ and $y_3 \in S \setminus \set{y_1,y_2}$.  Ap
 that $y_1$ and $y_3$ each have exactly one neighbor in $X$ and $\Delta(G) - 1$ neighbors in the same $\Delta(G) -1$ clique $B$ in $G - X$.
 Now $\card{A\cap B} = \card{A} + \card{B} - \card{A\cup B} \ge 2(\Delta(G) - 1) - d(y_1) \ge \Delta(G) - 2 > 0$.  But there can't be a vertex
 in $A \cap B$ since it would be adjacent to $y_1,y_2,y_3$ as well as $\Delta(G) - 2$ vertices in $A$ and thus have degree greater than $\Delta(G)$, a contradiction. 
-
+\end{proof}
 
 \section*{list coloring}
 When attempting to $k$-color a graph $G$, it will often be convenient to first $k$-color $G[S]$ for some $S \subset V(G)$ and then try to 
@@ -236,16 +236,16 @@ some other property of oriented graphs, say a made-up property ``agliplic'', and
 
 It will be convenient to work with an equivalent dual version of list assignments.  
 Instead of assigning a list of colors to each vertex, we assign a set of vertices to each color.  Given a set of colors $P$, a \emph{$P$-assignment} on a graph $G$ is a function
-from $P$ to the subsets of $V(G)$.  For a list assigment $L$, let the \emph{pot of $L$} be the set of all colors appearing in at least one $L(v)$; that is, $\pot(L) \DefinedAs \bigcup_{v \in V(G)} L(v)$.
-Then $L$ gives rise to the $\pot(L)$-assignment $C_L$ given by $C_L(c) \DefinedAs \setb{v}{V(G)}{c \in L(v)}$.
+from $P$ to the subsets of $V(G)$.  For a list assigment $L$ on $G$ and $S \subseteq V(G)$, put $L(S) \DefinedAs \bigcup_{v \in S} L(v)$.
+Then $L$ gives rise to the $L(V(G))$-assignment $C_L$ given by $C_L(c) \DefinedAs \setb{v}{V(G)}{c \in L(v)}$.
 
 \begin{observation}
-$G$ is $L$-colorable just in case there are independent sets $I_c \subseteq C_L(c)$ for each $c \in \pot(L)$ that together cover $V(G)$.
+$G$ is $L$-colorable just in case there are independent sets $I_c \subseteq C_L(c)$ for each $c \in L(V(G))$ that together cover $V(G)$.
 \end{observation}
 
 Viewing a list assignment in this dual fashion, there is a natural candidate for a choice of $I$ to color with $c$ when trying to prove Theorem \ref{SecondListBound} for agliplic oriented graphs.
 We want to find independent $I \subseteq C_L(c)$ such that every $v \in C_L(c) \setminus I$ has an out-neighbor in $I$.  Such an $I$ is a \emph{kernel} in $G\brackets{C_L(c)}$.  
-So, we could try taking agliplic to mean ``$G\brackets{C_L(c)}$ has a kernel $I_c$ for all $c \in \pot(L)$''.  
+So, we could try taking agliplic to mean ``$G\brackets{C_L(c)}$ has a kernel $I_c$ for all $c \in L(V(G))$''.  
 That almost works, but we have no way of guaranteeing that $G-I_c$ is still agliplic.  We can fix that by requiring that $G[S]$ have a kernel for \emph{every} $S\subseteq V(G)$.  
 Instead of agliplic, we call an oriented graph with this property \emph{kernel-perfect}.
 
@@ -254,7 +254,7 @@ If $L$ is a list assignment on a kernel-perfect oriented graph $G$ such that $\c
 \end{theorem}
 \begin{proof}
 Suppose there is a list assignment $L$ on a kernel-perfect oriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, but $G$ is not $L$-colorable.  Then
-we may pick such an $L$ and $G$ with $\card{G}$ as small as possible.  Pick $c \in \pot(L)$ and let $I$ be a kernel in $G\brackets{C_L(c)}$.  Color all vertices in $I$ with $c$
+we may pick such an $L$ and $G$ with $\card{G}$ as small as possible.  Pick $c \in L(V(G))$ and let $I$ be a kernel in $G\brackets{C_L(c)}$.  Color all vertices in $I$ with $c$
 and let $L'$ be the list assignment on $G-I$ where $L'(v) = L(v) \setminus \set{c}$ if $v \in C_L(c)$ and $L'(v) = L(v)$ otherwise.  
 Since every $v \in C_L(c)$ has an out-neighbor in $I$, we have $d_{G-I}^+(v) \le d^+(v) - 1$ , so 
 $\card{L'(v)} > d_{G-I}^+(v)$ for all $v \in V(G-I)$.  Since $\card{G-I} < \card{G}$ and $G-I$ is also kernel-perfect, applying the theorem shows that $G-I$ is $L'$-colorable, 
@@ -330,7 +330,7 @@ Pick $X \subseteq V\setminus\set{t}$ with $s \in X$ such that $\card{X, V\setmin
 \end{align*}
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{MaxFlowMinCut}
 If $g$ is a network on $V$, then there exists a flow $f$ on $V$ with $f \le g$ such that $\size{f} = \card{g}$.
 Moreover, if $g$ takes only integer values, then the flow $f$ can be chosen to as well.
 \end{theorem}
@@ -355,6 +355,28 @@ So, $t \not \in X$.  Since $v \in V \setminus X$ is not in $X$, we must have $f(
 \end{proof}
 
 \section*{a few flow applications}
+As our first application of Theorem \ref{MaxFlowMinCut}, we give a sufficient condition for a graph to be $L$-colorable.  
+\begin{lemma}
+If $L$ is a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$, then $G$ is $L$-colorable.
+\end{lemma}
+\begin{proof}
+Let $L$ be a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$.  
+We define a network $g$ on the set $Z \DefinedAs \set{s,t} \cup V(G) \cup L(V(G))$ by
+\[g(a, b) \DefinedAs  \begin{cases} 
+      1 & a = s \text{ and } b \in  L(V(G)),\\
+      1 & a = t \text{ and } b \in  V(G),\\
+	  1 & b \in V(G) \text{ and } a \in L(b),\\
+      0 & \text{otherwise} .
+   \end{cases}
+\]
+By Theorem \ref{MaxFlowMinCut}, there is a flow $f$ on $Z$ with $f \le g$ such that $\size{f} = \card{g}$ and $f(a,b) \in \IN$ for all $(a,b) \in Z\times Z$.
+Let $X \subseteq Z \setminus \set{t}$ with $s \in X$.  If $P = X \cap V(G)$ and $Q = X \cap L(V(G))$, then
+\begin{align*}
+\card{X, Z\setminus X}_g &\ge \card{P, Z\setminus X}_g + \card{Q, Z\setminus X}_g\\
+&=\card{P} + \card{Q, Z\setminus X}_g\\
+\end{align*}
+\end{proof}
+
 \section*{kernel magic}
 \section*{a few kernel magic applications}
 \section*{combinatorial nullstellensatz}
