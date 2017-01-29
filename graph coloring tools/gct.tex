@@ -52,6 +52,17 @@
 \newcommand{\DefinedAs}{\mathrel{\mathop:}=}
 
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\fancy}[1]{\mathcal{#1}}
+\newcommand{\C}[1]{\fancy{C}_{#1}}
+\newcommand{\IN}{\mathbb{N}}
+\newcommand{\IR}{\mathbb{R}}
+\newcommand{\G}{\fancy{G}}
+\newcommand{\CC}{\fancy{C}}
+\newcommand{\D}{\fancy{D}}
+\newcommand{\T}{\fancy{T}}
+\newcommand{\B}{\fancy{B}}
+\renewcommand{\L}{\fancy{L}}
+\newcommand{\HH}{\fancy{H}}
 
 \newcommand{\pot}{\operatorname{pot}}
 
@@ -343,12 +354,222 @@ So, $t \not \in X$.  Since $v \in V \setminus X$ is not in $X$, we must have $f(
 \end{align*}
 \end{proof}
 
-\subsection*{degree again}
-\subsection*{maximum independent covers}
-\section*{polynomial tools}
-\subsection*{combinatorial nullstellensatz}
-\subsection*{coefficient formulae}
-\subsection*{a combinatorial interpretation}
+\section*{a few flow applications}
+\section*{kernel magic}
+\section*{a few kernel magic applications}
+\section*{combinatorial nullstellensatz}
+Fix an arbitrary field $\mathbb{F}$. We write $f_{k_1, \ldots, k_n}$ for the coefficient of $x_1^{k_1}\cdots x_n^{k_n}$ in the polynomial $f \in \mathbb{F}[x_1, \ldots, x_n]$. 
+\begin{lemma}
+Suppose $f \in \mathbb{F}[x_1, \ldots, x_n]$ and $k_1, \ldots, k_n \in \IN$ with $\sum_{i \in \irange{n}} k_i = \deg(f)$.  If $f_{k_1, \ldots, k_n} \ne 0$, then for any $A_1, \ldots, A_n \subseteq \mathbb{F}$ with $\card{A_i} \ge k_i + 1$, there exists $(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n$ with $f(a_1, \ldots, a_n) \ne 0$.
+\end{lemma}
+\begin{proof}
+Suppose the result is false and choose $f \in \mathbb{F}[x_1, \ldots, x_n]$ for which it fails 
+minimizing $\deg(f)$. Then $\deg(f) \ge 2$ and we have $k_1, \ldots, k_n \in \IN$ with $\sum_{i \in \irange{n}} k_i = \deg(f)$ and 
+$A_1, \ldots, A_n \subseteq \mathbb{F}$ with $\card{A_i} \ge k_i + 1$ such that $f(a_1, \ldots, a_n) = 0$ for all $(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n$.  
+By symmetry, we may assume that $k_1 > 0$.  Fix $a \in A_1$ and divide $f$ by $x_1 - a$ to get $f = (x_1 - a)Q + R$ where the degree of $x_1$ in $R$ is zero.  
+Then the coefficient of $x_1^{k_1-1}x_2^{k_2} \cdots x_n^{k_n}$ in $Q$ must be non-zero and $\deg(Q) < \deg(f)$.  So, by minimality of $\deg(f)$ there 
+is $(a_1, \ldots, a_n) \in (A_1 \setminus \set{a}) \times \cdots \times A_n$ such that $Q(a_1,\ldots, a_n) \ne 0$.  
+Since $0 = f(a_1,\ldots, a_n) = (a_1 - a)Q(a_1,\ldots, a_n) + R(a_1,\ldots, a_n)$ we must have $R(a_1,\ldots, a_n) \ne 0$.  
+But $x_1$ has degree zero in $R$, so $R(a,\ldots, a_n) = R(a_1,\ldots, a_n) \ne 0$.  
+Finally, this means that $f(a,\ldots, a_n) = (a-a)Q(a,\ldots, a_n) + R(a,\ldots, a_n) \ne 0$, a contradiction.
+\end{proof}
+
+\section*{the graph polynomial}
+Let $G$ be a loopless multigraph with vertex set $V \DefinedAs \set{x_1, \ldots, x_n}$ and edge multiset $E$.  The \emph{graph polynomial} of $G$ is
+\[p_G(x_1,\ldots,x_n) \DefinedAs \prod_{\substack{\set{x_i,x_j} \in E\\i < j}} (x_i - x_j).\]
+To each orientation $\vec{G}$ of $G$, there is a corresponding monomial $m_{\vec{G}}(x_1,\ldots, x_n)$ given by choosing either $x_i$ or $-x_j$ from each factor $(x_i - x_j)$ according to $\vec{G}$. Precisely, given an orientation $\vec{G}$ of $G$ with edge multiset $\vec{E}$, put
+\[m_{\vec{G}}(x_1,\ldots, x_n) \DefinedAs \parens{\prod_{\substack{(x_i,x_j) \in \vec{E}\\i < j}} x_i}\parens{\prod_{\substack{(x_j,x_i) \in \vec{E}\\i < j}} -x_j}.\]
+Then $p_G(x_1,\ldots,x_n) = \sum_{\vec{G}} m_{\vec{G}}(x_1,\ldots, x_n)$, where the sum is over all orientations $\vec{G}$ of $G$.  
+
+Each $m_{\vec{G}}(x_1,\ldots, x_n)$ has coefficient either $1$ or $-1$.   We are interested in collecting up all monomials of the form $x_1^{k_1}\cdots x_n^{k_n}$.  Let $DE_{k_1,\ldots, k_n}(G)$ be the orientations of $G$ where $m_{\vec{G}}(x_1,\ldots, x_n) = x_1^{k_1}\cdots x_n^{k_n}$ and $DO_{k_1,\ldots, k_n}(G)$ the orientations of $G$ where $m_{\vec{G}}(x_1,\ldots, x_n) = -x_1^{k_1}\cdots x_n^{k_n}$.  Write $p_{k_1, \ldots, k_n}(G)$ for the coefficient of $x_1^{k_1}\cdots x_n^{k_n}$ in $p_G(x_1,\ldots,x_n)$.  Then we have
+\[p_{k_1, \ldots, k_n}(G) = |DE_{k_1,\ldots, k_n}(G)| - |DO_{k_1,\ldots, k_n}(G)|.\]
+This gives a combinatorial interpretation of the coefficients of $p_G$, but unfortunately it quantifies over all orientations of $G$.  For applying the Combinatorial Nullstellensatz, it is useful to have a single orientation of $G$ as a certificate that $p_{k_1, \ldots, k_n}(G) \ne 0$.  This can be achieved in terms of Eulerian subgraphs.  A digraph is Eulerian if the in-degree and out-degree are equal at every vertex.  Let $EE(\vec{G})$ be the spanning Eulerian subgraphs of $\vec{G}$ with an even number of edges and let $EO(\vec{G})$ be the spanning Eulerian subgraphs of $\vec{G}$ with an odd number of edges.  
+
+\begin{EulerianOrientationsLemma}
+If $\vec{G}$ is an orientation of $G$, then we have
+\[\card{|EE(\vec{G})| - |EO(\vec{G})|} = \card{|DE_{d_{\vec{G}}^+(x_1), \ldots, d_{\vec{G}}^+(x_n)}(G)|- |DO_{d_{\vec{G}}^+(x_1), \ldots, d_{\vec{G}}^+(x_n)}(G)|}.\]
+\end{EulerianOrientationsLemma}
+\begin{proof}
+	For $D \in DE_{d_{\vec{G}}^+(x_1), \ldots, d_{\vec{G}}^+(x_n)}(G) \cup DO_{d_{\vec{G}}^+(x_1), \ldots, d_{\vec{G}}^+(x_n)}(G)$, let $\vec{G} \oplus D$ be the spanning subgraph of $\vec{G}$ with edge set 
+	\[\setb{(x_i,x_j)}{E(\vec{G})}{(x_j,x_i) \in E(D)}.\]
+	Then $\vec{G} \oplus D$ is Eulerian since all vertices have the same out-degree in $\vec{G}$ and $D$.  If $\vec{G}$ is even, this gives bijections between $DE_{d_{\vec{G}}^+(x_1), \ldots, d_{\vec{G}}^+(x_n)}(G)$ and $EE(\vec{G})$ as well as between $DO_{d_{\vec{G}}^+(x_1), \ldots, d_{\vec{G}}^+(x_n)}(G)$ and $EO(\vec{G})$.  When $\vec{G}$ is odd, the bijections are between $DE_{d_{\vec{G}}^+(x_1), \ldots, d_{\vec{G}}^+(x_n)}(G)$ and $EO(\vec{G})$ as well as between $DO_{d_{\vec{G}}^+(x_1), \ldots, d_{\vec{G}}^+(x_n)}(G)$ and $EE(\vec{G})$.  In either case, we have
+\[\card{|EE(\vec{G})| - |EO(\vec{G})|} = \card{|DE_{d_{\vec{G}}^+(x_1), \ldots, d_{\vec{G}}^+(x_n)}(G)|- |DO_{d_{\vec{G}}^+(x_1), \ldots, d_{\vec{G}}^+(x_n)}(G)|}.\]
+\end{proof} 
+Therefore, if $\vec{G}$ is an orientation of $G$ with $d_{\vec{G}}^+(x_i) = k_i$ for all $i \in \irange{n}$, then
+\[|p_{k_1, \ldots, k_n}(G)| = \card{|EE(\vec{G})| - |EO(\vec{G})|}.\]
+
+\section*{a coefficient formula}
+\begin{lemma}
+Suppose $f \in \mathbb{F}[x_1, \ldots, x_n]$ and $k_1, \ldots, k_n \in \IN$ with $\sum_{i \in \irange{n}} k_i = \deg(f)$.  For any $A_1, \ldots, A_n \subseteq \mathbb{F}$ with $\card{A_i} = k_i + 1$, we have
+\[f_{k_1, \ldots, k_n} = \sum_{(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n} \frac{f(a_1, \ldots, a_n)}{N(a_1, \ldots, a_n)},\]
+where
+\[N(a_1, \ldots, a_n) \DefinedAs \prod_{i \in \irange{n}} \prod_{b \in A_i \setminus \set{a_i}} (a_i - b).\]
+\end{lemma}
+\begin{proof}
+Let $f \in \mathbb{F}[x_1, \ldots, x_n]$ and $k_1, \ldots, k_n \in \IN$ with $\sum_{i \in \irange{n}} k_i = \deg(f)$. Also, let $A_1, \ldots, A_n \subseteq \mathbb{F}$ with $\card{A_i} = k_i + 1$.  For each $(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n$, let $\chi_{(a_1, \ldots, a_n)}$ be the characteristic function of the set $\set{(a_1, \ldots, a_n)}$; that is $\func{\chi_{(a_1, \ldots, a_n)}}{A_1 \times \cdots \times A_n}{\mathbb{F}}$ with $\chi_{(a_1, \ldots, a_n)}(x_1, \ldots, x_n) = 1$ when $(x_1, \ldots, x_n) = (a_1, \ldots, a_n)$ and $\chi_{(a_1, \ldots, a_n)}(x_1, \ldots, x_n) = 0$ otherwise.  Consider the function
+\[F = \sum_{(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n} f(a_1, \ldots, a_n)\chi_{(a_1, \ldots, a_n)}.\]
+Then $F$ agrees with $f$ on all of $A_1 \times \cdots \times A_n$ and hence $f - F$ is zero on $A_1 \times \cdots \times A_n$.  We will apply the Combinatorial Nullstellensatz to $f - F$ to conclude that $(f-F)_{k_1, \ldots, k_n} = 0$ and hence $f_{k_1, \ldots, k_n} = F_{k_1, \ldots, k_n}$ where  $F_{k_1, \ldots, k_n}$ will turn out to be our desired sum.  To apply the Combinatorial Nullstellensatz, we need to represent $F$ as a polynomial, we can do so by representing each $\chi_{(a_1, \ldots, a_n)}$ as a polynomial as follows.  For $(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n$, let 
+\[N(a_1, \ldots, a_n) \DefinedAs \prod_{i \in \irange{n}} \prod_{b \in A_i \setminus \set{a_i}} (a_i - b).\]
+\noindent Then it is readily verified that
+\[\chi_{(a_1, \ldots, a_n)}(x_1, \ldots, x_n) = \frac{\prod_{i \in \irange{n}} \prod_{b \in A_i \setminus \set{a_i}} (x_i - b)}{N(a_1, \ldots, a_n)}.\]
+\noindent Using this to define $F$ we get 
+\[F(x_1, \ldots, x_n) = \sum_{(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n} f(a_1, \ldots, a_n)\frac{\prod_{i \in \irange{n}} \prod_{b \in A_i \setminus \set{a_i}} (x_i - b)}{N(a_1, \ldots, a_n)}.\]
+Now  $\deg(F) = \sum_{i \in \irange{n}} (|A_i| - 1) = \sum_{i \in \irange{n}} k_i = \deg(f)$.  Since $f - F$ is zero on $A_1 \times \cdots \times A_n$, applying the Combinatorial Nullstellensatz to $f - F$ with $k_1, \ldots, k_n$ and sets $A_1, \ldots, A_n$ gives $(f-F)_{k_1, \ldots, k_n} = 0$ and hence 
+\[f_{k_1, \ldots, k_n} = F_{k_1, \ldots, k_n} = \sum_{(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n} \frac{f(a_1, \ldots, a_n)}{N(a_1, \ldots, a_n)}.\]
+\end{proof}
+
+\chapter*{partitions and vertex shuffling}
+\section*{destroying non-complete}
+\section*{shuffling with more rules}
+\section*{looking at the entire recoloring digraph}
+
+\chapter*{independent transversals}
+\section*{randomly}
+\section*{a more powerful tool}
+\begin{theorem}\label{LopsidedTransversal}
+Let $H$ be a graph and $V_1 \cup \cdots \cup V_r$ a partition of $V(H)$.  
+Suppose there exists $t \geq 1$ such that for each $i \in \irange{r}$ and each $v \in V_i$ we have $d(v) \leq \min\set{t, \card{V_i}-t}$.  For any $S \subseteq V(H)$ with $\card{S} < \min\set{\card{V_1}, \ldots, \card{V_r}}$, there is an independent transversal $I$ of $V_1, \ldots, V_r$ with $I \cap S = \emptyset$.
+\end{theorem}
+
+In fact, a more general statement holds. 
+First we need some notation. 
+Write $\funcsurj{f}{A}{B}$ for a surjective function from $A$ to $B$.  
+Let $G$ be a graph.  
+For a $k$-coloring $\funcsurj{\pi}{V(G)}{\irange{k}}$ of $G$ and a subgraph $H$ of $G$ we say 
+that $I \DefinedAs \set{x_1, \ldots, x_k} \subseteq V(H)$ is an $H$-independent transversal of $\pi$ if $I$ is an independent 
+set in $H$ and $\pi(x_i) = i$ for all $i \in \irange{k}$.
+
+\begin{lemma}\label{BaseTransversalLemma}
+Let $G$ be a graph and $\funcsurj{\pi}{V(G)}{\irange{k}}$ a proper $k$-coloring of
+$G$.  Suppose that $\pi$ has no $G$-independent transversal, but for every $e
+\in E(G)$, $\pi$ has a $(G-e)$-independent transversal. Then for every $xy \in
+E(G)$ there is $J \subseteq \irange{k}$ with $\pi(x), \pi(y) \in J$ and an 
+induced matching $M$ of $G\brackets{\pi^{-1}(J)}$ with $xy \in M$ such that:
+\begin{enumerate}
+  \item $\bigcup M$ totally dominates $G\brackets{\pi^{-1}(J)}$,
+  \item the multigraph with vertex set $J$ and an edge between $a, b \in J$ for
+  each $uv \in M$ with $\pi(u) = a$ and $\pi(v) = b$ is a (simple) tree.  In
+  particular $\card{M} = \card{J} - 1$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Suppose the lemma is false and choose a counterexample $G$ with
+$\funcsurj{\pi}{V(G)}{\irange{k}}$ so as to minimize $k$.  Let $xy \in E(G)$.
+By assumption $\pi$ has a $(G-xy)$-independent transversal $T$.  Note that we
+must have $x,y \in T$ lest $T$ be a $G$-independent transversal of $\pi$.
+
+By symmetry we may assume that $\pi(x) = k-1$ and $\pi(y) = k$. Put $X
+\DefinedAs \pi^{-1}(k-1)$, $Y \DefinedAs \pi^{-1}(k)$ and $H \DefinedAs G -
+N(\set{x, y}) - E(X,Y)$. Define $\func{\zeta}{V(H)}{\irange{k-1}}$ by $\zeta(v)
+\DefinedAs \min\set{\pi(v), k-1}$. Note that since $x,y \in T$, we have
+$\card{\zeta^{-1}(i)} \geq 1$ for each $i \in \irange{k-2}$.  Put $Z \DefinedAs
+\zeta^{-1}(k-1)$. Then $Z \neq \emptyset$ for otherwise $M \DefinedAs \set{xy}$
+totally dominates $G[X \cup Y]$ giving a contradiction.
+
+Suppose $\zeta$ has an $H$-independent transversal $S$.  Then we have $z \in S
+\cap Z$ and by symmetry we may assume $z \in X$.  But then $S \cup \set{y}$ is
+a $G$-independent transversal of $\pi$, a contradiction.
+
+Let $H' \subseteq H$ be a minimal spanning subgraph such that $\zeta$ has no
+$H'$-independent transversal.  Now $d(z) \geq 1$ for each $z \in Z$ for
+otherwise $T - \set{x,y} \cup \set{z}$ would be an $H'$-independent transversal
+of $\zeta$.  Pick $zw \in E(H')$.  By minimality of $k$, we have $J \subseteq
+\irange{k-1}$ with $\zeta(z), \zeta(w) \in J$ and an induced matching $M$ of
+$H'\brackets{\zeta^{-1}(J)}$ with $zw \in M$ such that
+\begin{enumerate}
+  \item $\bigcup M$ totally dominates $H'\brackets{\zeta^{-1}(J)}$,
+  \item the multigraph with vertex set $J$ and an edge between $a, b \in J$ for
+  each $uv \in M$ with $\zeta(u) = a$ and $\zeta(v) = b$ is a (simple) tree.
+\end{enumerate}
+
+Put $M' \DefinedAs M \cup \set{xy}$ and $J' \DefinedAs J \cup \set{k}$.
+Since $H'$ is a spanning subgraph of $H$, $\bigcup M$ totally dominates
+$H\brackets{\zeta^{-1}(J)}$ and hence $\bigcup M'$ totally dominates
+$G\brackets{\pi^{-1}(J')}$.  Moreover, the multigraph in (2) for $M'$ and $J'$
+is formed by splitting the vertex $k-1 \in J$ into two vertices and adding an edge
+between them and hence it is still a tree.  This final contradiction proves the
+lemma.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{LopsidedTransversal}]
+Suppose the lemma fails for such an $S \subseteq V(H)$.  Put $H' \DefinedAs H - S$ and let $V_1', \ldots, V_r'$ be the induced partition of $H'$. Then there is no independent transversal of $V_1', \ldots, V_r'$ and $\card{V_i'} \geq 1$ for each $i \in \irange{r}$. Create a graph $Q$ by removing edges from $H'$ until it is edge minimal without an independent transversal. Pick $yz \in E(Q)$ and apply Lemma 
+\ref{BaseTransversalLemma} on $yz$ with the induced partition to get the guaranteed 
+$J \subseteq \irange{r}$ and the tree $T$ with vertex set $J$ and an edge between $a, b \in
+J$ for each $uv \in M$ with $u \in V_a'$ and $v \in V_b'$.  By our condition, for each $uv \in E(V_i, V_j)$, we have $\card{N_H(u) \cup N_H(v)} \leq \min\set{\card{V_i}, \card{V_j}}$.
+
+Choose a root $c$ of $T$. Traversing $T$ in leaf-first order and for each leaf $a$ with parent $b$ picking $|V_a|$ from $\min\set{|V_a|, |V_b|}$ we get that the vertices in $M$ together dominate at most $\sum_{i \in J \setminus \set{c}} \card{V_i}$ vertices in $H$.  Since $\card{S} < \card{V_c}$, $M$ cannot totally dominate $\bigcup_{i \in J} V_i'$, a contradiction.
+\end{proof}
+
+Note that the condition on $S$ can be weakened slightly.  Suppose we have ordered the $V_i$ so that $\card{V_1} \leq \card{V_2} \leq \cdots \leq \card{V_r}$.  Then for any $S \subseteq V(H)$ with $\card{S} < \card{V_2}$ such that $V_1 \not \subseteq S$, there is an independent transversal $I$ of $V_1, \ldots, V_r$ with $I \cap S = \emptyset$.  The proof is the same except when we choose our root $c$, choose it so as to maximize $\card{V_c}$.  
+Since $\card{J} \geq 2$, we get $\card{V_c} \geq \card{V_2} > \card{S}$ at the end.
+
+\section*{hitting all maximum cliques}
+\begin{defn}
+Let $G$ be a graph. For a collection of cliques $\Q$ in $G$, let $X_\Q$ be the intersection graph of $\Q$; that is, the 
+vertex set of $X_\Q$ is $\Q$ and there is an edge between $Q_1, Q_2 \in \Q$ iff $Q_1 \ne Q_2$ and $Q_1$ and $Q_2$ intersect.
+\end{defn}
+
+When $\Q$ is a collection of maximum cliques, we get a lot of information about $X_\Q$.  
+\begin{lemma}\label{HajnalLemma}
+If $G$ is a graph and $\Q$ is a collection of maximum cliques in $G$, then 
+\[\card{\bigcup \Q} + \card{\bigcap \Q} \geq 2\omega(G).\]
+\end{lemma}
+
+\begin{lemma}\label{KostochkaCliqueGraph}
+If $\Q$ is a collection of maximum cliques in a graph $G$ with $\omega(G) > \frac23 (\Delta(G) + 1)$ such that $X_\Q$ is connected, then $\cap \Q \neq \emptyset$. 
+\end{lemma}
+\begin{proof}
+Suppose not and choose a counterexample $\Q \DefinedAs \set{Q_1, \ldots, Q_r}$
+minimizing $r$. Plainly, $r \geq 3$. Let $A$ be a noncutvertex in $X_{\Q}$ and
+$B$ a neighbor of $A$. Put $\fancy{Z} \DefinedAs \Q - \set{A}$. Then
+$X_{\fancy{Z}}$ is connected and hence by minimality of $r$, $\cap \fancy{Z}
+\neq \emptyset$. In particular, $\card{\cup \fancy{Z}} \leq \Delta(G) + 1$.
+By assumption, $\cap\Q=\emptyset$, so $\card{\cap \Q} + \card{\cup \Q} \leq 0 +
+(\card{\cup \fancy{Z}} + \card{A - B}) \leq
+(\Delta(G) + 1) + (\Delta(G)+1 - \omega(G)) < 2\omega(G)$. This contradicts
+Lemma \ref{HajnalLemma}.
+\end{proof}
+
+\begin{lemma}\label{TwoThirdsEqualityStructure}
+If $\Q$ is a collection of maximum cliques in a graph $G$ with $\omega(G) \ge \frac23 (\Delta(G) + 1)$ such that $X_\Q$ is connected, then either 
+\begin{itemize}
+\item $\cap \Q \ne \emptyset$; or
+\item $\Delta(X_\Q) \le 2$ and if $B, C \in \Q$ are different neighbors of $A \in \Q$, then $B \cap C = \emptyset$ and $\card{A \cap B} = \card{A \cap C} = \frac12 \omega(G)$.
+\end{itemize}
+\end{lemma}
+
+\chapter*{vertex transitive graphs}
+Let $G$ be a vertex-transitive graph and let $\Q$ be the collection of all
+maximum cliques in $G$.  It is not hard to see that $X_\Q$ is vertex-transitive
+as well; in fact, we have the following.
+
+\begin{observation}\label{transitiveClustering}
+Let $G$ be a vertex-transitive graph and let $\Q$ be the collection of all
+maximum cliques in $G$.  For each component $C$ of $X_\Q$, put $G_C \DefinedAs
+G\brackets{\bigcup V(C)}$.  Then $G_C$ is vertex-transitive for each component
+$C$ of $X_\Q$ and $G_{C_1} \cong G_{C_2}$ for components $C_1$ and $C_2$ of
+$X_\Q$.
+\end{observation}
+
+\begin{lemma}\label{TransitiveClusteringBigCliques}
+Let $G$ be a connected vertex-transitive graph and let $\Q$ be the collection
+of all maximum cliques in $G$.  If $\omega(G) \ge \frac23 \parens{\Delta(G) +
+1}$, then either
+\begin{itemize}
+\item $X_\Q$ is edgeless; or
+\item $X_\Q$ is a cycle and $G$ is the graph obtained from $X_\Q$ by blowing up each vertex to a $K_{\frac12 \omega(G)}$.
+\end{itemize}
+\end{lemma}
+\begin{proof}
+If $\omega(G) > \frac23 \parens{\Delta(G) + 1}$, then $X_\Q$ is edgeless as shown above.  Hence we may assume $\omega(G) = \frac23 \parens{\Delta(G) + 1}$.  
+Let $Z$ be a component of $X_\Q$ and put $\Z \DefinedAs V(Z)$.
+By Lemma \ref{TwoThirdsEqualityStructure}, $\Delta(X_\Z) \le 2$ and if $B, C \in \Z$ are 
+different neighbors of $A \in \Z$, then $B \cap C = \emptyset$ and $\card{A \cap B} = \card{A \cap C} = \frac12 \omega(G)$.  
+By Observation \ref{transitiveClustering}, $X_\Z$ must be a cycle.  But then every vertex in $G_Z$ has 
+$\frac12 \omega(G) + \frac12 \omega(G) + \frac12 \omega(G) - 1 = \Delta(G)$ neighbors in $G_Z$ and thus $G = G_Z$.  
+Hence $X_\Q = X_\Z$ is a cycle and $G$ is the graph obtained from $X_\Q$ by blowing up each vertex to a $K_{\frac12 \omega(G)}$.
+\end{proof}
+
 
 \chapter*{coloring edges}
 It is also useful to consider coloring the edges of a graph so that incident edges receive different colors.  This
@@ -437,32 +658,8 @@ Deciding whether or not edge coloring a given graph $G$ requires $\Delta(G) + 1$
 We need a concise proof of this without having to introduce too much background.  Please submit a pull request on GitHub.
 \end{proof}
 
-\chapter*{vertex coloring, again}
-\chapter*{edge coloring, again}
 \section*{fans as a greedy strategy}
 \section*{acceptable paths}
 \section*{acceptable trees}
 \section*{edge list coloring}
-\subsection*{more kernel method}
-\subsection*{2-edge-coloring}
-\subsection*{improved degree theorem}
-\subsection*{a hint of quasiline and claw-free graphs}
-
-\chapter*{shuffle tool}
-\section*{destroying non-complete}
-\section*{shuffling with more rules}
-\section*{looking at the entire recoloring digraph}
-
-\chapter*{independent transversalls}
-\section*{randomly}
-\section*{Haxell's tool}
-\subsection*{triangles within triangles are neat}
-\section*{big maximum cliques intersect in simple ways}
-\section*{going lopsided}
-
-\chapter*{vertex transitive graphs}
-\section*{strong coloring}
-\section*{medium clique implies big clique}
-
-\chapter*{potential potential tool}
 \end{document}
