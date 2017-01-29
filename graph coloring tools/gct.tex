@@ -3,6 +3,7 @@
 \usepackage{marginnote}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{color}
 
 \newcommand{\aside}[1]{\marginnote{\scriptsize{#1}}[0cm]}
 \newcommand{\aaside}[2]{\marginnote{\scriptsize{#1}}[#2]}
@@ -57,7 +58,7 @@
 \begin{document}
 \frontmatter
 \title[gct]{graph coloring tools}
-\author{a wee keep company collaborative creation}
+\author{}
 \maketitle
 \tableofcontents
 
@@ -78,14 +79,14 @@ are \emph{adjacent} \aaside{adjacent}{+0.15in} if they are connected by an edge.
 of vertices to which $v$ is adjacent is its \emph{neighborhood}, written $N(v)$. \aaside{neighborhood}{+0.0in} \aaside{$N(v)$}{+0.15in}
 For the size of $v$'s neighborhood $\card{N(v)}$, we write $d(v)$ and call this the \emph{degree} of $v$. \aaside{$d(v)$, degree}{+0.3in}
 
-[ADD PICTURES]
+\aaside{\textcolor{blue}{add pictures}}{}
 
 \chapter*{coloring vertices}
 The entire book concerns one simple task: we want to color the vertices of a given graph so that adjacent vertices receive different colors.
 With sufficiently many crayons and no preferences about what the coloring should look like, this is easy, we just use a different crayon for each vertex.  
 Things get interesting when we ask how few different crayons we can use.  We are definitely going to need an empty box of crayons and that will only do for the
 graph with no vertices at all.  Given one crayon, we can handle all graphs with no edges.  With two crayons, we can do
-any path and any cycle with an even number of vertices [PICTURE].  But, we can't handle a triangle or any other cycle with an odd number of vertices [PICTURE].
+any path and any cycle with an even number of vertices \aaside{\textcolor{blue}{picture}}{}.  But, we can't handle a triangle or any other cycle with an odd number of vertices \aaside{\textcolor{blue}{picture}}{}.
 In fact, odd cycles are really the only thing that will prevent us from using just two crayons. 
 A graph $H$ is a \emph{subgraph} of a graph $G$, written $H \subseteq G$ if $V(H) \subseteq V(G)$ and $E(H) \subseteq E(G)$. \aaside{subgraph, $\subseteq$}{}
 When $H \subseteq G$, we say that $G$ \emph{contains} $H$. \aaside{contains}{0.12in}  If $v \in V(G)$, then $G-v$ is the graph we get by removing $v$ and all edges incident to $v$ from $G$. \aaside{$G-v$}{0.05in}
@@ -252,7 +253,7 @@ but then we have an $L$-coloring of $G$, a contradiction.
 Given an oriented graph $G$ that is not kernel-perfect, it is always possible to add arrows (possibly going the opposite way as a current arrow, forming a directed digon) 
 to get what we'll call a \emph{superoriented graph} that is kernel-perfect.  One way is just to add back arrows for each arrow, then any maximal independent set is a kernel.
 Theorem \ref{KernelPerfectListBound} holds for superoriented graphs by a nearly identical proof.  
-This can be useful as it gives us a way to trade in some slack in the $\card{L(v)} > d^+(v)$ bounds for kernel-perfection by adding some extra arrows.\aaside{example, picture}{}
+This can be useful as it gives us a way to trade in some slack in the $\card{L(v)} > d^+(v)$ bounds for kernel-perfection by adding some extra arrows.\aaside{\textcolor{blue}{example, picture}}{}
 
 \begin{theorem}\label{KernelPerfectSuperListBound}
 If $L$ is a list assignment on a kernel-perfect superoriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, then $G$ is $L$-colorable.
@@ -273,11 +274,11 @@ has an arrow to $v$ or is in $G-I$ and hence has a back arrow to $v$, a contradi
 \begin{question}
 Lemma \ref{KostochkaYanceyKernelLemma} says that if we take a graph $G$ with an independent set $I$ and direct all the edges of $G-I$ both ways and the edges 
 between $I$ and $V(G-I)$ arbitrarily, we get a kernel-perfect superoriented graph.  Can we classify the pairs $(G, F)$ where $G$ is a graph and $F \subseteq E(G)$ such that
-every superorientation of $G$ in which all edges in $F$ are bidirected are kernel-perfect?  \aaside{a few examples known}{}
+every superorientation of $G$ in which all edges in $F$ are bidirected are kernel-perfect?  \aaside{\textcolor{blue}{examples}}{}
 \end{question}
 
 An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfectListBound} generalizes Theorem \ref{SecondListBound}.  
-But this is not the only possible generalization of acylic that works, later\aaside{when?}{} we will see another based on counting certain substructures of the oriented graph. 
+But this is not the only possible generalization of acylic that works, later\aaside{\textcolor{blue}{what chapter?}}{} we will see another based on counting certain substructures of the oriented graph. 
 This second generalization of acyclic does not generalize kernel-pefection and kernel-perfection does not generalize it.
 
 \section*{flows}
