@@ -236,8 +236,9 @@ some other property of oriented graphs, say a made-up property ``agliplic'', and
 
 It will be convenient to work with an equivalent dual version of list assignments.  
 Instead of assigning a list of colors to each vertex, we assign a set of vertices to each color.  Given a set of colors $P$, a \emph{$P$-assignment} on a graph $G$ is a function
-from $P$ to the subsets of $V(G)$.  For a list assigment $L$ on $G$ and $S \subseteq V(G)$, put $L(S) \DefinedAs \bigcup_{v \in S} L(v)$.
+from $P$ to the subsets of $V(G)$.  For a list assignment $L$ on $G$ and $S \subseteq V(G)$, put $L(S) \DefinedAs \bigcup_{v \in S} L(v)$.
 Then $L$ gives rise to the $L(V(G))$-assignment $C_L$ given by $C_L(c) \DefinedAs \setb{v}{V(G)}{c \in L(v)}$.
+
 
 \begin{observation}
 $G$ is $L$-colorable just in case there are independent sets $I_c \subseteq C_L(c)$ for each $c \in L(V(G))$ that together cover $V(G)$.
@@ -355,7 +356,8 @@ So, $t \not \in X$.  Since $v \in V \setminus X$ is not in $X$, we must have $f(
 \end{proof}
 
 \section*{a few flow applications}
-As our first application of Theorem \ref{MaxFlowMinCut}, we give a sufficient condition for a graph to be $L$-colorable.  
+As our first application of Theorem \ref{MaxFlowMinCut}, we give a sufficient condition for a graph $G$ to be $L$-colorable.  This 
+condition is also necessary when $G$ is complete.
 \begin{lemma}
 If $L$ is a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$, then $G$ is $L$-colorable.
 \end{lemma}
