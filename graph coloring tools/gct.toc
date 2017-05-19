@@ -1,27 +1,27 @@
 \contentsline {chapter}{\tocchapter {Chapter}{}{preface}}{v}
-\contentsline {chapter}{\tocchapter {Chapter}{}{graphs}}{1}
-\contentsline {chapter}{\tocchapter {Chapter}{}{coloring vertices}}{3}
-\contentsline {section}{\tocsection {}{}{basic estimates}}{3}
-\contentsline {section}{\tocsection {}{}{list coloring}}{5}
-\contentsline {section}{\tocsection {}{}{flows}}{7}
-\contentsline {section}{\tocsection {}{}{a few flow applications}}{9}
-\contentsline {section}{\tocsection {}{}{kernel magic}}{10}
-\contentsline {section}{\tocsection {}{}{a few kernel magic applications}}{10}
-\contentsline {section}{\tocsection {}{}{combinatorial nullstellensatz}}{10}
-\contentsline {section}{\tocsection {}{}{the graph polynomial}}{10}
-\contentsline {section}{\tocsection {}{}{a coefficient formula}}{11}
-\contentsline {chapter}{\tocchapter {Chapter}{}{partitions and vertex shuffling}}{13}
-\contentsline {section}{\tocsection {}{}{destroying non-complete}}{13}
-\contentsline {section}{\tocsection {}{}{shuffling with more rules}}{13}
-\contentsline {section}{\tocsection {}{}{looking at the entire recoloring digraph}}{13}
-\contentsline {chapter}{\tocchapter {Chapter}{}{independent transversals}}{15}
-\contentsline {section}{\tocsection {}{}{randomly}}{15}
-\contentsline {section}{\tocsection {}{}{a more powerful tool}}{15}
-\contentsline {section}{\tocsection {}{}{hitting all maximum cliques}}{16}
-\contentsline {chapter}{\tocchapter {Chapter}{}{vertex transitive graphs}}{19}
-\contentsline {chapter}{\tocchapter {Chapter}{}{coloring edges}}{21}
-\contentsline {section}{\tocsection {}{}{hardness}}{22}
-\contentsline {section}{\tocsection {}{}{fans as a greedy strategy}}{23}
-\contentsline {section}{\tocsection {}{}{acceptable paths}}{23}
-\contentsline {section}{\tocsection {}{}{acceptable trees}}{23}
-\contentsline {section}{\tocsection {}{}{edge list coloring}}{23}
+\contentsline {chapter}{\tocchapter {Chapter}{}{graphs}}{vii}
+\contentsline {chapter}{\tocchapter {Chapter}{}{coloring vertices}}{1}
+\contentsline {section}{\tocsection {}{}{basic estimates}}{1}
+\contentsline {section}{\tocsection {}{}{list coloring}}{3}
+\contentsline {section}{\tocsection {}{}{flows}}{5}
+\contentsline {section}{\tocsection {}{}{a few flow applications}}{7}
+\contentsline {section}{\tocsection {}{}{kernel magic}}{8}
+\contentsline {section}{\tocsection {}{}{a few kernel magic applications}}{8}
+\contentsline {section}{\tocsection {}{}{combinatorial nullstellensatz}}{8}
+\contentsline {section}{\tocsection {}{}{the graph polynomial}}{8}
+\contentsline {section}{\tocsection {}{}{a coefficient formula}}{9}
+\contentsline {chapter}{\tocchapter {Chapter}{}{partitions and vertex shuffling}}{11}
+\contentsline {section}{\tocsection {}{}{destroying non-complete}}{11}
+\contentsline {section}{\tocsection {}{}{shuffling with more rules}}{11}
+\contentsline {section}{\tocsection {}{}{looking at the entire recoloring digraph}}{11}
+\contentsline {chapter}{\tocchapter {Chapter}{}{independent transversals}}{13}
+\contentsline {section}{\tocsection {}{}{randomly}}{13}
+\contentsline {section}{\tocsection {}{}{a more powerful tool}}{13}
+\contentsline {section}{\tocsection {}{}{hitting all maximum cliques}}{14}
+\contentsline {chapter}{\tocchapter {Chapter}{}{vertex transitive graphs}}{17}
+\contentsline {chapter}{\tocchapter {Chapter}{}{coloring edges}}{19}
+\contentsline {section}{\tocsection {}{}{hardness}}{20}
+\contentsline {section}{\tocsection {}{}{fans as a greedy strategy}}{21}
+\contentsline {section}{\tocsection {}{}{acceptable paths}}{21}
+\contentsline {section}{\tocsection {}{}{acceptable trees}}{21}
+\contentsline {section}{\tocsection {}{}{edge list coloring}}{21}

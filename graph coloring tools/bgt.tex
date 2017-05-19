@@ -1,13 +1,88 @@
-\documentclass{amsbook}
-\usepackage{amsfonts}
-\usepackage{marginnote}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{color}
+\documentclass{tufte-book} % Use the tufte-book class which in turn uses the tufte-common class
+\hypersetup{colorlinks} % Comment this line if you don't wish to have colored links
+\usepackage{microtype} % Improves character and word spacing
+\usepackage{booktabs} % Better horizontal rules in tables
+\usepackage{graphicx} % Needed to insert images into the document
+\graphicspath{{graphics/}} % Sets the default location of pictures
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio} % Improves figure scaling
 
-\newcommand{\aside}[1]{\marginnote{\scriptsize{#1}}[0cm]}
-\newcommand{\aaside}[2]{\marginnote{\scriptsize{#1}}[#2]}
+\usepackage{fancyvrb} % Allows customization of verbatim environments
+\fvset{fontsize=\normalsize} % The font size of all verbatim text can be changed here
 
+\newcommand{\hangp}[1]{\makebox[0pt][r]{(}#1\makebox[0pt][l]{)}} % New command to create parentheses around text in tables which take up no horizontal space - this improves column spacing
+\newcommand{\hangstar}{\makebox[0pt][l]{*}} % New command to create asterisks in tables which take up no horizontal space - this improves column spacing
+
+\usepackage{xspace} % Used for printing a trailing space better than using a tilde (~) using the \xspace command
+
+\newcommand{\monthyear}{\ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi\space\number\year} % A command to print the current month and year
+
+\newcommand{\openepigraph}[2]{ % This block sets up a command for printing an epigraph with 2 arguments - the quote and the author
+\begin{fullwidth}
+\sffamily\large
+\begin{doublespace}
+\noindent\allcaps{#1}\\ % The quote
+\noindent\allcaps{#2} % The author
+\end{doublespace}
+\end{fullwidth}
+}
+
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage} % Command to insert a blank page
+
+\usepackage{units} % Used for printing standard units
+
+\newcommand{\hlred}[1]{\textcolor{Maroon}{#1}} % Print text in maroon
+\newcommand{\hangleft}[1]{\makebox[0pt][r]{#1}} % Used for printing commands in the index, moves the slash left so the command name aligns with the rest of the text in the index 
+\newcommand{\hairsp}{\hspace{1pt}} % Command to print a very short space
+\newcommand{\ie}{\textit{i.\hairsp{}e.}\xspace} % Command to print i.e.
+\newcommand{\eg}{\textit{e.\hairsp{}g.}\xspace} % Command to print e.g.
+\newcommand{\na}{\quad--} % Used in tables for N/A cells
+\newcommand{\measure}[3]{#1/#2$\times$\unit[#3]{pc}} % Typesets the font size, leading, and measure in the form of: 10/12x26 pc.
+\newcommand{\tuftebs}{\symbol{'134}} % Command to print a backslash in tt type in OT1/T1
+
+\providecommand{\XeLaTeX}{X\lower.5ex\hbox{\kern-0.15em\reflectbox{E}}\kern-0.1em\LaTeX}
+\newcommand{\tXeLaTeX}{\XeLaTeX\index{XeLaTeX@\protect\XeLaTeX}} % Command to print the XeLaTeX logo while simultaneously adding the position to the index
+
+\newcommand{\doccmdnoindex}[2][]{\texttt{\tuftebs#2}} % Command to print a command in texttt with a backslash of tt type without inserting the command into the index
+
+\newcommand{\doccmddef}[2][]{\hlred{\texttt{\tuftebs#2}}\label{cmd:#2}\ifthenelse{\isempty{#1}} % Command to define a command in red and add it to the index
+{ % If no package is specified, add the command to the index
+\index{#2 command@\protect\hangleft{\texttt{\tuftebs}}\texttt{#2}}% Command name
+}
+{ % If a package is also specified as a second argument, add the command and package to the index
+\index{#2 command@\protect\hangleft{\texttt{\tuftebs}}\texttt{#2} (\texttt{#1} package)}% Command name
+\index{#1 package@\texttt{#1} package}\index{packages!#1@\texttt{#1}}% Package name
+}}
+
+\newcommand{\doccmd}[2][]{% Command to define a command and add it to the index
+\texttt{\tuftebs#2}%
+\ifthenelse{\isempty{#1}}% If no package is specified, add the command to the index
+{%
+\index{#2 command@\protect\hangleft{\texttt{\tuftebs}}\texttt{#2}}% Command name
+}
+{%
+\index{#2 command@\protect\hangleft{\texttt{\tuftebs}}\texttt{#2} (\texttt{#1} package)}% Command name
+\index{#1 package@\texttt{#1} package}\index{packages!#1@\texttt{#1}}% Package name
+}}
+
+% A bunch of new commands to print commands, arguments, environments, classes, etc within the text using the correct formatting
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}
+\newenvironment{docspec}{\begin{quotation}\ttfamily\parskip0pt\parindent0pt\ignorespaces}{\end{quotation}}
+\newcommand{\docenv}[1]{\texttt{#1}\index{#1 environment@\texttt{#1} environment}\index{environments!#1@\texttt{#1}}}
+\newcommand{\docenvdef}[1]{\hlred{\texttt{#1}}\label{env:#1}\index{#1 environment@\texttt{#1} environment}\index{environments!#1@\texttt{#1}}}
+\newcommand{\docpkg}[1]{\texttt{#1}\index{#1 package@\texttt{#1} package}\index{packages!#1@\texttt{#1}}}
+\newcommand{\doccls}[1]{\texttt{#1}}
+\newcommand{\docclsopt}[1]{\texttt{#1}\index{#1 class option@\texttt{#1} class option}\index{class options!#1@\texttt{#1}}}
+\newcommand{\docclsoptdef}[1]{\hlred{\texttt{#1}}\label{clsopt:#1}\index{#1 class option@\texttt{#1} class option}\index{class options!#1@\texttt{#1}}}
+\newcommand{\docmsg}[2]{\bigskip\begin{fullwidth}\noindent\ttfamily#1\end{fullwidth}\medskip\par\noindent#2}
+\newcommand{\docfilehook}[2]{\texttt{#1}\index{file hooks!#2}\index{#1@\texttt{#1}}}
+\newcommand{\doccounter}[1]{\texttt{#1}\index{#1 counter@\texttt{#1} counter}}
+
+\usepackage{makeidx} % Used to generate the index
+\makeindex % Generate the index which is printed at the end of the document
+
+
+\usepackage{amsmath, amsthm, amssymb}
 \theoremstyle{plain}
 \newtheorem{acknowledgement}{Acknowledgement}
 \newtheorem{algorithm}{Algorithm}
@@ -32,7 +107,6 @@
 \newtheorem{solution}{Solution}
 \newtheorem{summary}{Summary}
 \newtheorem{theorem}{Theorem}
-\numberwithin{equation}{chapter}
 
 \newcommand{\set}[1]{\left\{ #1 \right\}}
 \newcommand{\setb}[3]{\left\{ #1 \in #2 : #3 \right\}}
@@ -66,44 +140,54 @@
 
 \newcommand{\pot}{\operatorname{pot}}
 
+\usepackage{makeidx} % Used to generate the index
+\makeindex % Generate the index which is printed at the end of the document
+\title{Basic Graph Coloring}
+\author{landon rabern}
+
 \begin{document}
+
 \frontmatter
-\title[gct]{graph coloring tools}
-\author{}
-\maketitle
+\maketitle 
+
+
 \tableofcontents
 
-\chapter*{preface}
 
-this comes prior to the face.
+\cleardoublepage
+~\vfill
+\begin{doublespace}
+\noindent\fontsize{18}{22}\selectfont\itshape
+\nohyphenation
+For Rachel, Atticus and Alfred.
+\end{doublespace}
+\vfill
+\vfill
 
-
-
-\chapter*{graphs}
-A \emph{graph} is a collection of dots we call \emph{vertices} \aaside{vertices}{-.0in} some of which are connected by curves we call \emph{edges}. \aaside{edges}{-.0in}
+\cleardoublepage
+\mainmatter
+\chapter{Graphs}
+A \emph{graph}\marginnote{graph} is a collection of dots we call \emph{vertices}\marginnote{vertices} some of which are connected by curves we call \emph{edges}. \marginnote{edges}
 The relative location of the dots and the shape of the curves are not relevant, we are only concerned with whether or not a given
 pair of dots is connected by a curve.  Initially, we forbid edges from a vertex to itself and multiple edges between two vertices.
-If $G$ is a graph, then $V(G)$ is its set of vertices and $E(G)$ its set of edges. \aaside{$V(G)$, $E(G)$}{-.15in}
-We write $\card{G}$ for the number of vertices in $V(G)$ and $\size{G}$ for the number of edges in $E(G)$. \aaside{$\card{G}$, $\size{G}$}{}
+If $G$ is a graph, then $V(G)$ is its set of vertices and $E(G)$ its set of edges. \marginnote{$V(G)$, $E(G)$}
+We write $\card{G}$ for the number of vertices in $V(G)$ and $\size{G}$ for the number of edges in $E(G)$. \marginnote{$\card{G}$, $\size{G}$}
 Two vertices
-are \emph{adjacent} \aaside{adjacent}{+0.15in} if they are connected by an edge.  The set
-of vertices to which $v$ is adjacent is its \emph{neighborhood}, written $N(v)$. \aaside{neighborhood}{+0.0in} \aaside{$N(v)$}{+0.15in}
-For the size of $v$'s neighborhood $\card{N(v)}$, we write $d(v)$ and call this the \emph{degree} of $v$. \aaside{$d(v)$, degree}{+0.3in}
+are \emph{adjacent} \marginnote{adjacent} if they are connected by an edge.  The set
+of vertices to which $v$ is adjacent is its \emph{neighborhood}, written $N(v)$. \marginnote{neighborhood} \marginnote{$N(v)$}
+For the size of $v$'s neighborhood $\card{N(v)}$, we write $d(v)$ and call this the \emph{degree} of $v$. \marginnote{$d(v)$}\marginnote{degree}
 
-\aaside{\textcolor{blue}{add pictures}}{}
-
-\mainmatter
-\chapter*{coloring vertices}
+\chapter{Coloring vertices}
 The entire book concerns one simple task: we want to color the vertices of a given graph so that adjacent vertices receive different colors.
 With sufficiently many crayons and no preferences about what the coloring should look like, this is easy, we just use a different crayon for each vertex.  
 Things get interesting when we ask how few different crayons we can use.  We are definitely going to need an empty box of crayons and that will only do for the
 graph with no vertices at all.  Given one crayon, we can handle all graphs with no edges.  With two crayons, we can do
-any path and any cycle with an even number of vertices \aaside{\textcolor{blue}{picture}}{}.  But, we can't handle a triangle or any other cycle with an odd number of vertices \aaside{\textcolor{blue}{picture}}{}.
+any path and any cycle with an even number of vertices \marginnote{\textcolor{blue}{picture}}.  But, we can't handle a triangle or any other cycle with an odd number of vertices \marginnote{\textcolor{blue}{picture}}.
 In fact, odd cycles are really the only thing that will prevent us from using just two crayons. 
-A graph $H$ is a \emph{subgraph} of a graph $G$, written $H \subseteq G$ if $V(H) \subseteq V(G)$ and $E(H) \subseteq E(G)$. \aaside{subgraph, $\subseteq$}{}
-When $H \subseteq G$, we say that $G$ \emph{contains} $H$. \aaside{contains}{0.12in}  If $v \in V(G)$, then $G-v$ is the graph we get by removing $v$ and all edges incident to $v$ from $G$. \aaside{$G-v$}{0.05in}
-A graph is $k$-colorable if we can color its vertices with (at most) $k$ colors such that adjacent vertices receive different colors. \aaside{$k$-colorable}{}
-A $0$-colorable graph is \emph{empty}, a $1$-colorable graph is \emph{edgeless} and a $2$-colorable graph is \emph{bipartite}. \aaside{empty}{}\aaside{edgeless}{+0.1in}\aaside{bipartite}{+0.2in}
+A graph $H$ is a \emph{subgraph} of a graph $G$, written $H \subseteq G$ if $V(H) \subseteq V(G)$ and $E(H) \subseteq E(G)$. \marginnote{subgraph, $\subseteq$}
+When $H \subseteq G$, we say that $G$ \emph{contains} $H$. \marginnote{contains}  If $v \in V(G)$, then $G-v$ is the graph we get by removing $v$ and all edges incident to $v$ from $G$. \marginnote{$G-v$}
+A graph is $k$-colorable if we can color its vertices with (at most) $k$ colors such that adjacent vertices receive different colors. \marginnote{$k$-colorable}
+A $0$-colorable graph is \emph{empty}, a $1$-colorable graph is \emph{edgeless} and a $2$-colorable graph is \emph{bipartite}. \marginnote{empty}\marginnote{edgeless}\marginnote{bipartite}
 \begin{theorem}\label{TwoColoring}
 A graph is $2$-colorable just in case it contains no odd cycle.
 \end{theorem}
@@ -116,25 +200,23 @@ in $H$ would contain $x_v$ and hence give rise to an odd cycle in $G$ passing th
 where $x_v$ gets colored red.  But this gives a 2-coloring of $G$ by coloring all vertices in $N(v)$ red and $v$ blue, a contradiction.
 \end{proof}
 
-Well, this is embarrassing, coloring appears to be easy.  Fortunately, things get more interesting when we move up to three colors.
+Since detecting odd cycles is easy, this means $2$-coloring is easy. Things get more interesting when we move up to three colors.
 \begin{theorem}
-3-coloring is hard supposing other things we think are hard are actually hard.
+For $k \ge 3$, determining whether or not a graph has a $k$-coloring is a hard problem (supposing other problems we think are hard are, in fact, hard).
 \end{theorem}
-\begin{proof}
-We need a concise proof of this without having to introduce too much background.  Please submit a pull request on GitHub.
-\end{proof}
 
-\section*{basic estimates}
+\section{Basic estimates}
 Even though finding the minimum number of colors needed to color a graph is hard in general (supposing it is), we can still
 look for lower and upper bounds on this value.  The \emph{chromatic number} $\chi(G)$ of a graph $G$ is the smallest $k$ for which $G$ is $k$-colorable.
-\aaside{chromatic number}{+0.0in}\aaside{$\chi(G)$}{+0.15in}
+\marginnote{chromatic number}\marginnote{$\chi(G)$}
 The simplest thing we can do is give each vertex a different color.
 \begin{theorem}\label{WorstUpperBound}
 If $G$ is a graph, then $\chi(G) \le \card{G}$.
 \end{theorem}
 The only graphs that attain the upper bound in Theorem \ref{WorstUpperBound} are the \emph{complete} graphs; those in which
-any two vertices are adjacent. \aaside{complete}{}
-We can usually do much better by just arbitrarily coloring vertices, reusing colors when we can.  \aaside{maximum degree}{+0.0in}\aaside{$\Delta(G)$}{+0.15in}The \emph{maximum degree} $\Delta(G)$ of a graph $G$ is the largest degree
+any two vertices are adjacent. \marginnote{complete}
+We can usually do much better by just arbitrarily coloring vertices, reusing colors when we can.  \marginnote{maximum degree}\marginnote{$\Delta(G)$}
+The \emph{maximum degree} $\Delta(G)$ of a graph $G$ is the largest degree
 of any vertex in $G$; that is 
 \[\Delta(G) \DefinedAs \max_{v \in V(G)} d(v).\]
 
@@ -150,16 +232,17 @@ of $G$, a contradiction.
 
 Both complete graphs and odd cycles attain the upper bound in Theorem \ref{SecondWorstUpperBound}.  Theorem \ref{TwoColoring} says
 we can do better for graphs that don't contain odd cycles.  We can also do better for graphs that don't contain large complete subgraphs.
-A set of vertices $S$ in a graph $G$ is a \emph{clique} if the vertices in $S$ are pairwise adjacent.\aaside{clique}{}  
-The \emph{clique number} of a graph $G$, written $\omega(G)$, is the number of vertices in a largest clique in $G$.\aaside{$\omega(G)$}{}
+A set of vertices $S$ in a graph $G$ is a \emph{clique} if the vertices in $S$ are pairwise adjacent.\marginnote{clique}
+The \emph{clique number} of a graph $G$, written $\omega(G)$, is the number of vertices in a largest clique in $G$.\marginnote{$\omega(G)$}
 
 \begin{theorem}\label{OmegaLowerBound}
 If $G$ is a graph, then $\chi(G) \ge \omega(G)$.
 \end{theorem}
 
-A set of vertices $S$ in a graph $G$ is \emph{independent} if the vertices in $S$ are pairwise non-adjacent.\aaside{independent}{}  
-The \emph{independence number} of a graph $G$, written $\alpha(G)$, is the number of vertices in a largest independent set in $G$.\aaside{$\alpha(G)$}{}
+A set of vertices $S$ in a graph $G$ is \emph{independent} if the vertices in $S$ are pairwise non-adjacent.\marginnote{independent}
+The \emph{independence number} of a graph $G$, written $\alpha(G)$, is the number of vertices in a largest independent set in $G$.\marginnote{$\alpha(G)$}
 
+\section{Brooks' theorem}
 \begin{theorem}
 If $G$ is a graph with $\Delta(G) \ge 3$ and $\omega(G) \le \Delta(G)$, then $\chi(G) \le \Delta(G)$.
 \label{BrooksTheorem}
@@ -192,7 +275,7 @@ Now $\card{A\cap B} = \card{A} + \card{B} - \card{A\cup B} \ge 2(\Delta(G) - 1) 
 in $A \cap B$ since it would be adjacent to $y_1,y_2,y_3$ as well as $\Delta(G) - 2$ vertices in $A$ and thus have degree greater than $\Delta(G)$, a contradiction. 
 \end{proof}
 
-\section*{list coloring}
+\chapter{List coloring}
 When attempting to $k$-color a graph $G$, it will often be convenient to first $k$-color $G[S]$ for some $S \subset V(G)$ and then try to 
 $k$-color $G-S$ in a compatible manner. To make this precise, think of each vertex in $G$ starting with a list of $k$ permissible colors, say $\irange{k}$.
 When we $k$-color $G[S]$, the colors used on $N(v) \cap S$ are no longer permissible for each $v \in V(G-S)$.  For $v \in V(G-S)$, let $L(v)$ be the permissible colors
@@ -266,7 +349,7 @@ but then we have an $L$-coloring of $G$, a contradiction.
 Given an oriented graph $G$ that is not kernel-perfect, it is always possible to add arrows (possibly going the opposite way as a current arrow, forming a directed digon) 
 to get what we'll call a \emph{superoriented graph} that is kernel-perfect.  One way is just to add back arrows for each arrow, then any maximal independent set is a kernel.
 Theorem \ref{KernelPerfectListBound} holds for superoriented graphs by a nearly identical proof.  
-This can be useful as it gives us a way to trade in some slack in the $\card{L(v)} > d^+(v)$ bounds for kernel-perfection by adding some extra arrows.\aaside{\textcolor{blue}{example, picture}}{}
+This can be useful as it gives us a way to trade in some slack in the $\card{L(v)} > d^+(v)$ bounds for kernel-perfection by adding some extra arrows.\marginnote{\textcolor{blue}{example, picture}}
 
 \begin{theorem}\label{KernelPerfectSuperListBound}
 If $L$ is a list assignment on a kernel-perfect superoriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, then $G$ is $L$-colorable.
@@ -287,14 +370,14 @@ has an arrow to $v$ or is in $G-I$ and hence has a back arrow to $v$, a contradi
 \begin{question}
 Lemma \ref{KostochkaYanceyKernelLemma} says that if we take a graph $G$ with an independent set $I$ and direct all the edges of $G-I$ both ways and the edges 
 between $I$ and $V(G-I)$ arbitrarily, we get a kernel-perfect superoriented graph.  Can we classify the pairs $(G, F)$ where $G$ is a graph and $F \subseteq E(G)$ such that
-every superorientation of $G$ in which all edges in $F$ are bidirected are kernel-perfect?  \aaside{\textcolor{blue}{examples}}{}
+every superorientation of $G$ in which all edges in $F$ are bidirected are kernel-perfect?  \marginnote{\textcolor{blue}{examples}}
 \end{question}
 
 An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfectListBound} generalizes Theorem \ref{SecondListBound}.  
-But this is not the only possible generalization of acylic that works, later\aaside{\textcolor{blue}{what chapter?}}{} we will see another based on counting certain substructures of the oriented graph. 
+But this is not the only possible generalization of acylic that works, later\marginnote{\textcolor{blue}{what chapter?}} we will see another based on counting certain substructures of the oriented graph. 
 This second generalization of acyclic does not generalize kernel-pefection and kernel-perfection does not generalize it.
 
-\section*{flows}
+\chapter{Flows}
 Using Theorem \ref{KernelPerfectSuperListBound} and Lemma \ref{KostochkaYanceyKernelLemma}, we will prove an easily-applicable sufficient condition for a graph to be $L$-colorable.  
 But first, we need a general lemma that gives graph orientations with specified constraints on their out-degrees.  This lemma can be proved directly, 
 but a detour into the theory of flows will give us the lemma and many other results for free.
@@ -356,7 +439,7 @@ So, $t \not \in X$.  Since $v \in V \setminus X$ is not in $X$, we must have $f(
 \end{align*}
 \end{proof}
 
-\section*{a few flow applications}
+\section{Hall's theorem}
 As our first application of Theorem \ref{MaxFlowMinCut}, we give a sufficient condition for a graph $G$ to be $L$-colorable.  This 
 condition is also necessary when $G$ is complete.
 \begin{lemma}
@@ -392,6 +475,17 @@ Hence $f(s,v) = 1$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \in V
 Coloring each $v \in V(G)$ with $c_v$ gives an $L$-coloring of $G$ since if $c_v = c_w$, the fact that $f$ is a flow implies 
 $\card{Z, \set{c_v}} = \card{\set{c_v}, Z} = f(c_v, t) = 1$ and hence $v = w$.
 \end{proof}
+
+\section{Orientations with prescribed degrees}
+\begin{lemma}\label{InOrientations} If $G$ is a graph and $\func{g}{V(G)}{\IN}$,
+then $G$ has an orientation such that $d^{-}(v)\ge g(v)$ for all $v\in V(G)$ just in case
+\[
+\size{X}+\size{X,V(G)\setminus X}\ge g(X),
+\]
+for every $X \subseteq V(G)$.
+\end{lemma}
+
+\section{Connectivity}
 
 \section*{kernel magic}
 \section*{a few kernel magic applications}
@@ -456,7 +550,8 @@ Now  $\deg(F) = \sum_{i \in \irange{n}} (|A_i| - 1) = \sum_{i \in \irange{n}} k_
 \[f_{k_1, \ldots, k_n} = F_{k_1, \ldots, k_n} = \sum_{(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n} \frac{f(a_1, \ldots, a_n)}{N(a_1, \ldots, a_n)}.\]
 \end{proof}
 
-\chapter*{partitions and vertex shuffling}
+
+\chapter{partitions and vertex shuffling}
 \section*{destroying non-complete}
 \section*{shuffling with more rules}
 \section*{looking at the entire recoloring digraph}
@@ -576,7 +671,7 @@ If $\Q$ is a collection of maximum cliques in a graph $G$ with $\omega(G) \ge \f
 \end{itemize}
 \end{lemma}
 
-\chapter*{vertex transitive graphs}
+\chapter{vertex transitive graphs}
 Let $G$ be a vertex-transitive graph and let $\Q$ be the collection of all
 maximum cliques in $G$.  It is not hard to see that $X_\Q$ is vertex-transitive
 as well; in fact, we have the following.
@@ -609,7 +704,7 @@ Hence $X_\Q = X_\Z$ is a cycle and $G$ is the graph obtained from $X_\Q$ by blow
 \end{proof}
 
 
-\chapter*{coloring edges}
+\chapter{coloring edges}
 It is also useful to consider coloring the edges of a graph so that incident edges receive different colors.  This
 appears to be at odds with our previous claim that this book was only about coloring vertices of graph; fortunately, edge coloring
 is just a special case of vertex coloring.  If $G$ is a graph, the \emph{line graph} of $G$, written
@@ -700,4 +795,6 @@ We need a concise proof of this without having to introduce too much background.
 \section*{acceptable paths}
 \section*{acceptable trees}
 \section*{edge list coloring}
+\backmatter
+\printindex
 \end{document}
