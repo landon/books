@@ -78,6 +78,37 @@
 \newcommand{\docfilehook}[2]{\texttt{#1}\index{file hooks!#2}\index{#1@\texttt{#1}}}
 \newcommand{\doccounter}[1]{\texttt{#1}\index{#1 counter@\texttt{#1} counter}}
 
+\usepackage{remreset}% to allow continuous numbering of figures/tables throughout the entire book
+
+\makeatletter% since we're using commands with @ in their name
+\@removefromreset{figure}{chapter}% don't reset figure numbering
+\@removefromreset{table}{chapter}% don't reset figure numbering
+\let\origappendix\appendix% save a copy of the original meaning of \appendix
+\renewcommand{\appendix}{%
+  \origappendix% do all the original \appendix stuff
+  \titlecontents{chapter}%
+    [0em] % distance from left margin
+    {\vspace{1.5\baselineskip}\begin{fullwidth}\LARGE\rmfamily\itshape} % above (global formatting of entry)
+    {\hspace*{0em}\appendixname~\thecontentslabel: } % before w/label (label = ``2'')
+    {\hspace*{0em}} % before w/o label
+    {\rmfamily\upshape\qquad\thecontentspage} % filler + page (leaders and page num)
+    [\end{fullwidth}] % after
+  \titleformat{\chapter}%
+    [display]% shape
+    {\relax\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\begin{fullwidth}}{}}% format applied to label+text
+    {\itshape\huge Appendix~\thechapter}% label
+    {0pt}% horizontal separation between label and title body
+    {\huge\rmfamily\itshape}% before the title body
+    [\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\end{fullwidth}}{}]% after the title body
+  \setcounter{secnumdepth}{0}% ``number'' the appendices
+  \renewcommand{\thefigure}{\@arabic\c@figure}% define \thefigure to use only the figure number (1), not A.1
+  \renewcommand{\thetable}{\@arabic\c@table}%
+  %
+  % Add any other special appendix-related code here.
+  %
+}
+\makeatother% restore the special meaning of @
+
 \usepackage{makeidx} % Used to generate the index
 \makeindex % Generate the index which is printed at the end of the document
 
@@ -162,7 +193,7 @@
 For Rachel, Atticus and Alfred.
 \end{doublespace}
 \vfill
-\vfill
+\vfill
 
 \cleardoublepage
 \mainmatter
@@ -275,7 +306,7 @@ Now $\card{A\cap B} = \card{A} + \card{B} - \card{A\cup B} \ge 2(\Delta(G) - 1) 
 in $A \cap B$ since it would be adjacent to $y_1,y_2,y_3$ as well as $\Delta(G) - 2$ vertices in $A$ and thus have degree greater than $\Delta(G)$, a contradiction. 
 \end{proof}
 
-\chapter{List coloring}
+\section{List coloring}
 When attempting to $k$-color a graph $G$, it will often be convenient to first $k$-color $G[S]$ for some $S \subset V(G)$ and then try to 
 $k$-color $G-S$ in a compatible manner. To make this precise, think of each vertex in $G$ starting with a list of $k$ permissible colors, say $\irange{k}$.
 When we $k$-color $G[S]$, the colors used on $N(v) \cap S$ are no longer permissible for each $v \in V(G-S)$.  For $v \in V(G-S)$, let $L(v)$ be the permissible colors
@@ -376,6 +407,8 @@ every superorientation of $G$ in which all edges in $F$ are bidirected are kerne
 An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfectListBound} generalizes Theorem \ref{SecondListBound}.  
 But this is not the only possible generalization of acylic that works, later\marginnote{\textcolor{blue}{what chapter?}} we will see another based on counting certain substructures of the oriented graph. 
 This second generalization of acyclic does not generalize kernel-pefection and kernel-perfection does not generalize it.
+
+\section{Historical notes}
 
 \chapter{Flows}
 Using Theorem \ref{KernelPerfectSuperListBound} and Lemma \ref{KostochkaYanceyKernelLemma}, we will prove an easily-applicable sufficient condition for a graph to be $L$-colorable.  
@@ -486,10 +519,15 @@ for every $X \subseteq V(G)$.
 \end{lemma}
 
 \section{Connectivity}
+\section{Historical notes}
 
-\section*{kernel magic}
-\section*{a few kernel magic applications}
-\section*{combinatorial nullstellensatz}
+\chapter{Kernel magic}
+\section{Brooks' theorem for list coloring}
+\section{Triangle-free graphs}
+\section{Historical notes}
+
+\chapter{Combinatorial nullstellensatz}
+
 Fix an arbitrary field $\mathbb{F}$. We write $f_{k_1, \ldots, k_n}$ for the coefficient of $x_1^{k_1}\cdots x_n^{k_n}$ in the polynomial $f \in \mathbb{F}[x_1, \ldots, x_n]$. 
 \begin{lemma}
 Suppose $f \in \mathbb{F}[x_1, \ldots, x_n]$ and $k_1, \ldots, k_n \in \IN$ with $\sum_{i \in \irange{n}} k_i = \deg(f)$.  If $f_{k_1, \ldots, k_n} \ne 0$, then for any $A_1, \ldots, A_n \subseteq \mathbb{F}$ with $\card{A_i} \ge k_i + 1$, there exists $(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n$ with $f(a_1, \ldots, a_n) \ne 0$.
@@ -506,16 +544,22 @@ But $x_1$ has degree zero in $R$, so $R(a,\ldots, a_n) = R(a_1,\ldots, a_n) \ne 
 Finally, this means that $f(a,\ldots, a_n) = (a-a)Q(a,\ldots, a_n) + R(a,\ldots, a_n) \ne 0$, a contradiction.
 \end{proof}
 
-\section*{the graph polynomial}
+\section{The graph polynomial}
 Let $G$ be a loopless multigraph with vertex set $V \DefinedAs \set{x_1, \ldots, x_n}$ and edge multiset $E$.  The \emph{graph polynomial} of $G$ is
 \[p_G(x_1,\ldots,x_n) \DefinedAs \prod_{\substack{\set{x_i,x_j} \in E\\i < j}} (x_i - x_j).\]
 To each orientation $\vec{G}$ of $G$, there is a corresponding monomial $m_{\vec{G}}(x_1,\ldots, x_n)$ given by choosing either $x_i$ or $-x_j$ from each factor $(x_i - x_j)$ according to $\vec{G}$. Precisely, given an orientation $\vec{G}$ of $G$ with edge multiset $\vec{E}$, put
 \[m_{\vec{G}}(x_1,\ldots, x_n) \DefinedAs \parens{\prod_{\substack{(x_i,x_j) \in \vec{E}\\i < j}} x_i}\parens{\prod_{\substack{(x_j,x_i) \in \vec{E}\\i < j}} -x_j}.\]
 Then $p_G(x_1,\ldots,x_n) = \sum_{\vec{G}} m_{\vec{G}}(x_1,\ldots, x_n)$, where the sum is over all orientations $\vec{G}$ of $G$.  
 
-Each $m_{\vec{G}}(x_1,\ldots, x_n)$ has coefficient either $1$ or $-1$.   We are interested in collecting up all monomials of the form $x_1^{k_1}\cdots x_n^{k_n}$.  Let $DE_{k_1,\ldots, k_n}(G)$ be the orientations of $G$ where $m_{\vec{G}}(x_1,\ldots, x_n) = x_1^{k_1}\cdots x_n^{k_n}$ and $DO_{k_1,\ldots, k_n}(G)$ the orientations of $G$ where $m_{\vec{G}}(x_1,\ldots, x_n) = -x_1^{k_1}\cdots x_n^{k_n}$.  Write $p_{k_1, \ldots, k_n}(G)$ for the coefficient of $x_1^{k_1}\cdots x_n^{k_n}$ in $p_G(x_1,\ldots,x_n)$.  Then we have
+Each $m_{\vec{G}}(x_1,\ldots, x_n)$ has coefficient either $1$ or $-1$.   
+We are interested in collecting up all monomials of the form $x_1^{k_1}\cdots x_n^{k_n}$.  Let $DE_{k_1,\ldots, k_n}(G)$ be the orientations of $G$ 
+where $m_{\vec{G}}(x_1,\ldots, x_n) = x_1^{k_1}\cdots x_n^{k_n}$ and $DO_{k_1,\ldots, k_n}(G)$ the orientations of $G$ where $m_{\vec{G}}(x_1,\ldots, x_n) = -x_1^{k_1}\cdots x_n^{k_n}$.  
+Write $p_{k_1, \ldots, k_n}(G)$ for the coefficient of $x_1^{k_1}\cdots x_n^{k_n}$ in $p_G(x_1,\ldots,x_n)$.  Then we have
 \[p_{k_1, \ldots, k_n}(G) = |DE_{k_1,\ldots, k_n}(G)| - |DO_{k_1,\ldots, k_n}(G)|.\]
-This gives a combinatorial interpretation of the coefficients of $p_G$, but unfortunately it quantifies over all orientations of $G$.  For applying the Combinatorial Nullstellensatz, it is useful to have a single orientation of $G$ as a certificate that $p_{k_1, \ldots, k_n}(G) \ne 0$.  This can be achieved in terms of Eulerian subgraphs.  A digraph is Eulerian if the in-degree and out-degree are equal at every vertex.  Let $EE(\vec{G})$ be the spanning Eulerian subgraphs of $\vec{G}$ with an even number of edges and let $EO(\vec{G})$ be the spanning Eulerian subgraphs of $\vec{G}$ with an odd number of edges.  
+This gives a combinatorial interpretation of the coefficients of $p_G$, but unfortunately it quantifies over all orientations of $G$.  
+For applying the Combinatorial Nullstellensatz, it is useful to have a single orientation of $G$ as a certificate that $p_{k_1, \ldots, k_n}(G) \ne 0$.  
+This can be achieved in terms of Eulerian subgraphs.  A digraph is Eulerian if the in-degree and out-degree are equal at every vertex.  
+Let $EE(\vec{G})$ be the spanning Eulerian subgraphs of $\vec{G}$ with an even number of edges and let $EO(\vec{G})$ be the spanning Eulerian subgraphs of $\vec{G}$ with an odd number of edges.  
 
 \begin{EulerianOrientationsLemma}
 If $\vec{G}$ is an orientation of $G$, then we have
@@ -530,7 +574,7 @@ If $\vec{G}$ is an orientation of $G$, then we have
 Therefore, if $\vec{G}$ is an orientation of $G$ with $d_{\vec{G}}^+(x_i) = k_i$ for all $i \in \irange{n}$, then
 \[|p_{k_1, \ldots, k_n}(G)| = \card{|EE(\vec{G})| - |EO(\vec{G})|}.\]
 
-\section*{a coefficient formula}
+\section{A coefficient formula}
 \begin{lemma}
 Suppose $f \in \mathbb{F}[x_1, \ldots, x_n]$ and $k_1, \ldots, k_n \in \IN$ with $\sum_{i \in \irange{n}} k_i = \deg(f)$.  For any $A_1, \ldots, A_n \subseteq \mathbb{F}$ with $\card{A_i} = k_i + 1$, we have
 \[f_{k_1, \ldots, k_n} = \sum_{(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n} \frac{f(a_1, \ldots, a_n)}{N(a_1, \ldots, a_n)},\]
@@ -550,15 +594,15 @@ Now  $\deg(F) = \sum_{i \in \irange{n}} (|A_i| - 1) = \sum_{i \in \irange{n}} k_
 \[f_{k_1, \ldots, k_n} = F_{k_1, \ldots, k_n} = \sum_{(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n} \frac{f(a_1, \ldots, a_n)}{N(a_1, \ldots, a_n)}.\]
 \end{proof}
 
+\section{Uniquely colorable graphs}
+\section{Adding edges to simplify coefficient computation}
+\section{AT preserving operations}
+\section{Historical notes}
 
-\chapter{partitions and vertex shuffling}
-\section*{destroying non-complete}
-\section*{shuffling with more rules}
-\section*{looking at the entire recoloring digraph}
+\chapter{Independent transversals}
 
-\chapter*{independent transversals}
-\section*{randomly}
-\section*{a more powerful tool}
+\section{Randomly}
+\section{A stronger bound}
 \begin{theorem}\label{LopsidedTransversal}
 Let $H$ be a graph and $V_1 \cup \cdots \cup V_r$ a partition of $V(H)$.  
 Suppose there exists $t \geq 1$ such that for each $i \in \irange{r}$ and each $v \in V_i$ we have $d(v) \leq \min\set{t, \card{V_i}-t}$.  For any $S \subseteq V(H)$ with $\card{S} < \min\set{\card{V_1}, \ldots, \card{V_r}}$, there is an independent transversal $I$ of $V_1, \ldots, V_r$ with $I \cap S = \emptyset$.
@@ -635,13 +679,11 @@ Choose a root $c$ of $T$. Traversing $T$ in leaf-first order and for each leaf $
 
 Note that the condition on $S$ can be weakened slightly.  Suppose we have ordered the $V_i$ so that $\card{V_1} \leq \card{V_2} \leq \cdots \leq \card{V_r}$.  Then for any $S \subseteq V(H)$ with $\card{S} < \card{V_2}$ such that $V_1 \not \subseteq S$, there is an independent transversal $I$ of $V_1, \ldots, V_r$ with $I \cap S = \emptyset$.  The proof is the same except when we choose our root $c$, choose it so as to maximize $\card{V_c}$.  
 Since $\card{J} \geq 2$, we get $\card{V_c} \geq \card{V_2} > \card{S}$ at the end.
+\section{Lists with low degree color graphs}
 
-\section*{hitting all maximum cliques}
-\begin{defn}
+\section{Hitting all maximum cliques}
 Let $G$ be a graph. For a collection of cliques $\Q$ in $G$, let $X_\Q$ be the intersection graph of $\Q$; that is, the 
 vertex set of $X_\Q$ is $\Q$ and there is an edge between $Q_1, Q_2 \in \Q$ iff $Q_1 \ne Q_2$ and $Q_1$ and $Q_2$ intersect.
-\end{defn}
-
 When $\Q$ is a collection of maximum cliques, we get a lot of information about $X_\Q$.  
 \begin{lemma}\label{HajnalLemma}
 If $G$ is a graph and $\Q$ is a collection of maximum cliques in $G$, then 
@@ -671,7 +713,14 @@ If $\Q$ is a collection of maximum cliques in a graph $G$ with $\omega(G) \ge \f
 \end{itemize}
 \end{lemma}
 
-\chapter{vertex transitive graphs}
+\section{Strong coloring}
+\section{When every vertex is in a big clique}
+\section{Historical notes}
+
+\chapter{Kempe chains and vertex shuffling}
+\section{Historical notes}
+
+\chapter{Vertex transitive graphs}
 Let $G$ be a vertex-transitive graph and let $\Q$ be the collection of all
 maximum cliques in $G$.  It is not hard to see that $X_\Q$ is vertex-transitive
 as well; in fact, we have the following.
@@ -703,8 +752,10 @@ $\frac12 \omega(G) + \frac12 \omega(G) + \frac12 \omega(G) - 1 = \Delta(G)$ neig
 Hence $X_\Q = X_\Z$ is a cycle and $G$ is the graph obtained from $X_\Q$ by blowing up each vertex to a $K_{\frac12 \omega(G)}$.
 \end{proof}
 
+\section{Historical notes}
 
-\chapter{coloring edges}
+
+\chapter{Coloring edges}
 It is also useful to consider coloring the edges of a graph so that incident edges receive different colors.  This
 appears to be at odds with our previous claim that this book was only about coloring vertices of graph; fortunately, edge coloring
 is just a special case of vertex coloring.  If $G$ is a graph, the \emph{line graph} of $G$, written
@@ -795,6 +846,11 @@ We need a concise proof of this without having to introduce too much background.
 \section*{acceptable paths}
 \section*{acceptable trees}
 \section*{edge list coloring}
+\section{Historical notes}
 \backmatter
+\appendix
+\setboolean{@mainmatter}{true}
+\chapter{Basic probability}
+
 \printindex
 \end{document}

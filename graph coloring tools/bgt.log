@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100) (preloaded format=pdflatex 2016.12.12)  19 MAY 2017 12:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100) (preloaded format=pdflatex 2016.12.12)  19 MAY 2017 13:38
 entering extended mode
 **"C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex"
 ("C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex"
@@ -544,7 +544,8 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseDisplaystyle=\skip88
 \L@UnitsRaiseTextstyle=\skip89
 \L@UnitsRaiseScriptstyle=\skip90
-)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\makeidx.sty"
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\carlisle\remreset.sty") ("C:\P
+rogram Files (x86)\MiKTeX 2.9\tex\latex\base\makeidx.sty"
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
 \@indexfile=\write4
@@ -648,7 +649,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \c@summary=\count164
 \c@theorem=\count165
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:130: LaTeX 
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:161: LaTeX 
 Error: Command \C already defined.
                Or name \end... illegal, see p.192 of the manual.
 
@@ -660,7 +661,7 @@ or  <return>  to continue without it.
 
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:133: LaTeX 
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:164: LaTeX 
 Error: Command \G already defined.
                Or name \end... illegal, see p.192 of the manual.
 
@@ -674,38 +675,38 @@ or  <return>  to continue without it.
 (bgt.aux)
 \openout1 = `bgt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 148.
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 148.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 179.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 179.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 148.
-LaTeX Font Info:    Try loading font information for T1+pplj on input line 148.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Try loading font information for T1+pplj on input line 179.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pplj.fd"
 File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
 )
 \AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring ON on input line 148.
+Package hyperref Info: Link coloring ON on input line 179.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -715,9 +716,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count166
 )
-LaTeX Info: Redefining \ref on input line 148.
-LaTeX Info: Redefining \pageref on input line 148.
-LaTeX Info: Redefining \nameref on input line 148.
+LaTeX Info: Redefining \ref on input line 179.
+LaTeX Info: Redefining \pageref on input line 179.
+LaTeX Info: Redefining \nameref on input line 179.
 
 (bgt.out)
 (bgt.out)
@@ -726,7 +727,7 @@ LaTeX Info: Redefining \nameref on input line 148.
 
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 148.
+LaTeX Info: Redefining \selectfont on input line 179.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -761,7 +762,7 @@ LaTeX Info: Redefining \selectfont on input line 148.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 148.
+LaTeX Info: Redefining \microtypecontext on input line 179.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -803,28 +804,28 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \langwohyphens=\language72
-LaTeX Font Info:    Try loading font information for T1+phv on input line 151.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 182.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 151.
+(Font)              scaled to size 8.99994pt on input line 182.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 16.19989pt on input line 151.
+(Font)              scaled to size 16.19989pt on input line 182.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 32.39978pt on input line 151.
+(Font)              scaled to size 32.39978pt on input line 182.
 
-Overfull \hbox (37.03735pt too wide) in paragraph at lines 151--151
+Overfull \hbox (37.03735pt too wide) in paragraph at lines 182--182
 []\T1/phv/m/n/36/200ls BASIC GRAPH CO-LO-RING[]  
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 12.59991pt on input line 151.
+(Font)              scaled to size 12.59991pt on input line 182.
 
 [1
 
@@ -844,35 +845,39 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 [4
 
 ]
-[5]
-[6
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:196: Text l
+ine contains an invalid character
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+ [5] [6
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+pplx on input line 173
+LaTeX Font Info:    Try loading font information for OT1+pplx on input line 204
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pplx.fd"
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 173
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 204
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlzplm.fd"
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 173
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 204
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omszplm.fd"
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 173
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 204
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxzplm.fd"
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 173
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 204
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1zplm.fd"
@@ -883,33 +888,33 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 173.
+(Font)              scaled to size 10.42007pt on input line 204.
 
 (C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 173.
+(Font)              scaled to size 7.91925pt on input line 204.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 173.
+(Font)              scaled to size 6.25204pt on input line 204.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 173.
+(Font)              scaled to size 10.42007pt on input line 204.
 
 (C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 173.
+(Font)              scaled to size 7.91925pt on input line 204.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 173.
+(Font)              scaled to size 6.25204pt on input line 204.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 173.
+(Font)              scaled to size 8.33606pt on input line 204.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 173.
+(Font)              scaled to size 5.21004pt on input line 204.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 173.
+(Font)              scaled to size 8.33606pt on input line 204.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 173.
+(Font)              scaled to size 5.21004pt on input line 204.
 
 LaTeX Warning: Marginpar on page 7 moved.
 
@@ -955,12 +960,10 @@ LaTeX Warning: Marginpar on page 7 moved.
 
 LaTeX Warning: Marginpar on page 7 moved.
 
+ [7
 
-[7
 
-
-]
-[8
+] [8
 
 ]
 
@@ -1000,12 +1003,8 @@ LaTeX Warning: Marginpar on page 9 moved.
 LaTeX Warning: Marginpar on page 9 moved.
 
 LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 191.
-
-[9]
-
-LaTeX Warning: Marginpar on page 10 moved.
-
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 222.
+ [9]
 
 LaTeX Warning: Marginpar on page 10 moved.
 
@@ -1037,56 +1036,53 @@ LaTeX Warning: Marginpar on page 10 moved.
 LaTeX Warning: Marginpar on page 10 moved.
 
 
-[10]
-[11]
-[12]
-Overfull \hbox (0.1086pt too wide) in paragraph at lines 297--302
+LaTeX Warning: Marginpar on page 10 moved.
+
+ [10] [11]
+Overfull \hbox (0.1086pt too wide) in paragraph at lines 328--333
 []\T1/pplj/m/n/10 (+19) The requirement $[] \OML/zplm/m/it/10 > d\OT1/zplm/m/n/
 10 (\OML/zplm/m/it/10 v\OT1/zplm/m/n/10 )$ \T1/pplj/m/n/10 (+19) in Theorem [][
 ]7[][] is quite strong, in the 
  []
 
-
-[13
-
-]
-[14]
-Overfull \hbox (0.10896pt too wide) in paragraph at lines 349--353
+ [12] [13]
+Overfull \hbox (0.10896pt too wide) in paragraph at lines 380--384
 \T1/pplj/m/n/10 (+3) each arrow, then any maximal independent set is a kernel. 
 Theorem [][]9[][] 
  []
 
 
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+ [14]
+
 LaTeX Warning: Marginpar on page 15 moved.
 
+ [15] [16
 
-[15]
-
-LaTeX Warning: Marginpar on page 16 moved.
-
-
-LaTeX Warning: Marginpar on page 16 moved.
-
-
-[16]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 385
+]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 418
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ufplmbb.fd"
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Overfull \hbox (2.80997pt too wide) in paragraph at lines 401--401
+Overfull \hbox (2.80997pt too wide) in paragraph at lines 434--434
 []  
  []
 
+ [17] [18] [19] [20
 
-[17
+] [21] [22
 
 ]
-[18]
-[19]
-[20]
-Overfull \hbox (12.9537pt too wide) in paragraph at lines 516--517
+Underfull \vbox (badness 1708) has occurred while \output is active []
+
+ [23]
+Overfull \hbox (12.9537pt too wide) in paragraph at lines 554--558
 \OML/zplm/m/it/10 x[] [] x[]$ \T1/pplj/m/n/10 (-20) and $\OML/zplm/m/it/10 DO[]
 \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 G\OT1/zplm/m/n/10 )$ \T1/pplj/m/n/10 (-20) 
 the orien-ta-ti-ons of $\OML/zplm/m/it/10 G$ \T1/pplj/m/n/10 (-20) where $\OML/
@@ -1095,20 +1091,20 @@ zplm/m/it/10 m[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT1/pplx/m/n/10 , [] ,
  []
 
 
-Overfull \hbox (0.12332pt too wide) in paragraph at lines 517--519
+Overfull \hbox (0.12332pt too wide) in paragraph at lines 558--563
 \T1/pplj/m/n/10 (+13) This gives a combinatorial interpretation of the coeffici
 ents of $\OML/zplm/m/it/10 p[]$\T1/pplj/m/n/10 (+13) , but 
  []
 
 
-Overfull \hbox (0.10144pt too wide) in paragraph at lines 517--519
+Overfull \hbox (0.10144pt too wide) in paragraph at lines 558--563
 \OML/zplm/m/it/10 EO\OT1/zplm/m/n/10 ([])$ \T1/pplj/m/n/10 (+1) be the spanning
  Eulerian subgraphs of $[]$ with an odd number 
  []
 
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:520: LaTeX 
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:564: LaTeX 
 Error: Environment EulerianOrientationsLemma undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1118,13 +1114,13 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (9.51942pt too wide) detected at line 522
+Overfull \hbox (9.51942pt too wide) detected at line 566
 [] \OT1/zplm/m/n/10 = [] \OT1/pplx/m/n/10 .
  []
 
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:523: LaTeX 
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:567: LaTeX 
 Error: \begin{document} ended by \end{EulerianOrientationsLemma}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1134,20 +1130,20 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (3.04076pt too wide) in paragraph at lines 526--528
+Overfull \hbox (3.04076pt too wide) in paragraph at lines 570--572
 []$ \T1/pplj/m/n/10 (-20) and $\OML/zplm/m/it/10 D$\T1/pplj/m/n/10 (-20) . If $
 []$ is even, this gi-ves bi-jecti-ons be-t-ween $\OML/zplm/m/it/10 DE[]\OT1/zpl
 m/m/n/10 (\OML/zplm/m/it/10 G\OT1/zplm/m/n/10 )$ 
  []
 
 
-Overfull \hbox (9.51942pt too wide) detected at line 528
+Overfull \hbox (9.51942pt too wide) detected at line 572
 [] \OT1/zplm/m/n/10 = [] \OT1/pplx/m/n/10 .
  []
 
 
-[21]
-Overfull \hbox (3.59454pt too wide) detected at line 548
+[24]
+Overfull \hbox (3.59454pt too wide) detected at line 592
 \OML/zplm/m/it/10 F\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT1/pplx/m/n/10 , []
  , \OML/zplm/m/it/10 x[]\OT1/zplm/m/n/10 ) = [] \OML/zplm/m/it/10 f\OT1/zplm/m/
 n/10 (\OML/zplm/m/it/10 a[]\OT1/pplx/m/n/10 , [] , \OML/zplm/m/it/10 a[]\OT1/zp
@@ -1155,84 +1151,57 @@ lm/m/n/10 )[]\OT1/pplx/m/n/10 .
  []
 
 
-[22]
-[23
-
-]
-[24
-
-]
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:569: Undefi
-ned control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:571: Undefi
-ned control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:576: Undefi
-ned control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:590: Undefi
-ned control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
- [25]
-
-
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:640: LaTeX 
-Error: Environment defn undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:643: LaTeX 
-Error: \begin{document} ended by \end{defn}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
+[25]
 [26]
-LaTeX Font Info:    Try loading font information for TS1+pplj on input line 669
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:613: Undefi
+ned control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:615: Undefi
+ned control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:620: Undefi
+ned control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:634: Undefi
+ned control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+ [27
+
+] [28]
+LaTeX Font Info:    Try loading font information for TS1+pplj on input line 711
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1pplj.fd"
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
-)
-[27]
-[28
+) [29] [30
+
+] [31] [32
 
 ]
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:698: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:747: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1241,7 +1210,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:699: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:748: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1250,7 +1219,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:699: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:748: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1259,7 +1228,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:700: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:749: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1268,7 +1237,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:701: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:750: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1277,7 +1246,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:701: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:750: Missin
 g { inserted
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -1285,7 +1254,7 @@ so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:701: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:750: Missin
 g } inserted
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1294,7 +1263,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:703: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:752: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1303,7 +1272,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:703: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:752: Missin
 g { inserted
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -1311,7 +1280,7 @@ so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:703: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:752: Missin
 g } inserted
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1319,10 +1288,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
- [29] [30
+ [33] [34
 
 ]
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:719: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:770: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1331,7 +1300,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:719: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:770: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1340,7 +1309,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:720: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:771: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1349,37 +1318,41 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (0.12444pt too wide) in paragraph at lines 714--721
+Overfull \hbox (0.12444pt too wide) in paragraph at lines 765--772
 \T1/pplj/m/n/10 (+13) we can get by with zero colors. With just one color we ca
 n edge color 
  []
 
- [31] [32] [33] [34
+ [35] [36] [37] [38
 
 ]
+Appendix A.
 No file bgt.ind.
 
 Package bibentry Warning: You have used \nobibliography* 
 (bibentry)                without a following \bibliography.
 (bibentry)                You may not be able to run BibTeX.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 800.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 800.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 856.
+ [39
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 856.
  (bgt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 800.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 800.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 856.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 856.
 Package rerunfilecheck Info: File `bgt.out' has not changed.
-(rerunfilecheck)             Checksum: D838AFCA0741009C510447770BAA9F77;1649.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 800.
+(rerunfilecheck)             Checksum: CBA8C88E7B99BB3FF69799002EE26103;5904.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 856.
  ) 
 Here is how much of TeX's memory you used:
- 15891 strings out of 493367
- 230057 string characters out of 3137292
- 357710 words of memory out of 3000000
- 18732 multiletter control sequences out of 15000+200000
+ 15953 strings out of 493367
+ 230943 string characters out of 3137292
+ 358024 words of memory out of 3000000
+ 18761 multiletter control sequences out of 15000+200000
  98350 words of font info for 314 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
- 46i,13n,54p,735b,455s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,13n,54p,735b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/landon/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/base/8r.enc}<C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progr
@@ -1395,9 +1368,9 @@ rs/landon/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mathpazo/fplmri.pfb><C:
 m Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on bgt.pdf (34 pages, 243669 bytes).
+Output written on bgt.pdf (39 pages, 260324 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 48225 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 114 named destinations out of 1000 (max. 500000)
+ 48425 words of extra memory for PDF output out of 51595 (max. 10000000)
 
