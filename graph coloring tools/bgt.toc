@@ -1,40 +1,40 @@
-\contentsline {chapter}{Graphs}{7}{chapter*.2}
-\contentsline {chapter}{Coloring vertices}{9}{chapter*.3}
-\contentsline {section}{Basic estimates}{10}{section*.4}
-\contentsline {section}{Brooks' theorem}{11}{section*.5}
-\contentsline {section}{List coloring}{12}{section*.6}
-\contentsline {section}{Historical notes}{15}{section*.7}
-\contentsline {chapter}{Flows}{17}{chapter*.8}
-\contentsline {section}{Hall's theorem}{18}{section*.9}
-\contentsline {section}{Orientations with prescribed degrees}{19}{section*.10}
-\contentsline {section}{Connectivity}{19}{section*.11}
-\contentsline {section}{Historical notes}{19}{section*.12}
-\contentsline {chapter}{Kernel magic}{21}{chapter*.13}
-\contentsline {section}{Brooks' theorem for list coloring}{21}{section*.14}
-\contentsline {section}{Triangle-free graphs}{21}{section*.15}
-\contentsline {section}{Historical notes}{21}{section*.16}
-\contentsline {chapter}{Combinatorial nullstellensatz}{23}{chapter*.17}
-\contentsline {section}{The graph polynomial}{23}{section*.18}
-\contentsline {section}{A coefficient formula}{25}{section*.19}
-\contentsline {section}{Uniquely colorable graphs}{26}{section*.20}
-\contentsline {section}{Adding edges to simplify coefficient computation}{26}{section*.21}
-\contentsline {section}{AT preserving operations}{26}{section*.22}
-\contentsline {section}{Historical notes}{26}{section*.23}
-\contentsline {chapter}{Independent transversals}{27}{chapter*.24}
-\contentsline {section}{Randomly}{27}{section*.25}
-\contentsline {section}{A stronger bound}{27}{section*.26}
-\contentsline {section}{Lists with low degree color graphs}{29}{section*.27}
-\contentsline {section}{Hitting all maximum cliques}{29}{section*.28}
-\contentsline {section}{Strong coloring}{29}{section*.29}
-\contentsline {section}{When every vertex is in a big clique}{29}{section*.30}
-\contentsline {section}{Historical notes}{29}{section*.31}
-\contentsline {chapter}{Kempe chains and vertex shuffling}{31}{chapter*.32}
-\contentsline {section}{Historical notes}{31}{section*.33}
-\contentsline {chapter}{Vertex transitive graphs}{33}{chapter*.34}
-\contentsline {section}{Historical notes}{33}{section*.35}
-\contentsline {chapter}{Coloring edges}{35}{chapter*.36}
-\contentsline {section}{Historical notes}{37}{section*.37}
+\contentsline {chapter}{Graphs}{5}{chapter*.2}
+\contentsline {chapter}{Coloring vertices}{6}{chapter*.3}
+\contentsline {section}{Basic estimates}{7}{section*.4}
+\contentsline {section}{Brooks' theorem}{8}{section*.5}
+\contentsline {section}{List coloring}{9}{section*.6}
+\contentsline {section}{Historical notes}{12}{section*.7}
+\contentsline {chapter}{Flows}{13}{chapter*.8}
+\contentsline {section}{Hall's theorem}{14}{section*.9}
+\contentsline {section}{Orientations with prescribed degrees}{15}{section*.10}
+\contentsline {section}{Connectivity}{15}{section*.11}
+\contentsline {section}{Historical notes}{15}{section*.12}
+\contentsline {chapter}{Kernel magic}{16}{chapter*.13}
+\contentsline {section}{Brooks' theorem for list coloring}{16}{section*.14}
+\contentsline {section}{Triangle-free graphs}{16}{section*.15}
+\contentsline {section}{Historical notes}{16}{section*.16}
+\contentsline {chapter}{Combinatorial nullstellensatz}{17}{chapter*.17}
+\contentsline {section}{The graph polynomial}{17}{section*.18}
+\contentsline {section}{A coefficient formula}{19}{section*.19}
+\contentsline {section}{Uniquely colorable graphs}{20}{section*.20}
+\contentsline {section}{Adding edges to simplify coefficient computation}{20}{section*.21}
+\contentsline {section}{AT preserving operations}{20}{section*.22}
+\contentsline {section}{Historical notes}{20}{section*.23}
+\contentsline {chapter}{Independent transversals}{21}{chapter*.24}
+\contentsline {section}{Randomly}{21}{section*.25}
+\contentsline {section}{A stronger bound}{21}{section*.26}
+\contentsline {section}{Lists with low degree color graphs}{23}{section*.27}
+\contentsline {section}{Hitting all maximum cliques}{23}{section*.28}
+\contentsline {section}{Strong coloring}{23}{section*.29}
+\contentsline {section}{When every vertex is in a big clique}{23}{section*.30}
+\contentsline {section}{Historical notes}{23}{section*.31}
+\contentsline {chapter}{Kempe chains and vertex shuffling}{24}{chapter*.32}
+\contentsline {section}{Historical notes}{24}{section*.33}
+\contentsline {chapter}{Vertex transitive graphs}{25}{chapter*.34}
+\contentsline {section}{Historical notes}{25}{section*.35}
+\contentsline {chapter}{Coloring edges}{26}{chapter*.36}
+\contentsline {section}{Historical notes}{28}{section*.37}
 \ttl@change@i {\@ne }{chapter}{0em}{\vspace {1.5\baselineskip }\begin {fullwidth}\LARGE \rmfamily \itshape }{\hspace *{0em}\appendixname ~\thecontentslabel : }{\hspace *{0em}}{\rmfamily \upshape \qquad \thecontentspage }\relax 
 \ttl@change@v {chapter}{}{}{\end {fullwidth}}\relax 
-\contentsline {chapter}{\numberline {A}Basic probability}{39}{appendix.A}
+\contentsline {chapter}{\numberline {A}Basic probability}{29}{appendix.A}
 \contentsfinish 

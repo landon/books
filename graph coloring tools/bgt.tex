@@ -1,4 +1,4 @@
-\documentclass{tufte-book} % Use the tufte-book class which in turn uses the tufte-common class
+\documentclass[openany]{tufte-book} % Use the tufte-book class which in turn uses the tufte-common class
 \hypersetup{colorlinks} % Comment this line if you don't wish to have colored links
 \usepackage{microtype} % Improves character and word spacing
 \usepackage{booktabs} % Better horizontal rules in tables
@@ -193,20 +193,54 @@
 For Rachel, Atticus and Alfred.
 \end{doublespace}
 \vfill
-\vfill
+\vfill
 
 \cleardoublepage
 \mainmatter
 \chapter{Graphs}
-A \emph{graph}\marginnote{graph} is a collection of dots we call \emph{vertices}\marginnote{vertices} some of which are connected by curves we call \emph{edges}. \marginnote{edges}
+A \emph{graph} is a collection of dots we call \emph{vertices} some of which are connected by curves we call \emph{edges}. 
 The relative location of the dots and the shape of the curves are not relevant, we are only concerned with whether or not a given
 pair of dots is connected by a curve.  Initially, we forbid edges from a vertex to itself and multiple edges between two vertices.
-If $G$ is a graph, then $V(G)$ is its set of vertices and $E(G)$ its set of edges. \marginnote{$V(G)$, $E(G)$}
-We write $\card{G}$ for the number of vertices in $V(G)$ and $\size{G}$ for the number of edges in $E(G)$. \marginnote{$\card{G}$, $\size{G}$}
+If $G$ is a graph, then $V(G)$ is its set of vertices and $E(G)$ its set of edges. 
+We write $\card{G}$ for the number of vertices in $V(G)$ and $\size{G}$ for the number of edges in $E(G)$.
 Two vertices
-are \emph{adjacent} \marginnote{adjacent} if they are connected by an edge.  The set
-of vertices to which $v$ is adjacent is its \emph{neighborhood}, written $N(v)$. \marginnote{neighborhood} \marginnote{$N(v)$}
-For the size of $v$'s neighborhood $\card{N(v)}$, we write $d(v)$ and call this the \emph{degree} of $v$. \marginnote{$d(v)$}\marginnote{degree}
+are \emph{adjacent}  if they are connected by an edge.  The set
+of vertices to which $v$ is adjacent is its \emph{neighborhood}, written $N(v)$. 
+For the size of $v$'s neighborhood $\card{N(v)}$, we write $d(v)$ and call this the \emph{degree} of $v$.
+\begin{marginfigure}
+		\includegraphics[width=0.5in]{graphs/all/0.pdf}
+		\includegraphics[width=0.5in]{graphs/all/1.pdf}
+		\includegraphics[width=0.5in]{graphs/all/011.pdf}
+		\includegraphics[width=0.5in]{graphs/all/111.pdf}
+		\includegraphics[width=0.5in]{graphs/all/001011.pdf}
+		\includegraphics[width=0.5in]{graphs/all/011010.pdf}
+		\includegraphics[width=0.5in]{graphs/all/011011.pdf}
+		\includegraphics[width=0.5in]{graphs/all/011110.pdf}
+		\includegraphics[width=0.5in]{graphs/all/011111.pdf}
+		\includegraphics[width=0.5in]{graphs/all/111111.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0001001011.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0011001010.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0011001011.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0011010011.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0011011010.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0011011011.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0011011110.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0011011111.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0101011000.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0101011010.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0101011011.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0110011010.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0111001110.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0111001111.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0111011010.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0111011011.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0111011111.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0111111010.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0111111011.pdf}
+		\includegraphics[width=0.5in]{graphs/all/0111111111.pdf}
+		\includegraphics[width=0.5in]{graphs/all/1111111111.pdf}
+		\caption{Graphs with at most five vertices.}
+\end{marginfigure}
 
 \chapter{Coloring vertices}
 The entire book concerns one simple task: we want to color the vertices of a given graph so that adjacent vertices receive different colors.
@@ -838,9 +872,6 @@ to decide whether or not edge coloring a given graph $G$ requires $\Delta(G) + 1
 \begin{theorem}
 Deciding whether or not edge coloring a given graph $G$ requires $\Delta(G) + 1$ colors is hard supposing other things we think are hard are actually hard.
 \end{theorem}
-\begin{proof}
-We need a concise proof of this without having to introduce too much background.  Please submit a pull request on GitHub.
-\end{proof}
 
 \section*{fans as a greedy strategy}
 \section*{acceptable paths}
