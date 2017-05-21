@@ -348,6 +348,75 @@ For $k \ge 3$, determining whether or not a graph has a $k$-coloring is a hard p
 \end{theorem}
 
 \section{Basic estimates}
+
+\begin{marginfigure}[0.25in]
+\centering
+\begin{tikzpicture}[scale = 10, outer sep = 1in]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = [line width=3pt]
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw, fill]
+\tikzstyle{7bc24005-0c73-433b-88fc-258b1a5c36fd}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,255; green,0; blue,0}]
+\Vertex[style = 7bc24005-0c73-433b-88fc-258b1a5c36fd, x = 0.650, y = 0.500, L = \tiny {}]{v0}
+\end{tikzpicture}
+\end{marginfigure}
+\begin{marginfigure}[0.25in]
+\centering
+\begin{tikzpicture}[scale = 10]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = [line width=3pt]
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw, fill]
+\tikzstyle{a3aa1d1d-7cff-4b5b-803a-aeff12154523}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,255; green,0; blue,0}]
+\tikzstyle{5446257a-9e70-4bb5-a7ed-3eee493f7c97}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,0; green,0; blue,255}]
+\Vertex[style = a3aa1d1d-7cff-4b5b-803a-aeff12154523, x = 0.650, y = 0.500, L = \tiny {}]{v0}
+\Vertex[style = 5446257a-9e70-4bb5-a7ed-3eee493f7c97, x = 0.800, y = 0.500, L = \tiny {}]{v1}
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v0)
+\end{tikzpicture}
+\end{marginfigure}
+\begin{marginfigure}[0.25in]
+\centering
+\begin{tikzpicture}[scale = 10]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = [line width=3pt]
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw, fill]
+\tikzstyle{6f2d4fa7-60dd-40f2-b0a3-0fadcbd1d47f}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,255; green,0; blue,0}]
+\tikzstyle{ce12a3da-71ce-46d5-aadc-ecc99677bc21}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,0; green,0; blue,255}]
+\tikzstyle{a5c8a92d-dbcf-45a8-870a-9c88517e4908}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,0; green,255; blue,0}]
+\Vertex[style = 6f2d4fa7-60dd-40f2-b0a3-0fadcbd1d47f, x = 0.650, y = 0.500, L = \tiny {}]{v0}
+\Vertex[style = ce12a3da-71ce-46d5-aadc-ecc99677bc21, x = 0.850, y = 0.500, L = \tiny {}]{v1}
+\Vertex[style = a5c8a92d-dbcf-45a8-870a-9c88517e4908, x = 0.750, y = 0.650, L = \tiny {}]{v2}
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v1)
+\end{tikzpicture}
+\end{marginfigure}
+\begin{marginfigure}[0.25in]
+\centering
+\begin{tikzpicture}[scale = 10]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = [line width=3pt]
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw, fill]
+\tikzstyle{5f873b39-9705-452a-a84b-434bd362e24f}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,255; green,0; blue,0}]
+\tikzstyle{e8d2bc5d-1eaa-45b1-82c0-b5ad4369c905}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,0; green,0; blue,255}]
+\tikzstyle{7cb4136b-f44e-4206-ba53-a1b49fb9c412}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,0; green,255; blue,0}]
+\tikzstyle{5ca5c58d-8345-442a-887e-a790e621fc31}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,255; green,255; blue,0}]
+\Vertex[style = 5f873b39-9705-452a-a84b-434bd362e24f, x = 0.600, y = 0.450, L = \tiny {}]{v0}
+\Vertex[style = e8d2bc5d-1eaa-45b1-82c0-b5ad4369c905, x = 0.900, y = 0.450, L = \tiny {}]{v1}
+\Vertex[style = 7cb4136b-f44e-4206-ba53-a1b49fb9c412, x = 0.750, y = 0.700, L = \tiny {}]{v2}
+\Vertex[style = 5ca5c58d-8345-442a-887e-a790e621fc31, x = 0.750, y = 0.550, L = \tiny {}]{v3}
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v1)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v2)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v1)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v0)
+\end{tikzpicture}
+\caption{All vertices must get different colors in a complete graph.}
+\end{marginfigure}
+
 Even though finding the minimum number of colors needed to color a graph is hard in general (supposing it is), we can still
 look for lower and upper bounds on this value.  The \emph{chromatic number} $\chi(G)$ of a graph $G$ is the smallest $k$ for which $G$ is $k$-colorable.
 The simplest thing we can do is give each vertex a different color.
@@ -372,7 +441,37 @@ of $G$, a contradiction.
 \end{proof}
 
 Both complete graphs and odd cycles attain the upper bound in Theorem \ref{SecondWorstUpperBound}.  Theorem \ref{TwoColoring} says
-we can do better for graphs that don't contain odd cycles.  We can also do better for graphs that don't contain large complete subgraphs.
+we can do better for graphs that don't contain odd cycles.  A \emph{complete bipartite graph} consists of two disjoint independent sets (which we call \emph{parts})
+and all edges between them, we write $K_{a,b}$ for the complete bipartite graph with parts of size $a$ and $b$.  
+Theorem \ref{SecondWorstUpperBound} gives a poor upper bound for complete bipartite graphs.
+\begin{marginfigure}
+\centering
+\begin{tikzpicture}[scale = 10]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = [line width=3pt]
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw, fill]
+\tikzstyle{b1c378e4-07d3-4ef5-b562-7e6f63154031}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,255; green,0; blue,0}]
+\tikzstyle{a0504ff1-cdad-49ff-9da4-f42d0bac63c4}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill={rgb,255:red,0; green,0; blue,255}]
+\Vertex[style = b1c378e4-07d3-4ef5-b562-7e6f63154031, x = 0.600, y = 0.750, L = \tiny {}]{v0}
+\Vertex[style = b1c378e4-07d3-4ef5-b562-7e6f63154031, x = 0.600, y = 0.600, L = \tiny {}]{v1}
+\Vertex[style = b1c378e4-07d3-4ef5-b562-7e6f63154031, x = 0.600, y = 0.450, L = \tiny {}]{v2}
+\Vertex[style = a0504ff1-cdad-49ff-9da4-f42d0bac63c4, x = 0.900, y = 0.750, L = \tiny {}]{v3}
+\Vertex[style = a0504ff1-cdad-49ff-9da4-f42d0bac63c4, x = 0.900, y = 0.600, L = \tiny {}]{v4}
+\Vertex[style = a0504ff1-cdad-49ff-9da4-f42d0bac63c4, x = 0.900, y = 0.450, L = \tiny {}]{v5}
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v0)(v3)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v3)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v3)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v0)(v4)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v4)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v4)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v0)(v5)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v5)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v5)
+\end{tikzpicture}
+\caption{The graph $K_{3,3}$.}
+\end{marginfigure}
+We can also do better for graphs that don't contain large complete subgraphs.
 A set of vertices $S$ in a graph $G$ is a \emph{clique} if the vertices in $S$ are pairwise adjacent.
 The \emph{clique number} of a graph $G$, written $\omega(G)$, is the number of vertices in a largest clique in $G$.
 
@@ -384,6 +483,44 @@ A set of vertices $S$ in a graph $G$ is \emph{independent} if the vertices in $S
 The \emph{independence number} of a graph $G$, written $\alpha(G)$, is the number of vertices in a largest independent set in $G$.
 
 \section{Brooks' theorem}
+\begin{marginfigure}
+\centering
+\begin{tikzpicture}[scale = 12]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = [line width=2pt]
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 4pt, outer sep = 4pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 4pt, outer sep = 4pt, draw, fill]
+\tikzstyle{131bae28-2bdc-4036-be47-2a1c9c8946d9}=[shape = circle,minimum size = 6pt,inner sep = 4pt,outer sep = 4pt,draw,fill={rgb,255:red,255; green,0; blue,0}]
+\tikzstyle{bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d}=[shape = circle,minimum size = 6pt,inner sep = 4pt,outer sep = 4pt,draw,fill={rgb,255:red,0; green,0; blue,255}]
+\tikzstyle{19f95f63-7f16-470b-b04a-d4ef32a60a18}=[shape = circle,minimum size = 6pt,inner sep = 4pt,outer sep = 4pt,draw,fill={rgb,255:red,0; green,255; blue,0}]
+\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.800, y = 0.850, L = \tiny {}]{v0}
+\Vertex[style = bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d, x = 0.550, y = 0.700, L = \tiny {}]{v1}
+\Vertex[style = bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d, x = 1.050, y = 0.700, L = \tiny {}]{v2}
+\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.650, y = 0.650, L = \tiny {}]{v3}
+\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.950, y = 0.400, L = \tiny {}]{v4}
+\Vertex[style = 19f95f63-7f16-470b-b04a-d4ef32a60a18, x = 0.650, y = 0.400, L = \tiny {}]{v5}
+\Vertex[style = bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d, x = 0.800, y = 0.750, L = \tiny {}]{v6}
+\Vertex[style = 19f95f63-7f16-470b-b04a-d4ef32a60a18, x = 0.950, y = 0.650, L = \tiny {}]{v7}
+\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.700, y = 0.500, L = \tiny {}]{v8}
+\Vertex[style = 19f95f63-7f16-470b-b04a-d4ef32a60a18, x = 0.900, y = 0.500, L = \tiny {}]{v9}
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v5)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v2)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v5)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v7)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v9)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v8)(v6)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v8)(v7)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v9)(v6)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v3)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v0)(v6)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v7)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v9)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v5)(v8)
+\end{tikzpicture}
+\caption{The Petersen graph.}
+\end{marginfigure}
 \begin{theorem}
 If $G$ is a graph with $\Delta(G) \ge 3$ and $\omega(G) \le \Delta(G)$, then $\chi(G) \le \Delta(G)$.
 \label{BrooksTheorem}
