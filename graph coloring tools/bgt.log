@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100) (preloaded format=pdflatex 2016.12.12)  20 MAY 2017 12:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100) (preloaded format=pdflatex 2016.12.12)  20 MAY 2017 22:55
 entering extended mode
 **"C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex"
 ("C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex"
@@ -511,7 +511,34 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@thisruleclass=\count126
 \@lastruleclass=\count127
 \@thisrulewidth=\dimen146
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+) (tkz-graph.sty
+Package: tkz-graph 18/11/2008 v 2.7d base for graphs
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer\tikz.st
+y (C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.sty 
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfrcs.sty
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-c
+ommon.tex
+\pgfutil@everybye=\toks20
+\pgfutil@tempdima=\dimen147
+\pgfutil@tempdimb=\dimen148
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-c
+ommon-lists.tex))
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-l
+atex.def
+\pgfutil@abb=\box56
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfrcs.co
+de.tex
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgfcore.st
+y ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
@@ -523,19 +550,300 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
-\Gin@req@height=\dimen147
-\Gin@req@width=\dimen148
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\systemlayer\pgfsys.st
+y
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys.
+code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.c
+ode.tex
+\pgfkeys@pathtoks=\toks21
+\pgfkeys@temptoks=\toks22
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeysfi
+ltered.code.tex
+\pgfkeys@tmptoks=\toks23
+))
+\pgf@x=\dimen151
+\pgf@y=\dimen152
+\pgf@xa=\dimen153
+\pgf@ya=\dimen154
+\pgf@xb=\dimen155
+\pgf@yb=\dimen156
+\pgf@xc=\dimen157
+\pgf@yc=\dimen158
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count128
+\c@pgf@countb=\count129
+\c@pgf@countc=\count130
+\c@pgf@countd=\count131
+\t@pgf@toka=\toks24
+\t@pgf@tokb=\toks25
+\t@pgf@tokc=\toks26
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-
+pdftex.def
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-
+common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsyss
+oftpath.code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count132
+\pgfsyssoftpath@bigbuffer@items=\count133
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsysp
+rotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcore.
+code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
+ex
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathcalc.co
+de.tex
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathutil.co
+de.tex)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparser.
+code.tex
+\pgfmath@dimen=\dimen159
+\pgfmath@count=\count134
+\pgfmath@box=\box57
+\pgfmath@toks=\toks27
+\pgfmath@stack@operand=\toks28
+\pgfmath@stack@operation=\toks29
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.code.tex
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.basic.code.tex)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.trigonometric.code.tex)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.random.code.tex)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.comparison.code.tex)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.base.code.tex)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.round.code.tex)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.misc.code.tex)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.integerarithmetics.code.tex)))
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat.c
+ode.tex
+\c@pgfmathroundto@lastzeros=\count135
+))
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+oints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen160
+\pgf@picmaxx=\dimen161
+\pgf@picminy=\dimen162
+\pgf@picmaxy=\dimen163
+\pgf@pathminx=\dimen164
+\pgf@pathmaxx=\dimen165
+\pgf@pathminy=\dimen166
+\pgf@pathmaxy=\dimen167
+\pgf@xx=\dimen168
+\pgf@xy=\dimen169
+\pgf@yx=\dimen170
+\pgf@yy=\dimen171
+\pgf@zx=\dimen172
+\pgf@zy=\dimen173
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen174
+\pgf@path@lasty=\dimen175
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athusage.code.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen176
+\pgf@shorten@start@additional=\dimen177
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcores
+copes.code.tex
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box58
+\pgf@hbox=\box59
+\pgf@layerbox@main=\box60
+\pgf@picture@serial@count=\count136
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreg
+raphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen178
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoret
+ransformations.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen179
+\pgf@pt@y=\dimen180
+\pgf@pt@temp=\dimen181
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreq
+uick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreo
+bjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorea
+rrows.code.tex
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen182
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcores
+hade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen183
+\pgf@sys@shading@range@num=\count137
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorei
+mage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoree
+xternal.code.tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box61
+))
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorel
+ayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoret
+ransparency.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+atterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulesh
+apes.code.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box62
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulepl
+ot.code.tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp
+-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen184
+\pgf@nodesepend=\dimen185
+)
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp
+-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+)) (C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgffor.s
+ty
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfkeys.sty
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.c
+ode.tex)) (C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\math\pgfmat
+h.sty
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
+ex))
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgffor.co
+de.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
+ex)
+\pgffor@iter=\dimen186
+\pgffor@skip=\dimen187
+\pgffor@stack=\toks30
+\pgffor@toks=\toks31
+))
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+tikz.code.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrar
+yplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count138
+\pgfplotmarksize=\dimen188
+)
+\tikz@lastx=\dimen189
+\tikz@lasty=\dimen190
+\tikz@lastxsaved=\dimen191
+\tikz@lastysaved=\dimen192
+\tikzleveldistance=\dimen193
+\tikzsiblingdistance=\dimen194
+\tikz@figbox=\box63
+\tikz@figbox@bg=\box64
+\tikz@tempbox=\box65
+\tikz@tempbox@bg=\box66
+\tikztreelevel=\count139
+\tikznumberofchildren=\count140
+\tikznumberofcurrentchild=\count141
+\tikz@fig@count=\count142
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulema
+trix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count143
+\pgfmatrixcurrentcolumn=\count144
+\pgf@matrix@numberofcolumns=\count145
+)
+\tikz@expandcount=\count146
+
+(C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+\c@tkzb@ca=\count147
+\c@tkzb@cb=\count148
+\c@tkzb@cc=\count149
+\c@tkzb@v=\count150
+\c@tkzb@cd=\count151
+\c@tkzb@ce=\count152
+\c@tkzb@cf=\count153
+\c@tkzb@temp=\count154
+\c@tkzb@int=\count155
+\c@tkzb@next=\count156
+\c@tkzb@ta=\count157
+\c@tkzb@tb=\count158
+\node@distance=\dimen195
 ) (C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyvrb\fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count128
-\FV@InFile=\read1
-\FV@TabBox=\box56
-\c@FancyVerbLine=\count129
-\FV@StepNumber=\count130
-\FV@OutFile=\write3
+\FV@CodeLineNo=\count159
+\FV@InFile=\read2
+\FV@TabBox=\box67
+\c@FancyVerbLine=\count160
+\FV@StepNumber=\count161
+\FV@OutFile=\write4
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\units\units.sty
@@ -549,8 +857,8 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 rogram Files (x86)\MiKTeX 2.9\tex\latex\base\makeidx.sty"
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
-\@indexfile=\write4
-\openout4 = `bgt.idx'.
+\@indexfile=\write5
+\openout5 = `bgt.idx'.
 
 Writing index file bgt.idx
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
@@ -561,62 +869,63 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2000/06/29 v2.01 AMS text
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks20
-\ex@=\dimen149
+\@emptytoks=\toks32
+\ex@=\dimen196
 )) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen150
+\pmbraise@=\dimen197
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count131
+\inf@bad=\count162
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count132
-\leftroot@=\count133
+\uproot@=\count163
+\leftroot@=\count164
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count134
-\DOTSCASE@=\count135
+\classnum@=\count165
+\DOTSCASE@=\count166
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
-\Mathstrutbox@=\box57
-\strutbox@=\box58
-\big@size=\dimen151
+\Mathstrutbox@=\box68
+\strutbox@=\box69
+\big@size=\dimen198
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count136
-\c@MaxMatrixCols=\count137
+\macc@depth=\count167
+\c@MaxMatrixCols=\count168
 \dotsspace@=\muskip11
-\c@parentequation=\count138
-\dspbrk@lvl=\count139
-\tag@help=\toks21
-\row@=\count140
-\column@=\count141
-\maxfields@=\count142
-\andhelp@=\toks22
-\eqnshift@=\dimen152
-\alignsep@=\dimen153
-\tagshift@=\dimen154
-\tagwidth@=\dimen155
-\totwidth@=\dimen156
-\lineht@=\dimen157
-\@envbody=\toks23
+\c@parentequation=\count169
+\dspbrk@lvl=\count170
+\tag@help=\toks33
+\row@=\count171
+\column@=\count172
+\maxfields@=\count173
+\andhelp@=\toks34
+\eqnshift@=\dimen199
+Normal \dimen register pool exhausted, switching to extended pool.
+\alignsep@=\dimen256
+\tagshift@=\dimen257
+\tagwidth@=\dimen258
+\totwidth@=\dimen259
+\lineht@=\dimen260
+\@envbody=\toks35
 \multlinegap=\skip92
 \multlinetaggap=\skip93
-\mathdisplay@stack=\toks24
+\mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks25
-\thm@bodyfont=\toks26
-\thm@headfont=\toks27
-\thm@notefont=\toks28
-\thm@headpunct=\toks29
+\thm@style=\toks37
+\thm@bodyfont=\toks38
+\thm@headfont=\toks39
+\thm@notefont=\toks40
+\thm@headpunct=\toks41
 \thm@preskip=\skip94
 \thm@postskip=\skip95
 \thm@headsep=\skip96
-\dth@everypar=\toks30
+\dth@everypar=\toks42
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
@@ -626,31 +935,31 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-\c@acknowledgement=\count143
-\c@algorithm=\count144
-\c@axiom=\count145
-\c@case=\count146
-\c@claim=\count147
-\c@conclusion=\count148
-\c@condition=\count149
-\c@conjecture=\count150
-\c@corollary=\count151
-\c@criterion=\count152
-\c@definition=\count153
-\c@example=\count154
-\c@exercise=\count155
-\c@lemma=\count156
-\c@notation=\count157
-\c@problem=\count158
-\c@proposition=\count159
-\c@remark=\count160
-\c@observation=\count161
-\c@question=\count162
-\c@solution=\count163
-\c@summary=\count164
-\c@theorem=\count165
+\c@acknowledgement=\count174
+\c@algorithm=\count175
+\c@axiom=\count176
+\c@case=\count177
+\c@claim=\count178
+\c@conclusion=\count179
+\c@condition=\count180
+\c@conjecture=\count181
+\c@corollary=\count182
+\c@criterion=\count183
+\c@definition=\count184
+\c@example=\count185
+\c@exercise=\count186
+\c@lemma=\count187
+\c@notation=\count188
+\c@problem=\count189
+\c@proposition=\count190
+\c@remark=\count191
+\c@observation=\count192
+\c@question=\count193
+\c@solution=\count194
+\c@summary=\count195
+\c@theorem=\count196
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:161: LaTeX 
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:162: LaTeX 
 Error: Command \C already defined.
                Or name \end... illegal, see p.192 of the manual.
 
@@ -662,7 +971,7 @@ or  <return>  to continue without it.
 
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:164: LaTeX 
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:165: LaTeX 
 Error: Command \G already defined.
                Or name \end... illegal, see p.192 of the manual.
 
@@ -676,38 +985,38 @@ or  <return>  to continue without it.
 (bgt.aux)
 \openout1 = `bgt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 179.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 179.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 180.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 180.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Try loading font information for T1+pplj on input line 179.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Try loading font information for T1+pplj on input line 180.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pplj.fd"
 File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
 )
-\AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring ON on input line 179.
+\AtBeginShipoutBox=\box70
+Package hyperref Info: Link coloring ON on input line 180.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -715,20 +1024,20 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count166
+\c@section@level=\count197
 )
-LaTeX Info: Redefining \ref on input line 179.
-LaTeX Info: Redefining \pageref on input line 179.
-LaTeX Info: Redefining \nameref on input line 179.
+LaTeX Info: Redefining \ref on input line 180.
+LaTeX Info: Redefining \pageref on input line 180.
+LaTeX Info: Redefining \nameref on input line 180.
 
 (bgt.out)
 (bgt.out)
-\@outlinefile=\write5
-\openout5 = `bgt.out'.
+\@outlinefile=\write6
+\openout6 = `bgt.out'.
 
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 179.
+LaTeX Info: Redefining \selectfont on input line 180.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -763,7 +1072,7 @@ LaTeX Info: Redefining \selectfont on input line 179.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 179.
+LaTeX Info: Redefining \microtypecontext on input line 180.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -779,17 +1088,18 @@ File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 (C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count167
-\scratchdimen=\dimen158
-\scratchbox=\box60
-\nofMPsegments=\count168
-\nofMParguments=\count169
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count170
-\MPscratchDim=\dimen159
-\MPnumerator=\count171
-\makeMPintoPDFobject=\count172
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count198
+\scratchdimen=\dimen261
+\scratchbox=\box71
+\nofMPsegments=\count199
+Normal \count register pool exhausted, switching to extended pool.
+\nofMParguments=\count277
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count278
+\MPscratchDim=\dimen262
+\MPnumerator=\count279
+\makeMPintoPDFobject=\count280
+\everyMPtoPDFconversion=\toks44
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -805,28 +1115,30 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \langwohyphens=\language72
-LaTeX Font Info:    Try loading font information for T1+phv on input line 182.
+
+ABD: EveryShipout initializing macros
+LaTeX Font Info:    Try loading font information for T1+phv on input line 183.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 182.
+(Font)              scaled to size 8.99994pt on input line 183.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 16.19989pt on input line 182.
+(Font)              scaled to size 16.19989pt on input line 183.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 32.39978pt on input line 182.
+(Font)              scaled to size 32.39978pt on input line 183.
 
-Overfull \hbox (37.03735pt too wide) in paragraph at lines 182--182
+Overfull \hbox (37.03735pt too wide) in paragraph at lines 183--183
 []\T1/phv/m/n/36/200ls BASIC GRAPH CO-LO-RING[]  
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 12.59991pt on input line 182.
+(Font)              scaled to size 12.59991pt on input line 183.
 
 [1
 
@@ -834,8 +1146,8 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 
 {C:/Users/landon/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (bgt.toc)
-\tf@toc=\write6
-\openout6 = `bgt.toc'.
+\tf@toc=\write7
+\openout7 = `bgt.toc'.
 
 
 [2
@@ -848,31 +1160,31 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 [4
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+pplx on input line 204
+LaTeX Font Info:    Try loading font information for OT1+pplx on input line 205
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pplx.fd"
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 204
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 205
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlzplm.fd"
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 204
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 205
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omszplm.fd"
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 204
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 205
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxzplm.fd"
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 204
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 205
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1zplm.fd"
@@ -883,241 +1195,241 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 204.
+(Font)              scaled to size 10.42007pt on input line 205.
 
 (C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 204.
+(Font)              scaled to size 7.91925pt on input line 205.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 204.
+(Font)              scaled to size 6.25204pt on input line 205.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 204.
+(Font)              scaled to size 10.42007pt on input line 205.
 
 (C:\Users\landon\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 204.
+(Font)              scaled to size 7.91925pt on input line 205.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 204.
+(Font)              scaled to size 6.25204pt on input line 205.
 
-<graphs/all/0.pdf, id=192, 146.5475pt x 146.5475pt>
+<graphs/all/0.pdf, id=196, 146.5475pt x 146.5475pt>
 File: graphs/all/0.pdf Graphic file (type pdf)
 
 <use graphs/all/0.pdf>
-Package pdftex.def Info: graphs/all/0.pdf used on input line 211.
+Package pdftex.def Info: graphs/all/0.pdf used on input line 218.
 (pdftex.def)             Requested size: 36.13364pt x 36.13364pt.
 
-<graphs/all/1.pdf, id=193, 204.765pt x 220.825pt>
+<graphs/all/1.pdf, id=197, 204.765pt x 220.825pt>
 File: graphs/all/1.pdf Graphic file (type pdf)
 
 <use graphs/all/1.pdf>
-Package pdftex.def Info: graphs/all/1.pdf used on input line 212.
+Package pdftex.def Info: graphs/all/1.pdf used on input line 219.
 (pdftex.def)             Requested size: 36.13435pt x 38.96841pt.
 
-<graphs/all/011.pdf, id=194, 231.86626pt x 308.15125pt>
+<graphs/all/011.pdf, id=198, 231.86626pt x 308.15125pt>
 File: graphs/all/011.pdf Graphic file (type pdf)
 
 <use graphs/all/011.pdf>
-Package pdftex.def Info: graphs/all/011.pdf used on input line 213.
+Package pdftex.def Info: graphs/all/011.pdf used on input line 220.
 (pdftex.def)             Requested size: 36.13348pt x 48.02155pt.
 
-<graphs/all/111.pdf, id=195, 233.87375pt x 222.8325pt>
+<graphs/all/111.pdf, id=199, 233.87375pt x 222.8325pt>
 File: graphs/all/111.pdf Graphic file (type pdf)
 
 <use graphs/all/111.pdf>
-Package pdftex.def Info: graphs/all/111.pdf used on input line 214.
+Package pdftex.def Info: graphs/all/111.pdf used on input line 221.
 (pdftex.def)             Requested size: 36.13228pt x 34.42647pt.
 
-<graphs/all/001011.pdf, id=196, 302.12875pt x 311.1625pt>
+<graphs/all/001011.pdf, id=200, 302.12875pt x 311.1625pt>
 File: graphs/all/001011.pdf Graphic file (type pdf)
 
 <use graphs/all/001011.pdf>
-Package pdftex.def Info: graphs/all/001011.pdf used on input line 215.
+Package pdftex.def Info: graphs/all/001011.pdf used on input line 222.
 (pdftex.def)             Requested size: 36.13402pt x 37.21443pt.
 
-<graphs/all/011010.pdf, id=197, 324.21124pt x 388.45125pt>
+<graphs/all/011010.pdf, id=201, 324.21124pt x 388.45125pt>
 File: graphs/all/011010.pdf Graphic file (type pdf)
 
 <use graphs/all/011010.pdf>
-Package pdftex.def Info: graphs/all/011010.pdf used on input line 216.
+Package pdftex.def Info: graphs/all/011010.pdf used on input line 223.
 (pdftex.def)             Requested size: 36.13332pt x 43.29285pt.
 
-<graphs/all/011011.pdf, id=198, 258.9675pt x 328.22626pt>
+<graphs/all/011011.pdf, id=202, 258.9675pt x 328.22626pt>
 File: graphs/all/011011.pdf Graphic file (type pdf)
 
 <use graphs/all/011011.pdf>
-Package pdftex.def Info: graphs/all/011011.pdf used on input line 217.
+Package pdftex.def Info: graphs/all/011011.pdf used on input line 224.
 (pdftex.def)             Requested size: 36.13269pt x 45.7961pt.
 
-<graphs/all/011110.pdf, id=199, 231.86626pt x 274.02374pt>
+<graphs/all/011110.pdf, id=203, 231.86626pt x 274.02374pt>
 File: graphs/all/011110.pdf Graphic file (type pdf)
 
 <use graphs/all/011110.pdf>
-Package pdftex.def Info: graphs/all/011110.pdf used on input line 218.
+Package pdftex.def Info: graphs/all/011110.pdf used on input line 225.
 (pdftex.def)             Requested size: 36.13348pt x 42.7032pt.
 
-<graphs/all/011111.pdf, id=200, 235.88126pt x 291.0875pt>
+<graphs/all/011111.pdf, id=204, 235.88126pt x 291.0875pt>
 File: graphs/all/011111.pdf Graphic file (type pdf)
 
 <use graphs/all/011111.pdf>
-Package pdftex.def Info: graphs/all/011111.pdf used on input line 219.
+Package pdftex.def Info: graphs/all/011111.pdf used on input line 226.
 (pdftex.def)             Requested size: 36.1329pt x 44.58954pt.
 
-<graphs/all/111111.pdf, id=201, 224.84pt x 224.84pt>
+<graphs/all/111111.pdf, id=205, 224.84pt x 224.84pt>
 File: graphs/all/111111.pdf Graphic file (type pdf)
 
 <use graphs/all/111111.pdf>
-Package pdftex.def Info: graphs/all/111111.pdf used on input line 220.
+Package pdftex.def Info: graphs/all/111111.pdf used on input line 227.
 (pdftex.def)             Requested size: 36.13295pt x 36.13295pt.
 
-<graphs/all/0001001011.pdf, id=202, 296.10625pt x 296.10625pt>
+<graphs/all/0001001011.pdf, id=206, 296.10625pt x 296.10625pt>
 File: graphs/all/0001001011.pdf Graphic file (type pdf)
 
 <use graphs/all/0001001011.pdf>
-Package pdftex.def Info: graphs/all/0001001011.pdf used on input line 221.
+Package pdftex.def Info: graphs/all/0001001011.pdf used on input line 228.
 (pdftex.def)             Requested size: 36.13213pt x 36.13213pt.
 
-<graphs/all/0011001010.pdf, id=203, 398.48875pt x 302.12875pt>
+<graphs/all/0011001010.pdf, id=207, 398.48875pt x 302.12875pt>
 File: graphs/all/0011001010.pdf Graphic file (type pdf)
 
 <use graphs/all/0011001010.pdf>
-Package pdftex.def Info: graphs/all/0011001010.pdf used on input line 222.
+Package pdftex.def Info: graphs/all/0011001010.pdf used on input line 229.
 (pdftex.def)             Requested size: 36.12997pt x 27.39325pt.
 
-<graphs/all/0011001011.pdf, id=204, 318.18875pt x 294.09875pt>
+<graphs/all/0011001011.pdf, id=208, 318.18875pt x 294.09875pt>
 File: graphs/all/0011001011.pdf Graphic file (type pdf)
 
 <use graphs/all/0011001011.pdf>
-Package pdftex.def Info: graphs/all/0011001011.pdf used on input line 223.
+Package pdftex.def Info: graphs/all/0011001011.pdf used on input line 230.
 (pdftex.def)             Requested size: 36.13211pt x 33.39656pt.
 
-<graphs/all/0011010011.pdf, id=205, 353.32pt x 358.33875pt>
+<graphs/all/0011010011.pdf, id=209, 353.32pt x 358.33875pt>
 File: graphs/all/0011010011.pdf Graphic file (type pdf)
 
 <use graphs/all/0011010011.pdf>
-Package pdftex.def Info: graphs/all/0011010011.pdf used on input line 224.
+Package pdftex.def Info: graphs/all/0011010011.pdf used on input line 231.
 (pdftex.def)             Requested size: 36.13196pt x 36.6452pt.
 
-<graphs/all/0011011010.pdf, id=206, 275.0275pt x 336.25626pt>
+<graphs/all/0011011010.pdf, id=210, 275.0275pt x 336.25626pt>
 File: graphs/all/0011011010.pdf Graphic file (type pdf)
 
 <use graphs/all/0011011010.pdf>
-Package pdftex.def Info: graphs/all/0011011010.pdf used on input line 225.
+Package pdftex.def Info: graphs/all/0011011010.pdf used on input line 232.
 (pdftex.def)             Requested size: 36.1325pt x 44.17662pt.
 
-<graphs/all/0011011011.pdf, id=207, 320.19624pt x 298.11375pt>
+<graphs/all/0011011011.pdf, id=211, 320.19624pt x 298.11375pt>
 File: graphs/all/0011011011.pdf Graphic file (type pdf)
 
 <use graphs/all/0011011011.pdf>
-Package pdftex.def Info: graphs/all/0011011011.pdf used on input line 226.
+Package pdftex.def Info: graphs/all/0011011011.pdf used on input line 233.
 (pdftex.def)             Requested size: 36.13045pt x 33.63869pt.
 
-<graphs/all/0011011110.pdf, id=208, 347.2975pt x 285.065pt>
+<graphs/all/0011011110.pdf, id=212, 347.2975pt x 285.065pt>
 File: graphs/all/0011011110.pdf Graphic file (type pdf)
 
 <use graphs/all/0011011110.pdf>
-Package pdftex.def Info: graphs/all/0011011110.pdf used on input line 227.
+Package pdftex.def Info: graphs/all/0011011110.pdf used on input line 234.
 (pdftex.def)             Requested size: 36.1308pt x 29.6565pt.
 
-<graphs/all/0011011111.pdf, id=209, 295.1025pt x 343.2825pt>
+<graphs/all/0011011111.pdf, id=213, 295.1025pt x 343.2825pt>
 File: graphs/all/0011011111.pdf Graphic file (type pdf)
 
 <use graphs/all/0011011111.pdf>
-Package pdftex.def Info: graphs/all/0011011111.pdf used on input line 228.
+Package pdftex.def Info: graphs/all/0011011111.pdf used on input line 235.
 (pdftex.def)             Requested size: 36.13123pt x 42.0302pt.
 
-<graphs/all/0101011000.pdf, id=210, 178.6675pt x 450.68375pt>
+<graphs/all/0101011000.pdf, id=214, 178.6675pt x 450.68375pt>
 File: graphs/all/0101011000.pdf Graphic file (type pdf)
 
 <use graphs/all/0101011000.pdf>
-Package pdftex.def Info: graphs/all/0101011000.pdf used on input line 229.
+Package pdftex.def Info: graphs/all/0101011000.pdf used on input line 236.
 (pdftex.def)             Requested size: 36.13362pt x 91.14604pt.
 
-<graphs/all/0101011010.pdf, id=211, 232.87pt x 399.4925pt>
+<graphs/all/0101011010.pdf, id=215, 232.87pt x 399.4925pt>
 File: graphs/all/0101011010.pdf Graphic file (type pdf)
 
 <use graphs/all/0101011010.pdf>
-Package pdftex.def Info: graphs/all/0101011010.pdf used on input line 230.
+Package pdftex.def Info: graphs/all/0101011010.pdf used on input line 237.
 (pdftex.def)             Requested size: 36.13356pt x 61.98775pt.
 
-<graphs/all/0101011011.pdf, id=212, 249.93375pt x 315.1775pt>
+<graphs/all/0101011011.pdf, id=216, 249.93375pt x 315.1775pt>
 File: graphs/all/0101011011.pdf Graphic file (type pdf)
 
 <use graphs/all/0101011011.pdf>
-Package pdftex.def Info: graphs/all/0101011011.pdf used on input line 231.
+Package pdftex.def Info: graphs/all/0101011011.pdf used on input line 238.
 (pdftex.def)             Requested size: 36.13458pt x 45.5673pt.
 
-<graphs/all/0110011010.pdf, id=213, 304.13625pt x 299.1175pt>
+<graphs/all/0110011010.pdf, id=217, 304.13625pt x 299.1175pt>
 File: graphs/all/0110011010.pdf Graphic file (type pdf)
 
 <use graphs/all/0110011010.pdf>
-Package pdftex.def Info: graphs/all/0110011010.pdf used on input line 232.
+Package pdftex.def Info: graphs/all/0110011010.pdf used on input line 239.
 (pdftex.def)             Requested size: 36.13278pt x 35.53654pt.
 
-<graphs/all/0111001110.pdf, id=214, 348.30125pt x 367.3725pt>
+<graphs/all/0111001110.pdf, id=218, 348.30125pt x 367.3725pt>
 File: graphs/all/0111001110.pdf Graphic file (type pdf)
 
 <use graphs/all/0111001110.pdf>
-Package pdftex.def Info: graphs/all/0111001110.pdf used on input line 233.
+Package pdftex.def Info: graphs/all/0111001110.pdf used on input line 240.
 (pdftex.def)             Requested size: 36.13425pt x 38.11278pt.
 
-<graphs/all/0111001111.pdf, id=215, 268.00125pt x 354.32375pt>
+<graphs/all/0111001111.pdf, id=219, 268.00125pt x 354.32375pt>
 File: graphs/all/0111001111.pdf Graphic file (type pdf)
 
 <use graphs/all/0111001111.pdf>
-Package pdftex.def Info: graphs/all/0111001111.pdf used on input line 234.
+Package pdftex.def Info: graphs/all/0111001111.pdf used on input line 241.
 (pdftex.def)             Requested size: 36.13362pt x 47.77216pt.
 
-<graphs/all/0111011010.pdf, id=216, 266.9975pt x 349.305pt>
+<graphs/all/0111011010.pdf, id=220, 266.9975pt x 349.305pt>
 File: graphs/all/0111011010.pdf Graphic file (type pdf)
 
 <use graphs/all/0111011010.pdf>
-Package pdftex.def Info: graphs/all/0111011010.pdf used on input line 235.
+Package pdftex.def Info: graphs/all/0111011010.pdf used on input line 242.
 (pdftex.def)             Requested size: 36.13272pt x 47.2714pt.
 
-<graphs/all/0111011011.pdf, id=217, 293.095pt x 346.29375pt>
+<graphs/all/0111011011.pdf, id=221, 293.095pt x 346.29375pt>
 File: graphs/all/0111011011.pdf Graphic file (type pdf)
 
 <use graphs/all/0111011011.pdf>
-Package pdftex.def Info: graphs/all/0111011011.pdf used on input line 236.
+Package pdftex.def Info: graphs/all/0111011011.pdf used on input line 243.
 (pdftex.def)             Requested size: 36.13141pt x 42.68951pt.
 
-<graphs/all/0111011111.pdf, id=218, 232.87pt x 314.17375pt>
+<graphs/all/0111011111.pdf, id=222, 232.87pt x 314.17375pt>
 File: graphs/all/0111011111.pdf Graphic file (type pdf)
 
 <use graphs/all/0111011111.pdf>
-Package pdftex.def Info: graphs/all/0111011111.pdf used on input line 237.
+Package pdftex.def Info: graphs/all/0111011111.pdf used on input line 244.
 (pdftex.def)             Requested size: 36.13356pt x 48.74915pt.
 
-<graphs/all/0111111010.pdf, id=219, 320.19624pt x 344.28625pt>
+<graphs/all/0111111010.pdf, id=223, 320.19624pt x 344.28625pt>
 File: graphs/all/0111111010.pdf Graphic file (type pdf)
 
 <use graphs/all/0111111010.pdf>
-Package pdftex.def Info: graphs/all/0111111010.pdf used on input line 238.
+Package pdftex.def Info: graphs/all/0111111010.pdf used on input line 245.
 (pdftex.def)             Requested size: 36.13045pt x 38.84872pt.
 
-<graphs/all/0111111011.pdf, id=220, 286.06876pt x 389.455pt>
+<graphs/all/0111111011.pdf, id=224, 286.06876pt x 389.455pt>
 File: graphs/all/0111111011.pdf Graphic file (type pdf)
 
 <use graphs/all/0111111011.pdf>
-Package pdftex.def Info: graphs/all/0111111011.pdf used on input line 239.
+Package pdftex.def Info: graphs/all/0111111011.pdf used on input line 246.
 (pdftex.def)             Requested size: 36.1339pt x 49.19281pt.
 
-<graphs/all/0111111111.pdf, id=221, 315.1775pt x 311.1625pt>
+<graphs/all/0111111111.pdf, id=225, 315.1775pt x 311.1625pt>
 File: graphs/all/0111111111.pdf Graphic file (type pdf)
 
 <use graphs/all/0111111111.pdf>
-Package pdftex.def Info: graphs/all/0111111111.pdf used on input line 240.
+Package pdftex.def Info: graphs/all/0111111111.pdf used on input line 247.
 (pdftex.def)             Requested size: 36.13162pt x 35.67136pt.
 
-<graphs/all/1111111111.pdf, id=222, 304.13625pt x 307.1475pt>
+<graphs/all/1111111111.pdf, id=226, 304.13625pt x 307.1475pt>
 File: graphs/all/1111111111.pdf Graphic file (type pdf)
 
 <use graphs/all/1111111111.pdf>
-Package pdftex.def Info: graphs/all/1111111111.pdf used on input line 241.
+Package pdftex.def Info: graphs/all/1111111111.pdf used on input line 248.
 (pdftex.def)             Requested size: 36.13278pt x 36.49054pt.
 
 [5
@@ -1244,40 +1556,16 @@ tiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ./graphs/all/1111111111.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
 >]
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 252.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 252.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 252.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 252.
+<pictures/crayons.png, id=266, 1269.99469pt x 718.18312pt>
+File: pictures/crayons.png Graphic file (type png)
 
-LaTeX Warning: Marginpar on page 6 moved.
+<use pictures/crayons.png>
+Package pdftex.def Info: pictures/crayons.png used on input line 255.
+(pdftex.def)             Requested size: 180.66606pt x 102.16681pt.
 
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-LaTeX Warning: Marginpar on page 6 moved.
-
-
-LaTeX Warning: Marginpar on page 6 moved.
+Overfull \hbox (36.66606pt too wide) in paragraph at lines 255--256
+[]  
+ []
 
 
 LaTeX Warning: Marginpar on page 6 moved.
@@ -1289,48 +1577,20 @@ LaTeX Warning: Marginpar on page 6 moved.
 LaTeX Warning: Marginpar on page 6 moved.
 
 LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 256.
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 333.
 
 [6
 
-]
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
-
-
-LaTeX Warning: Marginpar on page 7 moved.
+ <./pictures/crayons.png>]
+Overfull \hbox (0.1139pt too wide) in paragraph at lines 357--362
+\T1/pplj/m/it/10 (+10) complete \T1/pplj/m/n/10 (+10) graphs; those in which an
+y two vertices are adjacent. We can 
+ []
 
 
 [7]
 [8]
-Overfull \hbox (0.1086pt too wide) in paragraph at lines 362--367
+Overfull \hbox (0.1086pt too wide) in paragraph at lines 438--443
 []\T1/pplj/m/n/10 (+19) The requirement $[] \OML/zplm/m/it/10 > d\OT1/zplm/m/n/
 10 (\OML/zplm/m/it/10 v\OT1/zplm/m/n/10 )$ \T1/pplj/m/n/10 (+19) in Theorem [][
 ]7[][] is quite strong, in the 
@@ -1339,7 +1599,7 @@ Overfull \hbox (0.1086pt too wide) in paragraph at lines 362--367
 
 [9]
 [10]
-Overfull \hbox (0.10896pt too wide) in paragraph at lines 414--418
+Overfull \hbox (0.10896pt too wide) in paragraph at lines 490--494
 \T1/pplj/m/n/10 (+3) each arrow, then any maximal independent set is a kernel. 
 Theorem [][]9[][] 
  []
@@ -1357,13 +1617,13 @@ LaTeX Warning: Marginpar on page 12 moved.
 
 
 [12]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 452
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 528
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ufplmbb.fd"
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Overfull \hbox (2.80997pt too wide) in paragraph at lines 468--468
+Overfull \hbox (2.80997pt too wide) in paragraph at lines 544--544
 []  
  []
 
@@ -1382,7 +1642,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active []
 [17
 
 ]
-Overfull \hbox (12.9537pt too wide) in paragraph at lines 588--592
+Overfull \hbox (12.9537pt too wide) in paragraph at lines 664--668
 \OML/zplm/m/it/10 x[] [] x[]$ \T1/pplj/m/n/10 (-20) and $\OML/zplm/m/it/10 DO[]
 \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 G\OT1/zplm/m/n/10 )$ \T1/pplj/m/n/10 (-20) 
 the orien-ta-ti-ons of $\OML/zplm/m/it/10 G$ \T1/pplj/m/n/10 (-20) where $\OML/
@@ -1391,20 +1651,20 @@ zplm/m/it/10 m[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT1/pplx/m/n/10 , [] ,
  []
 
 
-Overfull \hbox (0.12332pt too wide) in paragraph at lines 592--597
+Overfull \hbox (0.12332pt too wide) in paragraph at lines 668--673
 \T1/pplj/m/n/10 (+13) This gives a combinatorial interpretation of the coeffici
 ents of $\OML/zplm/m/it/10 p[]$\T1/pplj/m/n/10 (+13) , but 
  []
 
 
-Overfull \hbox (0.10144pt too wide) in paragraph at lines 592--597
+Overfull \hbox (0.10144pt too wide) in paragraph at lines 668--673
 \OML/zplm/m/it/10 EO\OT1/zplm/m/n/10 ([])$ \T1/pplj/m/n/10 (+1) be the spanning
  Eulerian subgraphs of $[]$ with an odd number 
  []
 
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:598: LaTeX 
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:674: LaTeX 
 Error: Environment EulerianOrientationsLemma undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1414,13 +1674,13 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (9.51942pt too wide) detected at line 600
+Overfull \hbox (9.51942pt too wide) detected at line 676
 [] \OT1/zplm/m/n/10 = [] \OT1/pplx/m/n/10 .
  []
 
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:601: LaTeX 
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:677: LaTeX 
 Error: \begin{document} ended by \end{EulerianOrientationsLemma}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1430,20 +1690,20 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (3.04076pt too wide) in paragraph at lines 604--606
+Overfull \hbox (3.04076pt too wide) in paragraph at lines 680--682
 []$ \T1/pplj/m/n/10 (-20) and $\OML/zplm/m/it/10 D$\T1/pplj/m/n/10 (-20) . If $
 []$ is even, this gi-ves bi-jecti-ons be-t-ween $\OML/zplm/m/it/10 DE[]\OT1/zpl
 m/m/n/10 (\OML/zplm/m/it/10 G\OT1/zplm/m/n/10 )$ 
  []
 
 
-Overfull \hbox (9.51942pt too wide) detected at line 606
+Overfull \hbox (9.51942pt too wide) detected at line 682
 [] \OT1/zplm/m/n/10 = [] \OT1/pplx/m/n/10 .
  []
 
 
 [18]
-Overfull \hbox (3.59454pt too wide) detected at line 626
+Overfull \hbox (3.59454pt too wide) detected at line 702
 \OML/zplm/m/it/10 F\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT1/pplx/m/n/10 , []
  , \OML/zplm/m/it/10 x[]\OT1/zplm/m/n/10 ) = [] \OML/zplm/m/it/10 f\OT1/zplm/m/
 n/10 (\OML/zplm/m/it/10 a[]\OT1/pplx/m/n/10 , [] , \OML/zplm/m/it/10 a[]\OT1/zp
@@ -1453,7 +1713,7 @@ lm/m/n/10 )[]\OT1/pplx/m/n/10 .
 
 [19]
 [20]
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:647: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:723: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1462,7 +1722,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:649: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:725: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1471,7 +1731,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:654: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:730: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1480,7 +1740,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:668: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:744: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1491,7 +1751,7 @@ and I'll forget about whatever was undefined.
  [21
 
 ] [22]
-LaTeX Font Info:    Try loading font information for TS1+pplj on input line 745
+LaTeX Font Info:    Try loading font information for TS1+pplj on input line 821
 .
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1pplj.fd"
@@ -1499,7 +1759,7 @@ File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
 ) [23] [24
 
 ]
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:781: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:857: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1508,7 +1768,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:782: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:858: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1517,7 +1777,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:782: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:858: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1526,7 +1786,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:783: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:859: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1535,7 +1795,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:784: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:860: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1544,7 +1804,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:784: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:860: Missin
 g { inserted
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -1552,7 +1812,7 @@ so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:784: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:860: Missin
 g } inserted
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1561,7 +1821,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:786: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:862: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1570,7 +1830,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:786: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:862: Missin
 g { inserted
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -1578,7 +1838,7 @@ so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:786: Missin
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:862: Missin
 g } inserted
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1589,7 +1849,7 @@ my insertion and my current dilemma will both disappear.
  [25
 
 ]
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:804: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:880: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1598,7 +1858,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:804: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:880: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1607,7 +1867,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:805: Undefi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:881: Undefi
 ned control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1616,7 +1876,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (0.12444pt too wide) in paragraph at lines 799--806
+Overfull \hbox (0.12444pt too wide) in paragraph at lines 875--882
 \T1/pplj/m/n/10 (+13) we can get by with zero colors. With just one color we ca
 n edge color 
  []
@@ -1631,27 +1891,27 @@ Package bibentry Warning: You have used \nobibliography*
 (bibentry)                without a following \bibliography.
 (bibentry)                You may not be able to run BibTeX.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 887.
  [29
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 887.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 963.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 963.
  (bgt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 887.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 887.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 963.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 963.
 Package rerunfilecheck Info: File `bgt.out' has not changed.
 (rerunfilecheck)             Checksum: CBA8C88E7B99BB3FF69799002EE26103;5904.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 887.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 963.
  ) 
 Here is how much of TeX's memory you used:
- 16107 strings out of 493367
- 234834 string characters out of 3137292
- 357976 words of memory out of 3000000
- 18890 multiletter control sequences out of 15000+200000
- 98506 words of font info for 317 fonts, out of 3000000 for 9000
+ 25815 strings out of 493367
+ 446027 string characters out of 3137292
+ 549047 words of memory out of 3000000
+ 28396 multiletter control sequences out of 15000+200000
+ 93542 words of font info for 299 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
- 46i,13n,54p,735b,448s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,13n,63p,735b,962s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/landon/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/base/8r.enc}<C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progr
@@ -1667,9 +1927,9 @@ rs/landon/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mathpazo/fplmri.pfb><C:
 m Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on bgt.pdf (29 pages, 291818 bytes).
+Output written on bgt.pdf (29 pages, 343238 bytes).
 PDF statistics:
- 501 PDF objects out of 1000 (max. 8388607)
+ 507 PDF objects out of 1000 (max. 8388607)
  104 named destinations out of 1000 (max. 500000)
- 48580 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 47061 words of extra memory for PDF output out of 51595 (max. 10000000)
 

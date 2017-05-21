@@ -2,6 +2,7 @@
 \hypersetup{colorlinks} % Comment this line if you don't wish to have colored links
 \usepackage{microtype} % Improves character and word spacing
 \usepackage{booktabs} % Better horizontal rules in tables
+\usepackage{tkz-graph}
 \usepackage{graphicx} % Needed to insert images into the document
 \graphicspath{{graphics/}} % Sets the default location of pictures
 \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio} % Improves figure scaling
@@ -207,6 +208,12 @@ Two vertices
 are \emph{adjacent}  if they are connected by an edge.  The set
 of vertices to which $v$ is adjacent is its \emph{neighborhood}, written $N(v)$. 
 For the size of $v$'s neighborhood $\card{N(v)}$, we write $d(v)$ and call this the \emph{degree} of $v$.
+
+We use the shorthand $\irange{k} \DefinedAs \set{1,2,\ldots, k}$. A \emph{path} in $G$ is a sequence of different vertices $x_1, x_2, \ldots, x_r$ such that $x_i$ is adjacent to $x_{i+1}$ for all $i \in \irange{r-1}$.  We say
+this is a path from $x_1$ to $x_r$.
+If $x_r$ is adjacent to $x_1$ as well, then we have a \emph{cycle}.  A graph $G$ is \emph{connected} if for all $x,y \in V(G)$, there is a path from $x$ to $y$.
+Figure \ref{fig:SmallGraphs} shows all the connected graphs with at most five vertices.
+
 \begin{marginfigure}
 		\includegraphics[width=0.5in]{graphs/all/0.pdf}
 		\includegraphics[width=0.5in]{graphs/all/1.pdf}
@@ -239,20 +246,90 @@ For the size of $v$'s neighborhood $\card{N(v)}$, we write $d(v)$ and call this 
 		\includegraphics[width=0.5in]{graphs/all/0111111011.pdf}
 		\includegraphics[width=0.5in]{graphs/all/0111111111.pdf}
 		\includegraphics[width=0.5in]{graphs/all/1111111111.pdf}
-		\caption{Graphs with at most five vertices.}
+		\caption{The connected graphs with at most five vertices.}
+		\label{fig:SmallGraphs}
 \end{marginfigure}
 
 \chapter{Coloring vertices}
+\begin{marginfigure}
+		\includegraphics[width=2.5in]{pictures/crayons.png}
+		\caption{These are crayons.}
+\end{marginfigure}
+
 The entire book concerns one simple task: we want to color the vertices of a given graph so that adjacent vertices receive different colors.
 With sufficiently many crayons and no preferences about what the coloring should look like, this is easy, we just use a different crayon for each vertex.  
 Things get interesting when we ask how few different crayons we can use.  We are definitely going to need an empty box of crayons and that will only do for the
-graph with no vertices at all.  Given one crayon, we can handle all graphs with no edges.  With two crayons, we can do
-any path and any cycle with an even number of vertices \marginnote{\textcolor{blue}{picture}}.  But, we can't handle a triangle or any other cycle with an odd number of vertices \marginnote{\textcolor{blue}{picture}}.
+graph with no vertices at all.  
+Given one crayon, we can handle all graphs with no edges.  With two crayons, we can do
+any path and any cycle with an even number of vertices.  But, we can't handle a triangle or any other cycle with an odd number of vertices.
+\begin{marginfigure}
+\caption{A graph with no vertices needs no crayons at all.}
+\end{marginfigure}
+\begin{marginfigure}[0.25in]
+\centering
+\begin{tikzpicture}[scale = 10]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = []
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 1.2pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 1.2pt, draw, fill]
+\tikzstyle{c641e27b-ed53-43a3-8b86-e014203f8ed0}=[shape = circle,minimum size = 6pt,inner sep = 5pt,draw,fill={rgb,255:red,255; green,0; blue,0}]
+\Vertex[style = c641e27b-ed53-43a3-8b86-e014203f8ed0, x = 0.650, y = 0.700, L = \tiny {}]{v0}
+\Vertex[style = c641e27b-ed53-43a3-8b86-e014203f8ed0, x = 0.850, y = 0.700, L = \tiny {}]{v1}
+\Vertex[style = c641e27b-ed53-43a3-8b86-e014203f8ed0, x = 0.650, y = 0.500, L = \tiny {}]{v2}
+\Vertex[style = c641e27b-ed53-43a3-8b86-e014203f8ed0, x = 0.850, y = 0.500, L = \tiny {}]{v3}
+\end{tikzpicture}
+\caption{An edgeless graphs needs only one crayon.}
+\end{marginfigure}
 In fact, odd cycles are really the only thing that will prevent us from using just two crayons. 
-A graph $H$ is a \emph{subgraph} of a graph $G$, written $H \subseteq G$ if $V(H) \subseteq V(G)$ and $E(H) \subseteq E(G)$. \marginnote{subgraph, $\subseteq$}
-When $H \subseteq G$, we say that $G$ \emph{contains} $H$. \marginnote{contains}  If $v \in V(G)$, then $G-v$ is the graph we get by removing $v$ and all edges incident to $v$ from $G$. \marginnote{$G-v$}
-A graph is $k$-colorable if we can color its vertices with (at most) $k$ colors such that adjacent vertices receive different colors. \marginnote{$k$-colorable}
-A $0$-colorable graph is \emph{empty}, a $1$-colorable graph is \emph{edgeless} and a $2$-colorable graph is \emph{bipartite}. \marginnote{empty}\marginnote{edgeless}\marginnote{bipartite}
+A graph $H$ is a \emph{subgraph} of a graph $G$, written $H \subseteq G$ if $V(H) \subseteq V(G)$ and $E(H) \subseteq E(G)$.
+When $H \subseteq G$, we say that $G$ \emph{contains} $H$. If $v \in V(G)$, then $G-v$ is the graph we get by removing $v$ and all edges incident to $v$ from $G$.
+A graph is $k$-colorable if we can color its vertices with (at most) $k$ colors such that adjacent vertices receive different colors.
+A $0$-colorable graph is \emph{empty}, a $1$-colorable graph is \emph{edgeless} and a $2$-colorable graph is \emph{bipartite}.
+\begin{marginfigure}[0.25in]
+\centering
+\begin{tikzpicture}[scale = 10]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = [line width = 3pt]
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 1.2pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 1.2pt, draw, fill]
+\tikzstyle{1b4903bd-d8d6-4bb7-bbf3-64e256860f93}=[shape = circle,minimum size = 6pt,inner sep = 5pt, outer sep = 5pt, draw,fill={rgb,255:red,255; green,0; blue,0}]
+\tikzstyle{ab7396a8-c702-4376-a383-e919a68bfd2c}=[shape = circle,minimum size = 6pt,inner sep = 5pt, outer sep = 5pt,draw,fill={rgb,255:red,0; green,0; blue,255}]
+\Vertex[style = 1b4903bd-d8d6-4bb7-bbf3-64e256860f93, x = 0.650, y = 0.700, L = \tiny {}]{v0}
+\Vertex[style = ab7396a8-c702-4376-a383-e919a68bfd2c, x = 0.850, y = 0.700, L = \tiny {}]{v1}
+\Vertex[style = ab7396a8-c702-4376-a383-e919a68bfd2c, x = 0.650, y = 0.500, L = \tiny {}]{v2}
+\Vertex[style = 1b4903bd-d8d6-4bb7-bbf3-64e256860f93, x = 0.850, y = 0.500, L = \tiny {}]{v3}
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v1)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v2)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v0)
+\end{tikzpicture}
+\caption{An even cycle needs two crayons.}
+\end{marginfigure}
+
+\begin{marginfigure}[0.25in]
+\centering
+\begin{tikzpicture}[scale = 10]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = [line width = 3pt]
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 1.2pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 1.2pt, draw, fill]
+\tikzstyle{cd709005-28f8-462c-809c-4d92d242e69f}=[shape = circle,minimum size = 6pt,inner sep = 5pt, outer sep = 5pt,draw,fill={rgb,255:red,255; green,0; blue,0}]
+\tikzstyle{9c802e76-9af9-42f3-9bc7-eac729935b9f}=[shape = circle,minimum size = 6pt,inner sep = 5pt, outer sep = 5pt,draw,fill={rgb,255:red,0; green,0; blue,255}]
+\tikzstyle{4922cc21-b00b-4fb0-85be-3c6ecc4346c7}=[shape = circle,minimum size = 6pt,inner sep = 5pt, outer sep = 5pt,draw,fill={rgb,255:red,0; green,255; blue,0}]
+\Vertex[style = cd709005-28f8-462c-809c-4d92d242e69f, x = 1.150, y = 0.400, L = \tiny {}]{v0}
+\Vertex[style = 9c802e76-9af9-42f3-9bc7-eac729935b9f, x = 1.100, y = 0.250, L = \tiny {}]{v1}
+\Vertex[style = cd709005-28f8-462c-809c-4d92d242e69f, x = 0.900, y = 0.250, L = \tiny {}]{v2}
+\Vertex[style = 9c802e76-9af9-42f3-9bc7-eac729935b9f, x = 0.850, y = 0.400, L = \tiny {}]{v3}
+\Vertex[style = 4922cc21-b00b-4fb0-85be-3c6ecc4346c7, x = 1.000, y = 0.500, L = \tiny {}]{v4}
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v3)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v2)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v3)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v0)
+\end{tikzpicture}
+\caption{An odd cycle needs three crayons.}
+\end{marginfigure}
+
 \begin{theorem}\label{TwoColoring}
 A graph is $2$-colorable just in case it contains no odd cycle.
 \end{theorem}
@@ -261,7 +338,7 @@ A graph containing an odd cycle clearly can't be $2$-colored.  For the other imp
 there is a graph that is not $2$-colorable and doesn't contain an odd cycle.  Then we may pick such a graph $G$ with $\card{G}$ as small as possible.
 Surely, $|G| > 0$, so we may pick $v \in V(G)$.  If $x, y \in N(v)$, then $x$ is not adjacent to $y$ since then $xyz$ would be an odd cycle.
 So we can construct a graph $H$ from $G$ by removing $v$ and identifying all of $N(v)$ to a new vertex $x_v$.  Any odd cycle
-in $H$ would contain $x_v$ and hence give rise to an odd cycle in $G$ passing through $v$.  So $H$ contains no odd cycle. Since $|H| < |G|$, appplying the theorem to $H$ gives a 2-coloring of $H$, say with red and blue
+in $H$ would contain $x_v$ and hence give rise to an odd cycle in $G$ passing through $v$.  So $H$ contains no odd cycle. Since $|H| < |G|$, applying the theorem to $H$ gives a 2-coloring of $H$, say with red and blue
 where $x_v$ gets colored red.  But this gives a 2-coloring of $G$ by coloring all vertices in $N(v)$ red and $v$ blue, a contradiction.
 \end{proof}
 
@@ -273,14 +350,13 @@ For $k \ge 3$, determining whether or not a graph has a $k$-coloring is a hard p
 \section{Basic estimates}
 Even though finding the minimum number of colors needed to color a graph is hard in general (supposing it is), we can still
 look for lower and upper bounds on this value.  The \emph{chromatic number} $\chi(G)$ of a graph $G$ is the smallest $k$ for which $G$ is $k$-colorable.
-\marginnote{chromatic number}\marginnote{$\chi(G)$}
 The simplest thing we can do is give each vertex a different color.
 \begin{theorem}\label{WorstUpperBound}
 If $G$ is a graph, then $\chi(G) \le \card{G}$.
 \end{theorem}
 The only graphs that attain the upper bound in Theorem \ref{WorstUpperBound} are the \emph{complete} graphs; those in which
-any two vertices are adjacent. \marginnote{complete}
-We can usually do much better by just arbitrarily coloring vertices, reusing colors when we can.  \marginnote{maximum degree}\marginnote{$\Delta(G)$}
+any two vertices are adjacent.
+We can usually do much better by just arbitrarily coloring vertices, reusing colors when we can. 
 The \emph{maximum degree} $\Delta(G)$ of a graph $G$ is the largest degree
 of any vertex in $G$; that is 
 \[\Delta(G) \DefinedAs \max_{v \in V(G)} d(v).\]
@@ -297,15 +373,15 @@ of $G$, a contradiction.
 
 Both complete graphs and odd cycles attain the upper bound in Theorem \ref{SecondWorstUpperBound}.  Theorem \ref{TwoColoring} says
 we can do better for graphs that don't contain odd cycles.  We can also do better for graphs that don't contain large complete subgraphs.
-A set of vertices $S$ in a graph $G$ is a \emph{clique} if the vertices in $S$ are pairwise adjacent.\marginnote{clique}
-The \emph{clique number} of a graph $G$, written $\omega(G)$, is the number of vertices in a largest clique in $G$.\marginnote{$\omega(G)$}
+A set of vertices $S$ in a graph $G$ is a \emph{clique} if the vertices in $S$ are pairwise adjacent.
+The \emph{clique number} of a graph $G$, written $\omega(G)$, is the number of vertices in a largest clique in $G$.
 
 \begin{theorem}\label{OmegaLowerBound}
 If $G$ is a graph, then $\chi(G) \ge \omega(G)$.
 \end{theorem}
 
-A set of vertices $S$ in a graph $G$ is \emph{independent} if the vertices in $S$ are pairwise non-adjacent.\marginnote{independent}
-The \emph{independence number} of a graph $G$, written $\alpha(G)$, is the number of vertices in a largest independent set in $G$.\marginnote{$\alpha(G)$}
+A set of vertices $S$ in a graph $G$ is \emph{independent} if the vertices in $S$ are pairwise non-adjacent.
+The \emph{independence number} of a graph $G$, written $\alpha(G)$, is the number of vertices in a largest independent set in $G$.
 
 \section{Brooks' theorem}
 \begin{theorem}
