@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100) (preloaded format=pdflatex 2016.12.12)  21 MAY 2017 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100) (preloaded format=pdflatex 2016.12.12)  22 MAY 2017 09:25
 entering extended mode
 **"C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex"
 ("C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex"
@@ -1929,10 +1929,10 @@ Package rerunfilecheck Info: File `bgt.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1100.
  ) 
 Here is how much of TeX's memory you used:
- 25944 strings out of 493367
- 449351 string characters out of 3137292
+ 25942 strings out of 493367
+ 449299 string characters out of 3137292
  578197 words of memory out of 3000000
- 28527 multiletter control sequences out of 15000+200000
+ 28525 multiletter control sequences out of 15000+200000
  99377 words of font info for 312 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
  61i,13n,63p,735b,966s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1951,7 +1951,7 @@ rs/landon/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mathpazo/fplmri.pfb><C:
 m Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on bgt.pdf (29 pages, 347925 bytes).
+Output written on bgt.pdf (29 pages, 347950 bytes).
 PDF statistics:
  508 PDF objects out of 1000 (max. 8388607)
  104 named destinations out of 1000 (max. 500000)
