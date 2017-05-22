@@ -1,0 +1,49 @@
+graph G {
+	graph [bb="-74.291,-93.017,76.436,99.492",
+		overlap=false,
+		sep=0.0,
+		splines=true
+	];
+	node [color=black,
+		fixedsize=true,
+		fontname="Latin Modern Math",
+		fontsize=42,
+		height=.92,
+		label="\N",
+		penwidth=1,
+		shape=circle,
+		width=.92
+	];
+	edge [color=black,
+		penwidth=6,
+		style=bold
+	];
+	0	 [fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="-34.862,-42.57",
+		style=filled,
+		width=0.91667];
+	2	 [fillcolor=blue,
+		height=0.91667,
+		label="",
+		pos="43.436,-60.017",
+		style=filled,
+		width=0.91667];
+	0 -- 2	 [pos="-2.563,-49.767 1.9865,-50.781 6.6634,-51.823 11.212,-52.837"];
+	3	 [fillcolor=blue,
+		height=0.91667,
+		label="",
+		pos="32.717,66.492",
+		style=filled,
+		width=0.91667];
+	0 -- 3	 [pos="-17.459,-14.484 -7.4471,1.673 5.0967,21.917 15.138,38.122"];
+	1	 [fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="-41.291,36.096",
+		style=filled,
+		width=0.91667];
+	1 -- 2	 [pos="-19.251,11.094 -6.699,-3.1448 8.9728,-20.923 21.507,-35.141"];
+	1 -- 3	 [pos="-10.762,48.634 -6.621,50.335 -2.3684,52.082 1.7796,53.785"];
+}

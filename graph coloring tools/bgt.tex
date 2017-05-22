@@ -2,7 +2,15 @@
 \hypersetup{colorlinks} % Comment this line if you don't wish to have colored links
 \usepackage{microtype} % Improves character and word spacing
 \usepackage{booktabs} % Better horizontal rules in tables
-\usepackage{tkz-graph}
+\usepackage{tikz,tkz-graph,tkz-berge}
+\usetikzlibrary{positioning}
+\usepackage{verbatim, xcolor}
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\newcommand{\boundellipse}[3]% center, xdim, ydim
+{(#1) ellipse (#2 and #3)
+}
 \usepackage{graphicx} % Needed to insert images into the document
 \graphicspath{{graphics/}} % Sets the default location of pictures
 \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio} % Improves figure scaling
@@ -485,42 +493,47 @@ The \emph{independence number} of a graph $G$, written $\alpha(G)$, is the numbe
 \section{Brooks' theorem}
 \begin{marginfigure}
 \centering
-\begin{tikzpicture}[scale = 12]
-\tikzstyle{VertexStyle} = []
-\tikzstyle{EdgeStyle} = [line width=2pt]
-\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 4pt, outer sep = 4pt, draw]
-\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 4pt, outer sep = 4pt, draw, fill]
-\tikzstyle{131bae28-2bdc-4036-be47-2a1c9c8946d9}=[shape = circle,minimum size = 6pt,inner sep = 4pt,outer sep = 4pt,draw,fill={rgb,255:red,255; green,0; blue,0}]
-\tikzstyle{bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d}=[shape = circle,minimum size = 6pt,inner sep = 4pt,outer sep = 4pt,draw,fill={rgb,255:red,0; green,0; blue,255}]
-\tikzstyle{19f95f63-7f16-470b-b04a-d4ef32a60a18}=[shape = circle,minimum size = 6pt,inner sep = 4pt,outer sep = 4pt,draw,fill={rgb,255:red,0; green,255; blue,0}]
-\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.800, y = 0.850, L = \tiny {}]{v0}
-\Vertex[style = bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d, x = 0.550, y = 0.700, L = \tiny {}]{v1}
-\Vertex[style = bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d, x = 1.050, y = 0.700, L = \tiny {}]{v2}
-\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.650, y = 0.650, L = \tiny {}]{v3}
-\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.950, y = 0.400, L = \tiny {}]{v4}
-\Vertex[style = 19f95f63-7f16-470b-b04a-d4ef32a60a18, x = 0.650, y = 0.400, L = \tiny {}]{v5}
-\Vertex[style = bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d, x = 0.800, y = 0.750, L = \tiny {}]{v6}
-\Vertex[style = 19f95f63-7f16-470b-b04a-d4ef32a60a18, x = 0.950, y = 0.650, L = \tiny {}]{v7}
-\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.700, y = 0.500, L = \tiny {}]{v8}
-\Vertex[style = 19f95f63-7f16-470b-b04a-d4ef32a60a18, x = 0.900, y = 0.500, L = \tiny {}]{v9}
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v0)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v5)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v0)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v2)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v5)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v7)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v9)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v8)(v6)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v8)(v7)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v9)(v6)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v3)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v0)(v6)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v7)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v9)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v5)(v8)
+\begin{tikzpicture}[line width=.03cm,scale=.5]
+\tikzstyle{vert}=[draw,shape=circle,fill=black,minimum size=4pt, inner sep=0pt] 
+\draw \boundellipse{0,0}{4}{2}; % cycle
+\foreach \deg/\name\dir in {30//left,75//left,120/x_1/south,210//left,255//left,300/x_2/north}  % cycle verts and incident edges
+{
+\draw ({4*cos \deg}, {2*sin \deg}) node[vert,label=\dir:{$\name$}] {} -- ++
+({.83*cos \deg}, {sin \deg}); 
+}
+
+\foreach \deg/\name\dir in {120/y_1/left,300/y_2/right} % off cycle verts and names
+\draw ({4.83*cos \deg}, {3*sin \deg})  node[vert,label=\dir:{$\name$}] {};
+
+% left bounding box
+\draw[rounded corners] (5,0) node (a) {} -- (5,3.5) -- (-5,3.5) -- (-5,-3.5) -- (5,-3.5)
+-- cycle;
+
+\draw (3.7,2.6) node (G) {$G$};
+\draw (-3.3,.4) node (C) {$X$};
+
+\begin{scope}[xshift = -0cm,yshift=1.35cm] % arrow
+\draw[rounded corners=.3mm, rotate=270] (6,.4) -- (8,.4) -- (8,1.0) -- (8.7,0);
+\draw[rounded corners=.08mm, rotate=270] (8.35,.5) -- (8.7,0) -- (8.35,-.5);
+\draw[rounded corners=.3mm, rotate=270] (8.7,0) -- (8,-1.0) -- (8,-.4) -- (6,-.4);
+\end{scope}
+
+\begin{scope}[yshift=-12cm]  % start below part of pic
+\foreach \deg/\name\dir in {120/y_1/left,300/y_2/right}
+\draw ({4.83*cos \deg}, {3*sin \deg}) node[vert,label=\dir:{$\name$}] (\name){};
+
+\draw (y_1) -- (y_2);  % edge y_1y_2
+
+% right bounding box
+\draw[rounded corners] (5,3.5) -- (-5,3.5) -- (-5,0) node (b) {} -- (-5,-3.5) -- (5,-3.5) -- cycle;
+
+\draw (2.4,2.6) node (G) {$H$};
+
+\end{scope}
 \end{tikzpicture}
-\caption{The Petersen graph.}
+\caption{Removing $X$ and adding $y_1y_2$ to get $H$.}
 \end{marginfigure}
+
 \begin{theorem}
 If $G$ is a graph with $\Delta(G) \ge 3$ and $\omega(G) \le \Delta(G)$, then $\chi(G) \le \Delta(G)$.
 \label{BrooksTheorem}
@@ -534,6 +547,33 @@ So, $\Delta(G) + 1 \le \chi(G) \le \chi(G-S) + 1$. We conclude $\chi(G-S) > \Del
 Since $\card{G-S} < \card{G}$, applying the theorem to $G-S$ shows that $\Delta(G-S) < 3$ or $\Delta(G -S) < \omega(G - S)$.  
 So, either $\chi(G-S) = \Delta(G) = 3$ or $\omega(G-S) \ge \Delta(G)$.  In the former case, let $X$ be the vertex set of an odd cycle in $G-S$ guaranteed by Theorem \ref{TwoColoring}.  
 In the latter case, let $X$ be a $\Delta(G)$-clique in $G-S$.
+
+\begin{marginfigure}[0.25in]
+\centering
+\begin{tikzpicture}[scale = 8]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = [line width=2pt]
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw, fill]
+\tikzstyle{532f9ccb-bc7b-4b29-b41b-c7fac8d640b0}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill = red]
+\tikzstyle{e6d9f5fc-90ba-4576-bad8-6b53a35507e9}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill=blue]
+\Vertex[style = unlabeledStyle, x = 0.800, y = 0.850, L = \small {}]{v0}
+\Vertex[style = labeledStyle, x = 0.550, y = 0.700, L = \small {$x_1$}]{v1}
+\Vertex[style = unlabeledStyle, x = 1.050, y = 0.700, L = \small {}]{v2}
+\Vertex[style = labeledStyle, x = 0.950, y = 0.400, L = \small {$x_2$}]{v3}
+\Vertex[style = unlabeledStyle, x = 0.650, y = 0.400, L = \small {}]{v4}
+\Vertex[style = 532f9ccb-bc7b-4b29-b41b-c7fac8d640b0, x = 0.550, y = 1.000, L = \small {$y_1$}]{v5}
+\Vertex[style = e6d9f5fc-90ba-4576-bad8-6b53a35507e9, x = 0.950, y = 0.150, L = \small {$y_2$}]{v6}
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v4)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v2)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v4)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v5)(v1)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v6)(v3)
+\end{tikzpicture}
+
+\end{marginfigure}
 
 Since $S$ is maximal and $\omega(G) \le \Delta(G)$, there are $x_1, x_2 \in X$ and $y_1, y_2 \in S$ such that $x_1$ is adjacent to $y_1$ and $x_2$ is adjacent to $y_2$.
 Construct a graph $H$ from $G-X$ by adding the edge $y_1y_2$.  Since $\card{H} < \card{G}$, applying the theorem to $H$ shows that $\omega(H) > \Delta(G)$ or $\chi(H) \le \Delta(G)$.
@@ -551,6 +591,31 @@ $x_3 \in X \setminus \set{x_1,x_2}$ and $y_3 \in S \setminus \set{y_1,y_2}$.  Ap
 that $y_1$ and $y_3$ each have exactly one neighbor in $X$ and $\Delta(G) - 1$ neighbors in the same $\Delta(G) -1$ clique $B$ in $G - X$.
 Now $\card{A\cap B} = \card{A} + \card{B} - \card{A\cup B} \ge 2(\Delta(G) - 1) - d(y_1) \ge \Delta(G) - 2 > 0$.  But there can't be a vertex
 in $A \cap B$ since it would be adjacent to $y_1,y_2,y_3$ as well as $\Delta(G) - 2$ vertices in $A$ and thus have degree greater than $\Delta(G)$, a contradiction. 
+\begin{marginfigure}
+\centering
+\begin{tikzpicture}[scale = 15]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = [line width=2pt]
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw, fill]
+\Vertex[style = labeledStyle, x = 0.550, y = 0.750, L = \small {$y_2$}]{v0}
+\Vertex[style = labeledStyle, x = 0.700, y = 0.750, L = \small {$y_1$}]{v1}
+\Vertex[style = labeledStyle, x = 0.850, y = 0.750, L = \small {$y_3$}]{v2}
+\Vertex[style = labeledStyle, x = 0.550, y = 0.600, L = \small {$A$}]{v3}
+\Vertex[style = labeledStyle, x = 0.700, y = 0.600, L = \small {$A,B$}]{v4}
+\Vertex[style = labeledStyle, x = 0.850, y = 0.600, L = \small {$B$}]{v5}
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v3)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v1)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v1)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v5)(v4)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v5)(v1)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v2)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v5)(v2)
+\end{tikzpicture}
+\caption{The final contradiction when $\Delta=3$.}
+\end{marginfigure}
 \end{proof}
 
 \section{List coloring}
@@ -627,7 +692,7 @@ but then we have an $L$-coloring of $G$, a contradiction.
 Given an oriented graph $G$ that is not kernel-perfect, it is always possible to add arrows (possibly going the opposite way as a current arrow, forming a directed digon) 
 to get what we'll call a \emph{superoriented graph} that is kernel-perfect.  One way is just to add back arrows for each arrow, then any maximal independent set is a kernel.
 Theorem \ref{KernelPerfectListBound} holds for superoriented graphs by a nearly identical proof.  
-This can be useful as it gives us a way to trade in some slack in the $\card{L(v)} > d^+(v)$ bounds for kernel-perfection by adding some extra arrows.\marginnote{\textcolor{blue}{example, picture}}
+This can be useful as it gives us a way to trade in some slack in the $\card{L(v)} > d^+(v)$ bounds for kernel-perfection by adding some extra arrows.
 
 \begin{theorem}\label{KernelPerfectSuperListBound}
 If $L$ is a list assignment on a kernel-perfect superoriented graph $G$ such that $\card{L(v)} > d^+(v)$ for all $v \in V(G)$, then $G$ is $L$-colorable.
@@ -648,15 +713,52 @@ has an arrow to $v$ or is in $G-I$ and hence has a back arrow to $v$, a contradi
 \begin{question}
 Lemma \ref{KostochkaYanceyKernelLemma} says that if we take a graph $G$ with an independent set $I$ and direct all the edges of $G-I$ both ways and the edges 
 between $I$ and $V(G-I)$ arbitrarily, we get a kernel-perfect superoriented graph.  Can we classify the pairs $(G, F)$ where $G$ is a graph and $F \subseteq E(G)$ such that
-every superorientation of $G$ in which all edges in $F$ are bidirected are kernel-perfect?  \marginnote{\textcolor{blue}{examples}}
+every superorientation of $G$ in which all edges in $F$ are bidirected are kernel-perfect? 
 \end{question}
 
 An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfectListBound} generalizes Theorem \ref{SecondListBound}.  
-But this is not the only possible generalization of acylic that works, later\marginnote{\textcolor{blue}{what chapter?}} we will see another based on counting certain substructures of the oriented graph. 
+But this is not the only possible generalization of acylic that works, late we will see another based on counting certain substructures of the oriented graph. 
 This second generalization of acyclic does not generalize kernel-pefection and kernel-perfection does not generalize it.
 
 \section{Historical notes}
-
+\begin{marginfigure}
+\centering
+\begin{tikzpicture}[scale = 12]
+\tikzstyle{VertexStyle} = []
+\tikzstyle{EdgeStyle} = [line width=2pt]
+\tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 4pt, outer sep = 4pt, draw]
+\tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 4pt, outer sep = 4pt, draw, fill]
+\tikzstyle{131bae28-2bdc-4036-be47-2a1c9c8946d9}=[shape = circle,minimum size = 6pt,inner sep = 4pt,outer sep = 4pt,draw,fill={rgb,255:red,255; green,0; blue,0}]
+\tikzstyle{bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d}=[shape = circle,minimum size = 6pt,inner sep = 4pt,outer sep = 4pt,draw,fill={rgb,255:red,0; green,0; blue,255}]
+\tikzstyle{19f95f63-7f16-470b-b04a-d4ef32a60a18}=[shape = circle,minimum size = 6pt,inner sep = 4pt,outer sep = 4pt,draw,fill={rgb,255:red,0; green,255; blue,0}]
+\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.800, y = 0.850, L = \tiny {}]{v0}
+\Vertex[style = bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d, x = 0.550, y = 0.700, L = \tiny {}]{v1}
+\Vertex[style = bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d, x = 1.050, y = 0.700, L = \tiny {}]{v2}
+\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.650, y = 0.650, L = \tiny {}]{v3}
+\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.950, y = 0.400, L = \tiny {}]{v4}
+\Vertex[style = 19f95f63-7f16-470b-b04a-d4ef32a60a18, x = 0.650, y = 0.400, L = \tiny {}]{v5}
+\Vertex[style = bf2acde6-a5b6-4cc4-8fa7-c41f604b2d4d, x = 0.800, y = 0.750, L = \tiny {}]{v6}
+\Vertex[style = 19f95f63-7f16-470b-b04a-d4ef32a60a18, x = 0.950, y = 0.650, L = \tiny {}]{v7}
+\Vertex[style = 131bae28-2bdc-4036-be47-2a1c9c8946d9, x = 0.700, y = 0.500, L = \tiny {}]{v8}
+\Vertex[style = 19f95f63-7f16-470b-b04a-d4ef32a60a18, x = 0.900, y = 0.500, L = \tiny {}]{v9}
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v5)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v0)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v2)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v5)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v7)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v9)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v8)(v6)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v8)(v7)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v9)(v6)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v3)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v0)(v6)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v7)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v4)(v9)
+\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v5)(v8)
+\end{tikzpicture}
+\caption{The Petersen graph.}
+\end{marginfigure}
 \chapter{Flows}
 Using Theorem \ref{KernelPerfectSuperListBound} and Lemma \ref{KostochkaYanceyKernelLemma}, we will prove an easily-applicable sufficient condition for a graph to be $L$-colorable.  
 But first, we need a general lemma that gives graph orientations with specified constraints on their out-degrees.  This lemma can be proved directly, 
@@ -1014,8 +1116,8 @@ With just one color we can edge color any graph with maximum degree at most one.
 to edge color a graph $G$.  Could we be so fortunate that the pattern continues
 and we can edge color any graph $G$ with only $\Delta(G)$-colors? Not quite, but we can do so for bipartite ($2$-colorable) graphs.
 A graph is $k$-edge-colorable if we can color its edges with (at most) $k$ colors such that incident edges receive different colors.
-A color $c$ us $\emph{used}$\aaside{used}{} at a vertex $v$ of $G$ if an edge incident to $v$ in $G$ is colored with $c$. Otherwise, $c$ is \emph{available}\aaside{available}{} at $v$.
-A \emph{path}\aaside{path}{+0.15in} in $G$ is a sequence of pairwise distinct vertices $x_1x_2\cdots x_k$ such that $x_i$ is adjacent to $x_{i+1}$ for $i \in \irange{k-1}$.
+A color $c$ us $\emph{used}$ at a vertex $v$ of $G$ if an edge incident to $v$ in $G$ is colored with $c$. Otherwise, $c$ is \emph{available} at $v$.
+A \emph{path} in $G$ is a sequence of pairwise distinct vertices $x_1x_2\cdots x_k$ such that $x_i$ is adjacent to $x_{i+1}$ for $i \in \irange{k-1}$.
 
 \begin{theorem}\label{DeltaEdgeColoring}
 If $G$ is a bipartite graph, then $G$ is $\Delta(G)$-edge-colorable.
