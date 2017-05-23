@@ -216,6 +216,7 @@ Two vertices
 are \emph{adjacent}  if they are connected by an edge.  The set
 of vertices to which $v$ is adjacent is its \emph{neighborhood}, written $N(v)$. 
 For the size of $v$'s neighborhood $\card{N(v)}$, we write $d(v)$ and call this the \emph{degree} of $v$.
+We write $E(v)$ for the set of edges containing $v$, these are the edges \emph{incident} to $v$.
 
 We use the shorthand $\irange{k} \DefinedAs \set{1,2,\ldots, k}$. A \emph{path} in $G$ is a sequence of different vertices $x_1, x_2, \ldots, x_r$ such that $x_i$ is adjacent to $x_{i+1}$ for all $i \in \irange{r-1}$.  We say
 this is a path from $x_1$ to $x_r$.
@@ -599,7 +600,7 @@ $x_3 \in X \setminus \set{x_1,x_2}$ and $y_3 \in S \setminus \set{y_1,y_2}$.  Ap
 that $y_1$ and $y_3$ each have exactly one neighbor in $X$ and $\Delta(G) - 1$ neighbors in the same $\Delta(G) -1$ clique $B$ in $G - X$.
 Now $\card{A\cap B} = \card{A} + \card{B} - \card{A\cup B} \ge 2(\Delta(G) - 1) - d(y_1) \ge \Delta(G) - 2 > 0$.  But there can't be a vertex
 in $A \cap B$ since it would be adjacent to $y_1,y_2,y_3$ as well as $\Delta(G) - 2$ vertices in $A$ and thus have degree greater than $\Delta(G)$, a contradiction. 
-\begin{marginfigure}
+\begin{marginfigure}[-1.25in]
 \centering
 \begin{tikzpicture}[scale = 15]
 \tikzstyle{VertexStyle} = []
@@ -725,7 +726,8 @@ every superorientation of $G$ in which all edges in $F$ are bidirected are kerne
 \end{question}
 
 An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfectListBound} generalizes Theorem \ref{SecondListBound}.  
-But this is not the only possible generalization of acylic that works, late we will see another based on counting certain substructures of the oriented graph. 
+But this is not the only possible generalization of acylic that works, in the combinatorial nullstellensatz chapter we'll present 
+another based on polynomials.
 This second generalization of acyclic does not generalize kernel-pefection and kernel-perfection does not generalize it.
 
 \section{Historical notes}
@@ -839,42 +841,79 @@ If $L$ is a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ 
 Let $L$ be a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$.  
 We define a network $g$ on the set $Z \DefinedAs \set{s,t} \cup V(G) \cup L(V(G))$ by
 \[g(a, b) \DefinedAs  \begin{cases} 
-      1 & a = s \text{ and } b \in  V(G))\\
-      1 & a = t \text{ and } b \in  L(V(G)),\\
+      1 & a = s \text{ and } b \in  V(G)\\
 	  1 & a \in V(G) \text{ and } b \in L(a),\\
+      1 & a \in L(V(G)) \text{ and } b=t,\\
       0 & \text{otherwise} .
    \end{cases}
 \]
-Let $X \subseteq Z \setminus \set{t}$ with $s \in X$.  If $P = X \cap L(V(G))$ and $Q = X \cap V(G)$, then
+First, we compute the capacity of $g$. Let $X \subseteq Z \setminus \set{t}$ with $s \in X$.  If $P = X \cap L(V(G))$ and $Q = X \cap V(G)$, then
 \begin{align*}
 \card{X, Z\setminus X}_g &= \card{P, Z\setminus X}_g + \card{Q, Z\setminus X}_g + \card{\set{s}, Z\setminus X}_g\\
-&\ge \card{P, Z\setminus X}_g + \card{Q} - \card{P} + \card{\set{s}, Z\setminus X}_g\\
-&=\card{P} + \card{Q} - \card{P} + \card{V(G)\setminus Q}\\
-&=\card{Q} + \card{V(G)\setminus Q}\\
-&= \card{G}.
+&=\card{P} + \card{Q, Z\setminus X}_g + \card{V(G)\setminus Q}\\
+&\ge\card{P} + \card{L(Q) \setminus P} + \card{V(G)\setminus Q}\\
+&\ge\card{L(Q)} + \card{G} - \card{Q}\\
+&\ge \card{G}.
 \end{align*}
+The final inequality holds due to our assumption $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$. 
 Hence $\card{g} \ge \card{G}$.  By Theorem \ref{MaxFlowMinCut}, there is a flow $f$ on $Z$ with $f \le g$ such that $\size{f} = \card{g}$.  But then
 \begin{align*}
 \card{\set{s}, V(G)}_f &=  \card{\set{s}, Z}_f \\
-&= \card{\set{s}, Z}_f - \card{Z, \set{s}}\\
+&= \card{\set{s}, Z}_f - \card{Z, \set{s}}_f\\
 &=\size{f}\\
 &= \card{g}\\
 &\ge\card{G}.
 \end{align*}
 Hence $f(s,v) = 1$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \in V(G)$, there is $c_v \in L(V(G))$ such that $g(v, c_v) \ge f(v, c_v) = 1$ and hence $c_v \in L(v)$.
 Coloring each $v \in V(G)$ with $c_v$ gives an $L$-coloring of $G$ since if $c_v = c_w$, the fact that $f$ is a flow implies 
-$\card{Z, \set{c_v}} = \card{\set{c_v}, Z} = f(c_v, t) = 1$ and hence $v = w$.
+$\card{Z, \set{c_v}}_f = \card{\set{c_v}, Z}_f = f(c_v, t) = 1$ and hence $v = w$.
 \end{proof}
 
 \section{Orientations with prescribed degrees}
-\begin{lemma}\label{InOrientations} If $G$ is a graph and $\func{g}{V(G)}{\IN}$,
-then $G$ has an orientation such that $d^{-}(v)\ge g(v)$ for all $v\in V(G)$ just in case
-\[
-\size{X}+\size{X,V(G)\setminus X}\ge g(X),
-\]
-for every $X \subseteq V(G)$.
-\end{lemma}
+If $G$ is an oriented graph, the \emph{in-degree} of a vertex $v \in V(G)$, written $d^-(v)$, is the number of arrows
+pointing into $v$.  For $\func{h}{A}{\IN}$ and $S \subseteq A$, put $h(S) \DefinedAs \sum_{x \in S} h(x)$.
 
+\begin{lemma}\label{InOrientations} If $G$ is a graph and $\func{h}{V(G)}{\IN}$,
+then $G$ has an orientation such that $d^{-}(v)\ge h(v)$ for all $v\in V(G)$ just in case
+\begin{equation}
+\size{S}+\size{S,V(G)\setminus S}\ge h(S),
+\end{equation}
+for every $S \subseteq V(G)$.
+\end{lemma}
+\begin{proof}
+An easy computation shows that if $G$ has an orientation with $d^{-}(v)\ge h(v)$ for all $v\in V(G)$, then (1) holds.
+
+For the other implication, we define a network $g$ on the set $Z \DefinedAs \set{s,t} \cup V(G) \cup E(G)$ by
+\[g(a, b) \DefinedAs  \begin{cases} 
+      h(b) & a = s \text{ and } b \in  V(G)\\
+	  1 & a \in V(G) \text{ and } b \in E(a),\\
+      1 & a \in E(G) \text{ and } b = t,\\
+      0 & \text{otherwise} .
+   \end{cases}
+\]
+First, we compute the capacity of $g$. Let $X \subseteq Z \setminus \set{t}$ with $s \in X$.  If $P = X \cap E(G)$ and $Q = X \cap V(G)$, then
+\begin{align*}
+\card{X, Z\setminus X}_g &= \card{P, Z\setminus X}_g + \card{Q, Z\setminus X}_g + \card{\set{s}, Z\setminus X}_g\\
+&=\card{P} + \card{Q, Z\setminus X}_g + h\parens{V(G)\setminus Q}\\
+&\ge\card{P} + 2\size{Q} + \size{Q, V(G)\setminus Q} - 2\card{E(Q) \cap P} - \card{E(Q, V(G)\setminus Q) \cap P} + h\parens{V(G)\setminus Q}\\
+&\ge\card{P} + 2\size{Q} + \size{Q, V(G)\setminus Q} -\size{Q} - \card{P} + h\parens{V(G)\setminus Q}\\
+&= \size{Q} + \size{Q, V(G)\setminus Q} + h\parens{V(G)\setminus Q}\\
+&\ge h(Q) + h\parens{V(G)\setminus Q}\\
+&= h(V(G)).
+\end{align*}
+The penultimate inequality holds due to (1).
+Hence $\card{g} \ge h(V(G))$.  By Theorem \ref{MaxFlowMinCut}, there is a flow $f$ on $Z$ with $f \le g$ such that $\size{f} = \card{g}$.  But then
+\begin{align*}
+\card{\set{s}, V(G)}_f &=  \card{\set{s}, Z}_f \\
+&= \card{\set{s}, Z}_f - \card{Z, \set{s}}_f\\
+&=\size{f}\\
+&= \card{g}\\
+&\ge h(V(G)).
+\end{align*}
+Hence $f(s,v) = h(v)$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \in V(G)$, there is $I(v) \subseteq E(G)$ with $\card{I(v)} = h(v)$ such that $f(v, e) = 1$ for all $e \in I(v)$.
+Now $I(v) \cap I(w) = \emptyset$ for different $v,w \in V(G)$ since otherwise, $e \in I(v) \cap I(w)$ would have $f(e, t) \ge 2 > g(e, t)$.  So, we can define our desired orientation of $G$
+by directing all edges in $I(v)$ into $v$ for all $v \in V(G)$ and then directing any unoriented edges arbitrarily. 
+\end{proof}
 \section{Connectivity}
 \section{Historical notes}
 
@@ -884,7 +923,6 @@ for every $X \subseteq V(G)$.
 \section{Historical notes}
 
 \chapter{Combinatorial nullstellensatz}
-
 Fix an arbitrary field $\mathbb{F}$. We write $f_{k_1, \ldots, k_n}$ for the coefficient of $x_1^{k_1}\cdots x_n^{k_n}$ in the polynomial $f \in \mathbb{F}[x_1, \ldots, x_n]$. 
 \begin{lemma}
 Suppose $f \in \mathbb{F}[x_1, \ldots, x_n]$ and $k_1, \ldots, k_n \in \IN$ with $\sum_{i \in \irange{n}} k_i = \deg(f)$.  If $f_{k_1, \ldots, k_n} \ne 0$, then for any $A_1, \ldots, A_n \subseteq \mathbb{F}$ with $\card{A_i} \ge k_i + 1$, there exists $(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n$ with $f(a_1, \ldots, a_n) \ne 0$.
@@ -1205,6 +1243,6 @@ Deciding whether or not edge coloring a given graph $G$ requires $\Delta(G) + 1$
 \appendix
 \setboolean{@mainmatter}{true}
 \chapter{Basic probability}
-
+\chapter{Notation}
 \printindex
 \end{document}
