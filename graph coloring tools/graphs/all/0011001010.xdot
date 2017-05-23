@@ -1,0 +1,66 @@
+graph G {
+	graph [_draw_="c 9 -#fffffe00 C 7 -#ffffff P 4 -176.29 -136.74 -176.29 84.01 140.48 84.01 140.48 -136.74 ",
+		bb="-176.29,-136.74,140.48,84.008",
+		overlap=false,
+		sep=0.0,
+		splines=true,
+		xdotversion=1.7
+	];
+	node [color=black,
+		fixedsize=true,
+		fontname="Latin Modern Math",
+		fontsize=42,
+		height=.92,
+		label="\N",
+		penwidth=1,
+		shape=circle,
+		width=.92
+	];
+	edge [color=black,
+		penwidth=6,
+		style=bold
+	];
+	0	 [_draw_="c 7 -#000000 C 7 -#ff0000 E -57.81 16.41 33 33 ",
+		fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="-57.809,16.411",
+		style=filled,
+		width=0.91667];
+	3	 [_draw_="c 7 -#000000 C 7 -#0000ff E -143.29 47.32 33 33 ",
+		fillcolor=blue,
+		height=0.91667,
+		label="",
+		pos="-143.29,47.319",
+		style=filled,
+		width=0.91667];
+	0 -- 3	 [_draw_="S 15 -setlinewidth(6) c 7 -#000000 B 4 -89.15 27.74 -96.68 30.47 -104.72 33.37 -112.23 36.09 ",
+		pos="-89.153,27.745 -96.682,30.467 -104.72,33.373 -112.23,36.09"];
+	4	 [_draw_="c 7 -#000000 C 7 -#0000ff E 33.47 -10.99 33 33 ",
+		fillcolor=blue,
+		height=0.91667,
+		label="",
+		pos="33.474,-10.994",
+		style=filled,
+		width=0.91667];
+	0 -- 4	 [_draw_="S 15 -setlinewidth(6) c 7 -#000000 B 4 -26.14 6.9 -17.08 4.18 -7.2 1.22 1.86 -1.5 ",
+		pos="-26.139,6.9033 -17.076,4.1825 -7.1999,1.2175 1.8597,-1.5024"];
+	1	 [_draw_="c 7 -#000000 C 7 -#ff0000 E 107.48 51.01 33 33 ",
+		fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="107.48,51.008",
+		style=filled,
+		width=0.91667];
+	1 -- 4	 [_draw_="S 15 -setlinewidth(6) c 7 -#000000 B 4 82.01 29.67 74.65 23.51 66.62 16.77 59.24 10.59 ",
+		pos="82.012,29.671 74.653,23.506 66.618,16.774 59.241,10.594"];
+	2	 [_draw_="c 7 -#000000 C 7 -#ff0000 E 60.14 -103.74 33 33 ",
+		fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="60.143,-103.74",
+		style=filled,
+		width=0.91667];
+	2 -- 4	 [_draw_="S 15 -setlinewidth(6) c 7 -#000000 B 4 50.96 -71.82 48.28 -62.5 45.35 -52.3 42.67 -42.97 ",
+		pos="50.965,-71.825 48.283,-62.497 45.352,-52.303 42.669,-42.972"];
+}

@@ -548,31 +548,39 @@ Since $\card{G-S} < \card{G}$, applying the theorem to $G-S$ shows that $\Delta(
 So, either $\chi(G-S) = \Delta(G) = 3$ or $\omega(G-S) \ge \Delta(G)$.  In the former case, let $X$ be the vertex set of an odd cycle in $G-S$ guaranteed by Theorem \ref{TwoColoring}.  
 In the latter case, let $X$ be a $\Delta(G)$-clique in $G-S$.
 
-\begin{marginfigure}[0.25in]
+\begin{marginfigure}[0.35in]
 \centering
-\begin{tikzpicture}[scale = 8]
+\begin{tikzpicture}[scale = 10]
 \tikzstyle{VertexStyle} = []
 \tikzstyle{EdgeStyle} = [line width=2pt]
 \tikzstyle{labeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw]
 \tikzstyle{unlabeledStyle}=[shape = circle, minimum size = 6pt, inner sep = 5pt, outer sep = 5pt, draw, fill]
-\tikzstyle{532f9ccb-bc7b-4b29-b41b-c7fac8d640b0}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill = red]
-\tikzstyle{e6d9f5fc-90ba-4576-bad8-6b53a35507e9}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill=blue]
-\Vertex[style = unlabeledStyle, x = 0.800, y = 0.850, L = \small {}]{v0}
-\Vertex[style = labeledStyle, x = 0.550, y = 0.700, L = \small {$x_1$}]{v1}
-\Vertex[style = unlabeledStyle, x = 1.050, y = 0.700, L = \small {}]{v2}
-\Vertex[style = labeledStyle, x = 0.950, y = 0.400, L = \small {$x_2$}]{v3}
-\Vertex[style = unlabeledStyle, x = 0.650, y = 0.400, L = \small {}]{v4}
-\Vertex[style = 532f9ccb-bc7b-4b29-b41b-c7fac8d640b0, x = 0.550, y = 1.000, L = \small {$y_1$}]{v5}
-\Vertex[style = e6d9f5fc-90ba-4576-bad8-6b53a35507e9, x = 0.950, y = 0.150, L = \small {$y_2$}]{v6}
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v0)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v1)(v4)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v2)(v0)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v2)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v3)(v4)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v5)(v1)
-\Edge[label = \tiny {}, labelstyle={auto=right, fill=none}](v6)(v3)
+\tikzstyle{4dcd64b6-e27c-4ef8-9704-2b5f8f257fa4}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill = blue]
+\tikzstyle{07b15e9c-2fc5-45a9-bb67-2e959dfd38f7}=[shape = circle,minimum size = 6pt,inner sep = 5pt,outer sep = 5pt,draw,fill = red]
+\Vertex[style = 4dcd64b6-e27c-4ef8-9704-2b5f8f257fa4, x = 0.800, y = 0.750, L = \small {$w$}]{v0}
+\Vertex[style = labeledStyle, x = 0.550, y = 0.550, L = \small {$x_1$}]{v1}
+\Vertex[style = labeledStyle, x = 1.050, y = 0.550, L = \small {$z$}]{v2}
+\Vertex[style = labeledStyle, x = 1.050, y = 0.350, L = \small {$x_2$}]{v3}
+\Vertex[style = unlabeledStyle, x = 0.900, y = 0.150, L = \small {}]{v4}
+\Vertex[style = 07b15e9c-2fc5-45a9-bb67-2e959dfd38f7, x = 0.550, y = 0.750, L = \small {$y_1$}]{v5}
+\Vertex[style = 4dcd64b6-e27c-4ef8-9704-2b5f8f257fa4, x = 1.050, y = 0.100, L = \small {$y_2$}]{v6}
+\Vertex[style = unlabeledStyle, x = 0.550, y = 0.350, L = \small {}]{v7}
+\Vertex[style = unlabeledStyle, x = 0.700, y = 0.150, L = \small {}]{v8}
+\Vertex[style = 07b15e9c-2fc5-45a9-bb67-2e959dfd38f7, x = 0.800, y = 0.950, L = \small {}]{v9}
+\Vertex[style = 4dcd64b6-e27c-4ef8-9704-2b5f8f257fa4, x = 1.050, y = 0.750, L = \small {}]{v10}
+\Edge[label = \small {}, labelstyle={auto=right, fill=none}](v1)(v0)
+\Edge[label = \small {}, labelstyle={auto=right, fill=none}](v2)(v0)
+\Edge[label = \small {}, labelstyle={auto=right, fill=none}](v3)(v2)
+\Edge[label = \small {}, labelstyle={auto=right, fill=none}](v3)(v4)
+\Edge[label = \small {}, labelstyle={auto=right, fill=none}](v5)(v1)
+\Edge[label = \small {}, labelstyle={auto=right, fill=none}](v6)(v3)
+\Edge[label = \small {}, labelstyle={auto=right, fill=none}](v7)(v1)
+\Edge[label = \small {}, labelstyle={auto=right, fill=none}](v8)(v4)
+\Edge[label = \small {}, labelstyle={auto=right, fill=none}](v8)(v7)
+\Edge[label = \small {}, labelstyle={auto=right, fill=none}](v9)(v0)
+\Edge[label = \small {}, labelstyle={auto=right, fill=none}](v10)(v2)
 \end{tikzpicture}
-
+\caption{Right after coloring $w$, note that $z$ has two blue neighbors.}
 \end{marginfigure}
 
 Since $S$ is maximal and $\omega(G) \le \Delta(G)$, there are $x_1, x_2 \in X$ and $y_1, y_2 \in S$ such that $x_1$ is adjacent to $y_1$ and $x_2$ is adjacent to $y_2$.
@@ -580,7 +588,7 @@ Construct a graph $H$ from $G-X$ by adding the edge $y_1y_2$.  Since $\card{H} <
 Suppose $\chi(H) \le \Delta(G)$.  Then there is a $\Delta(G)$-coloring of $G-X$ where $y_1$ and $y_2$ receive different colors, say red and blue respectively.
 Pick the first vertex $z$ in a shortest path $P$ from $x_1$ to $x_2$ in $X$ that has a blue colored neighbor in $V(H)$. 
 Each vertex in $X$ has $\Delta(G)-1$ neighbors in $X$ and hence at most one neighbor in $V(H)$.  So, $z \ne x_1$ since $x_1$ already has a red colored neighbor in $V(H)$.
-Let $w$ be be the vertex preceding $z$ on $P$. Then $w$ has no blue colored neighbor.  Since $X$ is the vertex set of a cycle or a 
+Let $w$ be be the vertex preceding $z$ on $P$ (it could be that $w = x_1$). Then $w$ has no blue colored neighbor.  Since $X$ is the vertex set of a cycle or a 
 complete graph, there is a path $Q$ from $w$ to $z$ passing through every vertex of $X$.  Color $w$ blue and then proceed along $Q$, coloring one vertex at a time.  
 Since each vertex we encounter before we get to $z$ has at most $\Delta(G) - 1$ colored neighbors, we always have an available color to use.  But, $z$ is adjacent
 to both $w$ and another blue colored vertex in $V(H)$, so there is an available color for $z$ as well.  This gives a $\Delta(G)$-coloring of $G$, a contradiction.

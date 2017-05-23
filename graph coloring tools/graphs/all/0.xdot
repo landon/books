@@ -1,0 +1,30 @@
+graph G {
+	graph [_draw_="c 9 -#fffffe00 C 7 -#ffffff P 4 -33 -33 -33 33 33 33 33 -33 ",
+		bb="-33,-33,33,33",
+		overlap=false,
+		sep=0.0,
+		splines=true,
+		xdotversion=1.7
+	];
+	node [color=black,
+		fixedsize=true,
+		fontname="Latin Modern Math",
+		fontsize=42,
+		height=.92,
+		label="\N",
+		penwidth=1,
+		shape=circle,
+		width=.92
+	];
+	edge [color=black,
+		penwidth=6,
+		style=bold
+	];
+	0	 [_draw_="c 7 -#000000 C 7 -#ff0000 E 0 0 33 33 ",
+		fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="0,0",
+		style=filled,
+		width=0.91667];
+}
