@@ -921,7 +921,21 @@ one of the paths (we say this collection of paths is \emph{edge-disjoint}). A gr
 such that each $v \in V(G) \setminus \set{x,y}$ is in at most one of the paths (we say this collection of paths is \emph{vertex-disjoint}).  
 
 First, we investigate edge-connectivity. If $G-F$ is not connected for some $F \subseteq E(G)$, then there must be $x,y \in V(G)$ such that each path from $x$ to $y$ contains an edge in $F$.
-In particular, for any edge-disjoint collection of paths $\P$ from $x$ to $y$, we have $\card{\P} \le \card{F}$.
+In particular, for any edge-disjoint collection of paths $\P$ from $x$ to $y$, we have $\card{\P} \le \card{F}$.  Menger's theorem is that the converse also holds.
+
+\begin{theorem}\label{MengerEdge}
+A graph $G$ is $k$-edge-connected just in case $G - F$ is connected for every $F \subseteq E(G)$ with $\card{F} < k$.
+\end{theorem}
+\begin{proof}
+SOne implication is trivial as discussed above.  For the other implication, suppose $G - F$ is connected for every $F \subseteq E(G)$ with $\card{F} < k$
+and let $s,t \in V(G)$.  We need to find an edge-disjoint collection of $k$ paths from $s$ to $t$.
+\end{proof}
+
+\begin{theorem}\label{MengerVertex}
+A graph $G$ is $k$-vertex-connected just in case $G - S$ is connected for every $S \subseteq V(G)$ with $\card{S} < k$.
+\end{theorem}
+\begin{proof}
+\end{proof}
 
 \section{Historical notes}
 
