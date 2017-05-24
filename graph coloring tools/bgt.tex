@@ -914,7 +914,15 @@ Hence $f(s,v) = h(v)$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \i
 Now $I(v) \cap I(w) = \emptyset$ for different $v,w \in V(G)$ since otherwise, $e \in I(v) \cap I(w)$ would have $f(e, t) \ge 2 > g(e, t)$.  So, we can define our desired orientation of $G$
 by directing all edges in $I(v)$ into $v$ for all $v \in V(G)$ and then directing any unoriented edges arbitrarily. 
 \end{proof}
-\section{Connectivity}
+\section{Menger's theorem}
+Recall that a graph $G$ is \emph{connected} if for all $x,y \in V(G)$, there is a path from $x$ to $y$.  Intuitively, $G$ is ``even more connected'' if there are multiple such paths for all $x,y \in V(G)$.
+We can make this precise in two closely related ways.  A graph $G$ is \emph{$k$-edge-connected} if for all $x,y \in V(G)$, there are $k$ paths from $x$ to $y$ such that each edge of $G$ is in at most 
+one of the paths (we say this collection of paths is \emph{edge-disjoint}). A graph $G$ is \emph{$k$-vertex-connected} if for all $x,y \in V(G)$, there are $k$ paths from $x$ to $y$ 
+such that each $v \in V(G) \setminus \set{x,y}$ is in at most one of the paths (we say this collection of paths is \emph{vertex-disjoint}).  
+
+First, we investigate edge-connectivity. If $G-F$ is not connected for some $F \subseteq E(G)$, then there must be $x,y \in V(G)$ such that each path from $x$ to $y$ contains an edge in $F$.
+In particular, for any edge-disjoint collection of paths $\P$ from $x$ to $y$, we have $\card{\P} \le \card{F}$.
+
 \section{Historical notes}
 
 \chapter{Kernel magic}
