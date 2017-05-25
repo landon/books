@@ -170,6 +170,7 @@
 \newcommand{\fancy}[1]{\mathcal{#1}}
 \newcommand{\C}[1]{\fancy{C}_{#1}}
 \newcommand{\IN}{\mathbb{N}}
+\newcommand{\IZ}{\mathbb{Z}}
 \newcommand{\IR}{\mathbb{R}}
 \newcommand{\G}{\fancy{G}}
 \newcommand{\CC}{\fancy{C}}
@@ -180,6 +181,12 @@
 \newcommand{\HH}{\fancy{H}}
 
 \newcommand{\pot}{\operatorname{pot}}
+\newcommand{\mic}{\operatorname{mic}}
+\newcommand{\AT}{\operatorname{AT}}
+\newcommand{\col}{\operatorname{col}}
+\newcommand{\ch}{\operatorname{ch}}
+\newcommand{\type}{\operatorname{type}}
+\newcommand{\nonsep}{\bar{S}}
 
 \usepackage{makeidx} % Used to generate the index
 \makeindex % Generate the index which is printed at the end of the document
@@ -729,7 +736,44 @@ every superorientation of $G$ in which all edges in $F$ are bidirected are kerne
 An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfectListBound} generalizes Theorem \ref{SecondListBound}.  
 But this is not the only possible generalization of acylic that works, in the combinatorial nullstellensatz chapter we'll present 
 another based on polynomials.
-This second generalization of acyclic does not generalize kernel-pefection and kernel-perfection does not generalize it.
+This second generalization of acyclic does not generalize kernel-perfection and kernel-perfection does not generalize it.
+
+\section{Coloring with prescribed list sizes}
+Suppose we are attempting to $k$-color a graph $G$ and have already $k$-colored $G[S]$ for some $S \subset V(G)$.  
+If $L$ is the list assignment of remaining permissible colors on $G-S$, then we don't really know much about $L$, except that $\card{L(v)} \ge k - \card{N(v) \cap S}$ for all $S \subseteq V(G)$.
+So, we really want to know that $G-S$ is colorable from \emph{every} list assignment of that size.
+
+\begin{definition}
+For a graph $G$, a \emph{$G$-numbering} is a function $\func{f}{V(G)}{\IZ}$ such that $f(v) \le d_G(v) + 1$ for all $v \in V(G)$.
+\end{definition}
+
+\begin{lemma}
+If $f$ is a $G$-numbering and $H$ is an induced subgraph of $G$, then $\func{f_H}{V(H)}{\IZ}$ given by $f_H(v) \DefinedAs f(v) - \size{v, G-H}$ is an $H$-numbering.
+\end{lemma}
+\begin{proof}
+For $v \in V(H)$,
+\begin{align*}
+f_H(v) &= f(v) - \size{v, G-H} \le d_G(v) + 1 - \size{v, G-H}\\
+&= d_G(v) + 1 - (d_G(v) - d_H(v)) \\
+&= d_H(v) + 1.
+\end{align*}
+\end{proof}
+
+\begin{definition}
+Let $G$ be a graph and $f$ a $G$-numbering. For a nonempty induced subgraph $H$ of $G$, we say that \emph{$G$ is $f$-reducible to $H$} if $H$ is $f_H$-choosable.  If $G$
+is not $f$-reducible to any nonempty induced subgraph, then $G$ is $f$-irreducible.
+\end{definition}
+
+Recall that for $\func{f}{A}{\IZ}$ and $S \subseteq A$, we let $f(S) = \sum_{x \in S} f(x)$.
+\begin{lemma}
+If $G$ is a graph and $f$ is a $G$-numbering with $f(V(G)) > 2\size{G}$, then $G$ has a nonempty induced subgraph $H$ with $f_H(v) > d_H(v)$ for all $v \in V(H)$.
+\end{lemma}
+\begin{lemma}\label{BasicIrreducible}
+If $G$ is $f$-irreducible, then $f(V(G)) \le 2\size{G}$.
+\end{lemma}
+
+The natural next questions is what happens when $f(V(G)) = 2\size{G}$, can $G$ be $f$-irreducible in this case?  The examples in Figure [insert me] show that the answer is yes.
+We will understand the case of equality completely in \nameref{KernelMagicChapter} using a tool that improves Lemma \ref{BasicIrreducible} in terms of the ``maximum independent cover'' number.
 
 \section{Historical notes}
 \begin{marginfigure}
@@ -871,7 +915,7 @@ $\card{Z, \set{c_v}}_f = \card{\set{c_v}, Z}_f = f(c_v, t) = 1$ and hence $v = w
 \end{proof}
 
 Hall's theorem can be expressed in many forms, here is a more standard way that is readily seen to be equivalent to Lemma \ref{HallTheoremLemma}. A \emph{transversal} in a collection 
-of sets $\set{A_i}_{i \in \irange{k}}$ is a set $X \subseteq \bigcup_{i \in \irange{k}} A_i$ with $\card{X} = k$ such that $\card{X \cap A_i} = 1$
+of finite sets $\set{A_i}_{i \in \irange{k}}$ is a set $X \subseteq \bigcup_{i \in \irange{k}} A_i$ with $\card{X} = k$ such that $\card{X \cap A_i} = 1$
 for all $i \in \irange{k}$.
 \begin{HallsTheorem}
 $\set{A_i}_{i \in \irange{k}}$ has a transversal just in case $\card{\bigcup_{i \in I} A_i} \ge \card{I}$ for all $I \subseteq \irange{k}$.
@@ -953,7 +997,16 @@ Show that Lemma \ref{InOrientations} follows from Lemma \ref{HallTheoremLemma}. 
 
 \section{Historical notes}
 
-\chapter{Kernel magic}
+\chapter{Kernel magic}\label{KernelMagicChapter}
+
+\begin{definition} The \emph{maximum independent cover number }of a graph $G$
+is the maximum $\mic(G)$ of $\size{I,V(G)\setminus I}$ over all independent sets $I$
+of $G$. 
+\end{definition}
+
+\begin{lemma}
+If $G$ is $f$-irreducible, then $f(V(G)) < 2\size{G} + |G| - \mic(G)$.
+\end{lemma}
 \section{Brooks' theorem for list coloring}
 \section{Triangle-free graphs}
 \section{Historical notes}
