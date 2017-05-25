@@ -764,16 +764,12 @@ Let $G$ be a graph and $f$ a $G$-numbering. For a nonempty induced subgraph $H$ 
 is not $f$-reducible to any nonempty induced subgraph, then $G$ is $f$-irreducible.
 \end{definition}
 
-Recall that for $\func{f}{A}{\IZ}$ and $S \subseteq A$, we let $f(S) = \sum_{x \in S} f(x)$.
-\begin{lemma}
-If $G$ is a graph and $f$ is a $G$-numbering with $f(V(G)) > 2\size{G}$, then $G$ has a nonempty induced subgraph $H$ with $f_H(v) > d_H(v)$ for all $v \in V(H)$.
-\end{lemma}
 \begin{lemma}\label{BasicIrreducible}
-If $G$ is $f$-irreducible, then $f(V(G)) \le 2\size{G}$.
+If $G$ is $f$-irreducible, then $f(v) \le d_G(v)$ for all $v \in V(G)$.  In particular, $2\size{G} \ge f(V(G))$.
 \end{lemma}
 
 The natural next questions is what happens when $f(V(G)) = 2\size{G}$, can $G$ be $f$-irreducible in this case?  The examples in Figure [insert me] show that the answer is yes.
-We will understand the case of equality completely in \nameref{KernelMagicChapter} using a tool that improves Lemma \ref{BasicIrreducible} in terms of the ``maximum independent cover'' number.
+We will understand the case of equality completely in \nameref{KernelMagicChapter} using a tool that improves Lemma \ref{BasicIrreducible} in terms of the ``maximum independent cover number''.
 
 \section{Historical notes}
 \begin{marginfigure}
@@ -1005,7 +1001,7 @@ of $G$.
 \end{definition}
 
 \begin{lemma}
-If $G$ is $f$-irreducible, then $f(V(G)) < 2\size{G} + |G| - \mic(G)$.
+If $G$ is $f$-irreducible, then $2\size{G} > f(V(G)) + \mic(G) - |G|$.
 \end{lemma}
 \section{Brooks' theorem for list coloring}
 \section{Triangle-free graphs}
