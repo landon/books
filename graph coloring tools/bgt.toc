@@ -7,33 +7,32 @@
 \contentsline {chapter}{Flows}{13}{chapter*.8}
 \contentsline {section}{Hall's theorem}{14}{section*.9}
 \contentsline {section}{Orientations with prescribed degrees}{15}{section*.10}
-\contentsline {section}{Higher connectivity}{16}{section*.11}
-\contentsline {section}{Historical notes}{17}{section*.12}
-\contentsline {chapter}{Kernel magic}{18}{chapter*.13}
-\contentsline {section}{Brooks' theorem for list coloring}{18}{section*.14}
-\contentsline {section}{Triangle-free graphs}{18}{section*.15}
-\contentsline {section}{Historical notes}{18}{section*.16}
-\contentsline {chapter}{Combinatorial nullstellensatz}{19}{chapter*.17}
-\contentsline {section}{The graph polynomial}{19}{section*.18}
-\contentsline {section}{A coefficient formula}{21}{section*.19}
-\contentsline {section}{Uniquely colorable graphs}{22}{section*.20}
-\contentsline {section}{Adding edges to simplify coefficient computation}{22}{section*.21}
-\contentsline {section}{AT preserving operations}{22}{section*.22}
-\contentsline {section}{Historical notes}{22}{section*.23}
-\contentsline {chapter}{Independent transversals}{23}{chapter*.24}
-\contentsline {section}{Randomly}{23}{section*.25}
-\contentsline {section}{A stronger bound}{23}{section*.26}
-\contentsline {section}{Lists with low degree color graphs}{25}{section*.27}
-\contentsline {section}{Hitting all maximum cliques}{25}{section*.28}
-\contentsline {section}{Strong coloring}{25}{section*.29}
-\contentsline {section}{When every vertex is in a big clique}{25}{section*.30}
-\contentsline {section}{Historical notes}{25}{section*.31}
-\contentsline {chapter}{Kempe chains and vertex shuffling}{26}{chapter*.32}
-\contentsline {section}{Historical notes}{26}{section*.33}
-\contentsline {chapter}{Vertex transitive graphs}{27}{chapter*.34}
-\contentsline {section}{Historical notes}{27}{section*.35}
-\contentsline {chapter}{Coloring edges}{28}{chapter*.36}
-\contentsline {section}{Historical notes}{30}{section*.37}
+\contentsline {section}{Historical notes}{17}{section*.11}
+\contentsline {chapter}{Kernel magic}{18}{chapter*.12}
+\contentsline {section}{Brooks' theorem for list coloring}{18}{section*.13}
+\contentsline {section}{Triangle-free graphs}{18}{section*.14}
+\contentsline {section}{Historical notes}{18}{section*.15}
+\contentsline {chapter}{Combinatorial nullstellensatz}{19}{chapter*.16}
+\contentsline {section}{The graph polynomial}{19}{section*.17}
+\contentsline {section}{A coefficient formula}{21}{section*.18}
+\contentsline {section}{Uniquely colorable graphs}{22}{section*.19}
+\contentsline {section}{Adding edges to simplify coefficient computation}{22}{section*.20}
+\contentsline {section}{AT preserving operations}{22}{section*.21}
+\contentsline {section}{Historical notes}{22}{section*.22}
+\contentsline {chapter}{Independent transversals}{23}{chapter*.23}
+\contentsline {section}{Randomly}{23}{section*.24}
+\contentsline {section}{A stronger bound}{23}{section*.25}
+\contentsline {section}{Lists with low degree color graphs}{25}{section*.26}
+\contentsline {section}{Hitting all maximum cliques}{25}{section*.27}
+\contentsline {section}{Strong coloring}{25}{section*.28}
+\contentsline {section}{When every vertex is in a big clique}{25}{section*.29}
+\contentsline {section}{Historical notes}{25}{section*.30}
+\contentsline {chapter}{Kempe chains and vertex shuffling}{26}{chapter*.31}
+\contentsline {section}{Historical notes}{26}{section*.32}
+\contentsline {chapter}{Vertex transitive graphs}{27}{chapter*.33}
+\contentsline {section}{Historical notes}{27}{section*.34}
+\contentsline {chapter}{Coloring edges}{28}{chapter*.35}
+\contentsline {section}{Historical notes}{30}{section*.36}
 \ttl@change@i {\@ne }{chapter}{0em}{\vspace {1.5\baselineskip }\begin {fullwidth}\LARGE \rmfamily \itshape }{\hspace *{0em}\appendixname ~\thecontentslabel : }{\hspace *{0em}}{\rmfamily \upshape \qquad \thecontentspage }\relax 
 \ttl@change@v {chapter}{}{}{\end {fullwidth}}\relax 
 \contentsline {chapter}{\numberline {A}Basic probability}{31}{appendix.A}

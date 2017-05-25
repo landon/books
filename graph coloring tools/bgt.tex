@@ -147,6 +147,7 @@
 \newtheorem{solution}{Solution}
 \newtheorem{summary}{Summary}
 \newtheorem{theorem}{Theorem}
+\newtheorem*{HallsTheorem}{Hall's theorem}
 
 \newcommand{\set}[1]{\left\{ #1 \right\}}
 \newcommand{\setb}[3]{\left\{ #1 \in #2 : #3 \right\}}
@@ -772,7 +773,7 @@ This second generalization of acyclic does not generalize kernel-pefection and k
 \chapter{Flows}
 Using Theorem \ref{KernelPerfectSuperListBound} and Lemma \ref{KostochkaYanceyKernelLemma}, we will prove an easily-applicable sufficient condition for a graph to be $L$-colorable.  
 But first, we need a general lemma that gives graph orientations with specified constraints on their out-degrees.  This lemma can be proved directly, 
-but a detour into the theory of flows will give us the lemma and many other results for free.
+but a detour into the theory of flows will give us the lemma and other results for free (modulo computation).
 
 Let $V$ be a finite set.  A \emph{network} on $V$ is a function $\func{f}{V\times V}{\Q_{\ge 0}}$.  For a network $f$ and $X,Y \subseteq V$, put
 \[\card{X,Y}_f \DefinedAs \sum_{(x,y) \in X\times Y} f(x,y).\]
@@ -834,7 +835,7 @@ So, $t \not \in X$.  Since $v \in V \setminus X$ is not in $X$, we must have $f(
 \section{Hall's theorem}
 As our first application of Theorem \ref{MaxFlowMinCut}, we give a sufficient condition for a graph $G$ to be $L$-colorable.  This 
 condition is also necessary when $G$ is complete.
-\begin{lemma}
+\begin{lemma}\label{HallTheoremLemma}
 If $L$ is a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$, then $G$ is $L$-colorable.
 \end{lemma}
 \begin{proof}
@@ -868,6 +869,13 @@ Hence $f(s,v) = 1$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \in V
 Coloring each $v \in V(G)$ with $c_v$ gives an $L$-coloring of $G$ since if $c_v = c_w$, the fact that $f$ is a flow implies 
 $\card{Z, \set{c_v}}_f = \card{\set{c_v}, Z}_f = f(c_v, t) = 1$ and hence $v = w$.
 \end{proof}
+
+Hall's theorem can be expressed in many forms, here is a more standard way that is readily seen to be equivalent to Lemma \ref{HallTheoremLemma}. A \emph{transversal} in a collection 
+of sets $\set{A_i}_{i \in \irange{k}}$ is a set $X \subseteq \bigcup_{i \in \irange{k}} A_i$ with $\card{X} = k$ such that $\card{X \cap A_i} = 1$
+for all $i \in \irange{k}$.
+\begin{HallsTheorem}
+$\set{A_i}_{i \in \irange{k}}$ has a transversal just in case $\card{\bigcup_{i \in I} A_i} \ge \card{I}$ for all $I \subseteq \irange{k}$.
+\end{HallsTheorem}
 
 \section{Orientations with prescribed degrees}
 If $G$ is an oriented graph, the \emph{in-degree} of a vertex $v \in V(G)$, written $d^-(v)$, is the number of arrows
@@ -914,28 +922,34 @@ Hence $f(s,v) = h(v)$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \i
 Now $I(v) \cap I(w) = \emptyset$ for different $v,w \in V(G)$ since otherwise, $e \in I(v) \cap I(w)$ would have $f(e, t) \ge 2 > g(e, t)$.  So, we can define our desired orientation of $G$
 by directing all edges in $I(v)$ into $v$ for all $v \in V(G)$ and then directing any unoriented edges arbitrarily. 
 \end{proof}
-\section{Menger's theorem}
-Recall that a graph $G$ is \emph{connected} if for all $x,y \in V(G)$, there is a path from $x$ to $y$.  Intuitively, $G$ is ``even more connected'' if there are multiple such paths for all $x,y \in V(G)$.
-We can make this precise in two closely related ways.  A graph $G$ is \emph{$k$-edge-connected} if for all $x,y \in V(G)$, there are $k$ paths from $x$ to $y$ such that each edge of $G$ is in at most 
-one of the paths (we say this collection of paths is \emph{edge-disjoint}). A graph $G$ is \emph{$k$-vertex-connected} if for all $x,y \in V(G)$, there are $k$ paths from $x$ to $y$ 
-such that each $v \in V(G) \setminus \set{x,y}$ is in at most one of the paths (we say this collection of paths is \emph{vertex-disjoint}).  
 
-First, we investigate edge-connectivity. If $G-F$ is not connected for some $F \subseteq E(G)$, then there must be $x,y \in V(G)$ such that each path from $x$ to $y$ contains an edge in $F$.
-In particular, for any edge-disjoint collection of paths $\P$ from $x$ to $y$, we have $\card{\P} \le \card{F}$.  Menger's theorem is that the converse also holds.
+The proofs of Lemma \ref{HallTheoremLemma} and Lemma \ref{InOrientations} look so similar we might suspect there is some relation between the two lemmas.
+\begin{exercise}
+Show that Lemma \ref{InOrientations} follows from Lemma \ref{HallTheoremLemma}.  Hint: split each $b \in V(G)$ into $h(b)$ copies of itself.
+\end{exercise}
 
-\begin{theorem}\label{MengerEdge}
-A graph $G$ is $k$-edge-connected just in case $G - F$ is connected for every $F \subseteq E(G)$ with $\card{F} < k$.
-\end{theorem}
-\begin{proof}
-SOne implication is trivial as discussed above.  For the other implication, suppose $G - F$ is connected for every $F \subseteq E(G)$ with $\card{F} < k$
-and let $s,t \in V(G)$.  We need to find an edge-disjoint collection of $k$ paths from $s$ to $t$.
-\end{proof}
-
-\begin{theorem}\label{MengerVertex}
-A graph $G$ is $k$-vertex-connected just in case $G - S$ is connected for every $S \subseteq V(G)$ with $\card{S} < k$.
-\end{theorem}
-\begin{proof}
-\end{proof}
+%\section{Menger's theorem}
+%Recall that a graph $G$ is \emph{connected} if for all $x,y \in V(G)$, there is a path from $x$ to $y$.  Intuitively, $G$ is ``even more connected'' if there are multiple such paths for all $x,y \in V(G)$.
+%We can make this precise in two closely related ways.  A graph $G$ is \emph{$k$-edge-connected} if for all $x,y \in V(G)$, there are $k$ paths from $x$ to $y$ such that each edge of $G$ is in at most 
+%one of the paths (we say this collection of paths is \emph{edge-disjoint}). A graph $G$ is \emph{$k$-vertex-connected} if for all $x,y \in V(G)$, there are $k$ paths from $x$ to $y$ 
+%such that each $v \in V(G) \setminus \set{x,y}$ is in at most one of the paths (we say this collection of paths is \emph{vertex-disjoint}).  
+%
+%First, we investigate edge-connectivity. If $G-F$ is not connected for some $F \subseteq E(G)$, then there must be $x,y \in V(G)$ such that each path from $x$ to $y$ contains an edge in $F$.
+%In particular, for any edge-disjoint collection of paths $\P$ from $x$ to $y$, we have $\card{\P} \le \card{F}$.  Menger's theorem is that the converse also holds.
+%
+%\begin{theorem}\label{MengerEdge}
+%A graph $G$ is $k$-edge-connected just in case $G - F$ is connected for every $F \subseteq E(G)$ with $\card{F} < k$.
+%\end{theorem}
+%\begin{proof}
+%One implication is trivial as discussed above.  For the other implication, suppose $G - F$ is connected for every $F \subseteq E(G)$ with $\card{F} < k$
+%and let $s,t \in V(G)$.  We need to find an edge-disjoint collection of $k$ paths from $s$ to $t$.
+%\end{proof}
+%
+%\begin{theorem}\label{MengerVertex}
+%A graph $G$ is $k$-vertex-connected just in case $G - S$ is connected for every $S \subseteq V(G)$ with $\card{S} < k$.
+%\end{theorem}
+%\begin{proof}
+%\end{proof}
 
 \section{Historical notes}
 
@@ -1204,15 +1218,6 @@ It may come as a surpise that even though we might need more than $\Delta(G)$ co
 For bipartite graphs we were able to repair an almost correct coloring by swapping colors along a path because we had control over where this path ended.  In the
 general case we don't have the same control over a path between two vertices, but we can exert some measure of control over paths leaving and entering a larger structure. 
 The larger structure we use here is the whole neighborhood of a vertex.
-
-This is a good time to introduce a lemma that will be useful throughout the book.  
-A \emph{transversal} in a collection of sets $\set{A_i}_{i \in \irange{k}}$ is a set $X \subseteq \bigcup_{i \in \irange{k}} A_i$ with $\card{X} = k$ such that $\card{X \cap A_i} = 1$
-for all $i \in \irange{k}$.
-\begin{lemma}
-$\set{A_i}_{i \in \irange{k}}$ has a transversal just in case $\card{\bigcup_{i \in I} A_i} \ge \card{I}$ for all $I \subseteq \irange{k}$.
-\end{lemma}
-\begin{proof}
-\end{proof}
 
 \begin{corollary}\label{TransversalCorollary}
 If $\card{\bigcup_{i \in \irange{k}} A_i} \ge k$, then there is nonempty $I \subseteq \irange{k}$ such that $\set{A_i}_{i \in I}$ has a transversal $X$ where $X \cap A_i = \emptyset$
