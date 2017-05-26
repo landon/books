@@ -353,7 +353,7 @@ A graph is $2$-colorable just in case it contains no odd cycle.
 \begin{proof}
 A graph containing an odd cycle clearly can't be $2$-colored.  For the other implication, suppose
 there is a graph that is not $2$-colorable and doesn't contain an odd cycle.  Then we may pick such a graph $G$ with $\card{G}$ as small as possible.
-Surely, $|G| > 0$, so we may pick $v \in V(G)$.  If $x, y \in N(v)$, then $x$ is not adjacent to $y$ since then $xyz$ would be an odd cycle.
+Surely, $|G| > 0$ and there is $v \in V(G)$ with $d(v) \ge 2$.  If $x, y \in N(v)$, then $x$ is not adjacent to $y$ since then $xyz$ would be an odd cycle.
 So we can construct a graph $H$ from $G$ by removing $v$ and identifying all of $N(v)$ to a new vertex $x_v$.  Any odd cycle
 in $H$ would contain $x_v$ and hence give rise to an odd cycle in $G$ passing through $v$.  So $H$ contains no odd cycle. Since $|H| < |G|$, applying the theorem to $H$ gives a 2-coloring of $H$, say with red and blue
 where $x_v$ gets colored red.  But this gives a 2-coloring of $G$ by coloring all vertices in $N(v)$ red and $v$ blue, a contradiction.
@@ -1010,7 +1010,8 @@ If $G$ is $f$-irreducible, then $2\size{G} > f(V(G)) + \mic(G) - |G|$.
 \chapter{Combinatorial nullstellensatz}
 Fix an arbitrary field $\mathbb{F}$. We write $f_{k_1, \ldots, k_n}$ for the coefficient of $x_1^{k_1}\cdots x_n^{k_n}$ in the polynomial $f \in \mathbb{F}[x_1, \ldots, x_n]$. 
 \begin{lemma}
-Suppose $f \in \mathbb{F}[x_1, \ldots, x_n]$ and $k_1, \ldots, k_n \in \IN$ with $\sum_{i \in \irange{n}} k_i = \deg(f)$.  If $f_{k_1, \ldots, k_n} \ne 0$, then for any $A_1, \ldots, A_n \subseteq \mathbb{F}$ with $\card{A_i} \ge k_i + 1$, there exists $(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n$ with $f(a_1, \ldots, a_n) \ne 0$.
+Suppose $f \in \mathbb{F}[x_1, \ldots, x_n]$ and $k_1, \ldots, k_n \in \IN$ with $\sum_{i \in \irange{n}} k_i = \deg(f)$.  If $f_{k_1, \ldots, k_n} \ne 0$, then for any $A_1, \ldots, A_n \subseteq \mathbb{F}$ 
+with $\card{A_i} \ge k_i + 1$, there exists $(a_1, \ldots, a_n) \in A_1 \times \cdots \times A_n$ with $f(a_1, \ldots, a_n) \ne 0$.
 \end{lemma}
 \begin{proof}
 Suppose the result is false and choose $f \in \mathbb{F}[x_1, \ldots, x_n]$ for which it fails 
