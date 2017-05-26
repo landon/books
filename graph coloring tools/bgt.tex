@@ -767,9 +767,12 @@ is not $f$-reducible to any nonempty induced subgraph, then $G$ is $f$-irreducib
 \begin{lemma}\label{BasicIrreducible}
 If $G$ is $f$-irreducible, then $f(v) \le d_G(v)$ for all $v \in V(G)$.  In particular, $2\size{G} \ge f(V(G))$.
 \end{lemma}
+\begin{proof}
+If there is $v \in V(G)$ with $f(v) > d_G(v)$, then $G$ is $f$-reducible to $G\brackets{\set{v}}$.
+\end{proof}
 
-The natural next questions is what happens when $f(V(G)) = 2\size{G}$, can $G$ be $f$-irreducible in this case?  The examples in Figure [insert me] show that the answer is yes.
-We will understand the case of equality completely in \nameref{KernelMagicChapter} using a tool that improves Lemma \ref{BasicIrreducible} in terms of the ``maximum independent cover number''.
+A natural next question is what happens when $f(V(G)) = 2\size{G}$, can $G$ be $f$-irreducible in this case?  The examples in Figure [insert me] show that the answer is yes.
+We will understand the case of equality completely in the \nameref{KernelMagicChapter} chapter using a tool that improves Lemma \ref{BasicIrreducible} in terms of the ``maximum independent cover number''.
 
 \section{Historical notes}
 \begin{marginfigure}

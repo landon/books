@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100) (preloaded format=pdflatex 2016.12.12)  26 MAY 2017 10:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100) (preloaded format=pdflatex 2016.12.12)  26 MAY 2017 12:24
 entering extended mode
 **"C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex"
 ("C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex"
@@ -1707,18 +1707,14 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 747
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ufplmbb.fd"
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Overfull \hbox (38.43082pt too wide) in paragraph at lines 776--811
+[12]
+Overfull \hbox (38.43082pt too wide) in paragraph at lines 779--814
  [] 
  []
 
 
-[12]
-
-LaTeX Warning: Marginpar on page 13 moved.
-
-
 [13]
-Overfull \hbox (2.80997pt too wide) in paragraph at lines 834--834
+Overfull \hbox (2.80997pt too wide) in paragraph at lines 837--837
 []  
  []
 
@@ -1728,7 +1724,7 @@ Overfull \hbox (2.80997pt too wide) in paragraph at lines 834--834
 ]
 [15]
 [16]
-Overfull \hbox (117.38614pt too wide) in paragraph at lines 951--951
+Overfull \hbox (117.38614pt too wide) in paragraph at lines 954--954
 []  
  []
 
@@ -1744,7 +1740,7 @@ Underfull \vbox (badness 1708) has occurred while \output is active []
 [20
 
 ]
-Overfull \hbox (12.9537pt too wide) in paragraph at lines 1035--1039
+Overfull \hbox (12.9537pt too wide) in paragraph at lines 1038--1042
 \OML/zplm/m/it/10 x[] [] x[]$ \T1/pplj/m/n/10 (-20) and $\OML/zplm/m/it/10 DO[]
 \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 G\OT1/zplm/m/n/10 )$ \T1/pplj/m/n/10 (-20) 
 the orien-ta-ti-ons of $\OML/zplm/m/it/10 G$ \T1/pplj/m/n/10 (-20) where $\OML/
@@ -1753,20 +1749,20 @@ zplm/m/it/10 m[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT1/pplx/m/n/10 , [] ,
  []
 
 
-Overfull \hbox (0.12332pt too wide) in paragraph at lines 1039--1044
+Overfull \hbox (0.12332pt too wide) in paragraph at lines 1042--1047
 \T1/pplj/m/n/10 (+13) This gives a combinatorial interpretation of the coeffici
 ents of $\OML/zplm/m/it/10 p[]$\T1/pplj/m/n/10 (+13) , but 
  []
 
 
-Overfull \hbox (0.10144pt too wide) in paragraph at lines 1039--1044
+Overfull \hbox (0.10144pt too wide) in paragraph at lines 1042--1047
 \OML/zplm/m/it/10 EO\OT1/zplm/m/n/10 ([])$ \T1/pplj/m/n/10 (+1) be the spanning
  Eulerian subgraphs of $[]$ with an odd number 
  []
 
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1045: LaTeX
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1048: LaTeX
  Error: Environment EulerianOrientationsLemma undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1776,13 +1772,13 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (9.51942pt too wide) detected at line 1047
+Overfull \hbox (9.51942pt too wide) detected at line 1050
 [] \OT1/zplm/m/n/10 = [] \OT1/pplx/m/n/10 .
  []
 
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1048: LaTeX
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1051: LaTeX
  Error: \begin{document} ended by \end{EulerianOrientationsLemma}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1792,20 +1788,20 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (3.04076pt too wide) in paragraph at lines 1051--1053
+Overfull \hbox (3.04076pt too wide) in paragraph at lines 1054--1056
 []$ \T1/pplj/m/n/10 (-20) and $\OML/zplm/m/it/10 D$\T1/pplj/m/n/10 (-20) . If $
 []$ is even, this gi-ves bi-jecti-ons be-t-ween $\OML/zplm/m/it/10 DE[]\OT1/zpl
 m/m/n/10 (\OML/zplm/m/it/10 G\OT1/zplm/m/n/10 )$ 
  []
 
 
-Overfull \hbox (9.51942pt too wide) detected at line 1053
+Overfull \hbox (9.51942pt too wide) detected at line 1056
 [] \OT1/zplm/m/n/10 = [] \OT1/pplx/m/n/10 .
  []
 
 
 [21]
-Overfull \hbox (3.59454pt too wide) detected at line 1073
+Overfull \hbox (3.59454pt too wide) detected at line 1076
 \OML/zplm/m/it/10 F\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT1/pplx/m/n/10 , []
  , \OML/zplm/m/it/10 x[]\OT1/zplm/m/n/10 ) = [] \OML/zplm/m/it/10 f\OT1/zplm/m/
 n/10 (\OML/zplm/m/it/10 a[]\OT1/pplx/m/n/10 , [] , \OML/zplm/m/it/10 a[]\OT1/zp
@@ -1815,7 +1811,7 @@ lm/m/n/10 )[]\OT1/pplx/m/n/10 .
 
 [22]
 [23]
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1094: Undef
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1097: Undef
 ined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1824,7 +1820,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1096: Undef
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1099: Undef
 ined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1833,7 +1829,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1101: Undef
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1104: Undef
 ined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1842,7 +1838,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1115: Undef
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1118: Undef
 ined control sequence
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1854,49 +1850,13 @@ and I'll forget about whatever was undefined.
 
 ] [25]
 LaTeX Font Info:    Try loading font information for TS1+pplj on input line 119
-2.
+5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1pplj.fd"
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
 ) [26] [27
 
 ]
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1228: Undef
-ined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1229: Undef
-ined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1229: Undef
-ined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1230: Undef
-ined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1231: Undef
 ined control sequence
 The control sequence at the end of the top line
@@ -1906,21 +1866,22 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1231: Missi
-ng { inserted
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1232: Undef
+ined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1231: Missi
-ng } inserted
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1232: Undef
+ined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
 C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1233: Undef
@@ -1932,7 +1893,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1233: Missi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1234: Undef
+ined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1234: Missi
 ng { inserted
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -1940,7 +1910,33 @@ so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
 
-C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1233: Missi
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1234: Missi
+ng } inserted
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1236: Undef
+ined control sequence
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1236: Missi
+ng { inserted
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+C:/Users/landon/Documents/GitHub/books/graph coloring tools/bgt.tex:1236: Missi
 ng } inserted
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1951,7 +1947,7 @@ my insertion and my current dilemma will both disappear.
  [28
 
 ]
-Overfull \hbox (0.12444pt too wide) in paragraph at lines 1246--1253
+Overfull \hbox (0.12444pt too wide) in paragraph at lines 1249--1256
 \T1/pplj/m/n/10 (+13) we can get by with zero colors. With just one color we ca
 n edge color 
  []
@@ -1974,20 +1970,20 @@ Package bibentry Warning: You have used \nobibliography*
  [33
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1325.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1325.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1328.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1328.
  (bgt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1325.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1325.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1328.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1328.
 
 Package rerunfilecheck Info: File `bgt.out' has not changed.
 (rerunfilecheck)             Checksum: D69D03667364C580CC8BC7B815DF67B7;6117.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1325.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1328.
  ) 
 Here is how much of TeX's memory you used:
  27536 strings out of 493367
  488402 string characters out of 3137292
- 647813 words of memory out of 3000000
+ 639814 words of memory out of 3000000
  30040 multiletter control sequences out of 15000+200000
  110733 words of font info for 353 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
@@ -2007,7 +2003,7 @@ rs/landon/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/mathpazo/fplmri.pfb><C:
 m Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on bgt.pdf (33 pages, 371142 bytes).
+Output written on bgt.pdf (33 pages, 371625 bytes).
 PDF statistics:
  549 PDF objects out of 1000 (max. 8388607)
  116 named destinations out of 1000 (max. 500000)
