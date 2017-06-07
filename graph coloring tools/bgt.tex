@@ -226,7 +226,8 @@ of vertices to which $v$ is adjacent is its \emph{neighborhood}, written $N(v)$.
 For the size of $v$'s neighborhood $\card{N(v)}$, we write $d(v)$ and call this the \emph{degree} of $v$.
 We write $E(v)$ for the set of edges containing $v$, these are the edges \emph{incident} to $v$.
 
-We use the shorthand $\irange{k} \DefinedAs \set{1,2,\ldots, k}$. A \emph{path} in $G$ is a sequence of different vertices $x_1, x_2, \ldots, x_r$ such that $x_i$ is adjacent to $x_{i+1}$ for all $i \in \irange{r-1}$.  We say
+We use the shorthand $\irange{k} \DefinedAs \set{1,2,\ldots, k}$. A \emph{path} in $G$ is a sequence of different vertices $x_1, x_2, \ldots, x_r$ such that $x_i$ is 
+adjacent to $x_{i+1}$ for all $i \in \irange{r-1}$.  We say
 this is a path from $x_1$ to $x_r$.
 If $x_r$ is adjacent to $x_1$ as well, then we have a \emph{cycle}.  A graph $G$ is \emph{connected} if for all $x,y \in V(G)$, there is a path from $x$ to $y$.
 Figure \ref{fig:SmallGraphs} shows all the connected graphs with at most five vertices.
@@ -441,7 +442,7 @@ The simplest thing we can do is give each vertex a different color.
 If $G$ is a graph, then $\chi(G) \le \card{G}$.
 \end{theorem}
 The only graphs that attain the upper bound in Theorem \ref{WorstUpperBound} are the \emph{complete} graphs; those in which
-any two vertices are adjacent.
+any two vertices are adjacent.  We write $K_r$ for the complete graph with $r$ vertices.
 We can usually do much better by just arbitrarily coloring vertices, reusing colors when we can. 
 The \emph{maximum degree} $\Delta(G)$ of a graph $G$ is the largest degree
 of any vertex in $G$; that is 
@@ -595,6 +596,7 @@ In the latter case, let $X$ be a $\Delta(G)$-clique in $G-S$.
 Since $S$ is maximal and $\omega(G) \le \Delta(G)$, there are $x_1, x_2 \in X$ and $y_1, y_2 \in S$ such that $x_1$ is adjacent to $y_1$ and $x_2$ is adjacent to $y_2$.
 Construct a graph $H$ from $G-X$ by adding the edge $y_1y_2$.  Since $\card{H} < \card{G}$, applying the theorem to $H$ shows that $\omega(H) > \Delta(G)$ or $\chi(H) \le \Delta(G)$.
 Suppose $\chi(H) \le \Delta(G)$.  Then there is a $\Delta(G)$-coloring of $G-X$ where $y_1$ and $y_2$ receive different colors, say red and blue respectively.
+
 Pick the first vertex $z$ in a shortest path $P$ from $x_1$ to $x_2$ in $X$ that has a blue colored neighbor in $V(H)$. 
 Each vertex in $X$ has $\Delta(G)-1$ neighbors in $X$ and hence at most one neighbor in $V(H)$.  So, $z \ne x_1$ since $x_1$ already has a red colored neighbor in $V(H)$.
 Let $w$ be be the vertex preceding $z$ on $P$ (it could be that $w = x_1$). Then $w$ has no blue colored neighbor.  Since $X$ is the vertex set of a cycle or a 
@@ -634,6 +636,20 @@ in $A \cap B$ since it would be adjacent to $y_1,y_2,y_3$ as well as $\Delta(G) 
 \caption{The final contradiction when $\Delta=3$.}
 \end{marginfigure}
 \end{proof}
+
+\begin{exercise}
+Show that if each vertex of a cycle is assigned a list of two colors, then the vertices can be colored from their lists so that adjacent vertices get different colors, unless
+the lists are all the same.
+\end{exercise}
+
+\begin{exercise}
+Show that if each vertex of $K_r$ is assigned a list of $r-1$ colors, then the vertices can be colored from their lists so that adjacent vertices get different colors, unless
+the lists are all the same.
+\end{exercise}
+
+\begin{exercise}
+Use the previous two exercises to replace the penultimate paragraph in the proof Theorem \ref{BrooksTheorem}.
+\end{exercise}
 
 \section{List coloring}
 When attempting to $k$-color a graph $G$, it will often be convenient to first $k$-color $G[S]$ for some $S \subset V(G)$ and then try to 
@@ -727,7 +743,7 @@ theorem to $H$ to get a kernel $S$ in $H$.  But then $S \cup \set{v}$ is a kerne
 has an arrow to $v$ or is in $G-I$ and hence has a back arrow to $v$, a contradiction.
 \end{proof}
 
-\begin{question}
+\begin{question}\label{KernelPerfectQuestion}
 Lemma \ref{KostochkaYanceyKernelLemma} says that if we take a graph $G$ with an independent set $I$ and direct all the edges of $G-I$ both ways and the edges 
 between $I$ and $V(G-I)$ arbitrarily, we get a kernel-perfect superoriented graph.  Can we classify the pairs $(G, F)$ where $G$ is a graph and $F \subseteq E(G)$ such that
 every superorientation of $G$ in which all edges in $F$ are bidirected are kernel-perfect? 
@@ -737,6 +753,11 @@ An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfec
 But this is not the only possible generalization of acylic that works, in the combinatorial nullstellensatz chapter we'll present 
 another based on polynomials.
 This second generalization of acyclic does not generalize kernel-perfection and kernel-perfection does not generalize it.
+
+\begin{exercise}
+Show that if $G$ is a graph and $F \subseteq E(G)$, then
+every superorientation of $G$ in which $G-F$ is acyclic and all edges in $F$ are bidirected is kernel-perfect.
+\end{exercise}
 
 \section{Coloring with prescribed list sizes}
 Suppose we are attempting to $k$-color a graph $G$ and have already $k$-colored $G[S]$ for some $S \subset V(G)$.  
@@ -932,7 +953,7 @@ then $G$ has an orientation such that $d^{-}(v)\ge h(v)$ for all $v\in V(G)$ jus
 for every $S \subseteq V(G)$.
 \end{lemma}
 \begin{proof}
-An easy computation shows that if $G$ has an orientation with $d^{-}(v)\ge h(v)$ for all $v\in V(G)$, then (1) holds.
+An easy computation shows that if $G$ has an orientation with $d^{-}(v)\ge h(v)$ for all $v\in V(G)$, then (1) holds. 
 
 For the other implication, we define a network $g$ on the set $Z \DefinedAs \set{s,t} \cup V(G) \cup E(G)$ by
 \[g(a, b) \DefinedAs  \begin{cases} 
@@ -965,6 +986,10 @@ Hence $f(s,v) = h(v)$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \i
 Now $I(v) \cap I(w) = \emptyset$ for different $v,w \in V(G)$ since otherwise, $e \in I(v) \cap I(w)$ would have $f(e, t) \ge 2 > g(e, t)$.  So, we can define our desired orientation of $G$
 by directing all edges in $I(v)$ into $v$ for all $v \in V(G)$ and then directing any unoriented edges arbitrarily. 
 \end{proof}
+
+\begin{exercise}
+Carry out the computation mentioned at the start of the proof of Lemma \ref{InOrientations}. 
+\end{exercise}
 
 The proofs of Lemma \ref{HallTheoremLemma} and Lemma \ref{InOrientations} look so similar we might suspect there is some relation between the two lemmas.
 \begin{exercise}
