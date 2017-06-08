@@ -5,6 +5,7 @@
 \usepackage{tikz,tkz-graph,tkz-berge}
 \usetikzlibrary{positioning}
 \usepackage{verbatim, xcolor}
+\usepackage{amsmath,amssymb}
 
 \usetikzlibrary{arrows}
 \usetikzlibrary{decorations.markings}
@@ -157,8 +158,8 @@
 \newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
 \newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
 \newcommand{\func}[3]{#1\colon #2 \rightarrow #3}
-\newcommand{\funcinj}[3]{#1\colon #2 \inj #3}
-\newcommand{\funcsurj}[3]{#1\colon #2 \surj #3}
+\newcommand{\funcinj}[3]{#1\colon #2 \hookrightarrow #3}
+\newcommand{\funcsurj}[3]{#1\colon #2 \twoheadrightarrow #3}
 \newcommand{\irange}[1]{\left[#1\right]}
 \newcommand{\join}[2]{#1 \mbox{\hspace{2 pt}$\ast$\hspace{2 pt}} #2}
 \newcommand{\djunion}[2]{#1 \mbox{\hspace{2 pt}$+$\hspace{2 pt}} #2}
@@ -166,7 +167,7 @@
 \newcommand{\brackets}[1]{\left[ #1 \right]}
 \newcommand{\DefinedAs}{\mathrel{\mathop:}=}
 
-\newcommand{\Q}{\mathbb{Q}}
+
 \newcommand{\fancy}[1]{\mathcal{#1}}
 \newcommand{\C}[1]{\fancy{C}_{#1}}
 \newcommand{\IN}{\mathbb{N}}
@@ -179,6 +180,8 @@
 \newcommand{\B}{\fancy{B}}
 \renewcommand{\L}{\fancy{L}}
 \newcommand{\HH}{\fancy{H}}
+\newcommand{\Q}{\fancy{Q}}
+\newcommand{\Z}{\fancy{Z}}
 
 \newcommand{\pot}{\operatorname{pot}}
 \newcommand{\mic}{\operatorname{mic}}
@@ -750,13 +753,18 @@ every superorientation of $G$ in which all edges in $F$ are bidirected are kerne
 \end{question}
 
 An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfectListBound} generalizes Theorem \ref{SecondListBound}.  
-But this is not the only possible generalization of acylic that works, in the combinatorial nullstellensatz chapter we'll present 
+But this is not the only possible generalization of acylic that works, in the \nameref{combinatorialnullchapter} chapter we'll present 
 another based on polynomials.
 This second generalization of acyclic does not generalize kernel-perfection and kernel-perfection does not generalize it.
 
 \begin{exercise}
 Show that if $G$ is a graph and $F \subseteq E(G)$, then
 every superorientation of $G$ in which $G-F$ is acyclic and all edges in $F$ are bidirected is kernel-perfect.
+\end{exercise}
+
+\begin{exercise}
+Show that if $G$ is a graph and each odd cycle of $G$ contains at least two edges in $F \subseteq E(G)$, then
+every superorientation of $G$ in which all edges in $F$ are bidirected is kernel-perfect.
 \end{exercise}
 
 \section{Coloring with prescribed list sizes}
@@ -1035,7 +1043,7 @@ If $G$ is $f$-irreducible, then $2\size{G} > f(V(G)) + \mic(G) - |G|$.
 \section{Triangle-free graphs}
 \section{Historical notes}
 
-\chapter{Combinatorial nullstellensatz}
+\chapter{Combinatorial nullstellensatz}\label{combinatorialnullchapter}
 Fix an arbitrary field $\mathbb{F}$. We write $f_{k_1, \ldots, k_n}$ for the coefficient of $x_1^{k_1}\cdots x_n^{k_n}$ in the polynomial $f \in \mathbb{F}[x_1, \ldots, x_n]$. 
 \begin{lemma}
 Suppose $f \in \mathbb{F}[x_1, \ldots, x_n]$ and $k_1, \ldots, k_n \in \IN$ with $\sum_{i \in \irange{n}} k_i = \deg(f)$.  If $f_{k_1, \ldots, k_n} \ne 0$, then for any $A_1, \ldots, A_n \subseteq \mathbb{F}$ 
@@ -1109,18 +1117,28 @@ Now  $\deg(F) = \sum_{i \in \irange{n}} (|A_i| - 1) = \sum_{i \in \irange{n}} k_
 \section{Historical notes}
 
 \chapter{Independent transversals}
+Let $H$ be a graph and $V_1, \ldots, V_r$ a partition of $V(H)$. An \emph{independent transversal} of $V_1, \ldots, V_r$ is an independent 
+set $I$ in $H$ with $I \cap V_i \ne \emptyset$ for all $i \in \irange{r}$.
 
-\section{Randomly}
-\section{A stronger bound}
+\begin{corollary}}\label{HaxellTransversal}
+Let $H$ be a graph and $V_1, \ldots, V_r$ a partition of $V(H)$.  If $\card{V_i} \ge 2\Delta(H)$ for each $i \in \irange{r}$, then
+$V_1, \ldots, V_r$ has an independent transversal.
+\end{corollary}
+
+With a more technical statement, we can account for non-uniform $\card{V_i}$.  Corollary \ref{HaxellTransversal} follows from the case when $t=0$ and $S = \emptyset$.
+
 \begin{theorem}\label{LopsidedTransversal}
 Let $H$ be a graph and $V_1 \cup \cdots \cup V_r$ a partition of $V(H)$.  
-Suppose there exists $t \geq 1$ such that for each $i \in \irange{r}$ and each $v \in V_i$ we have $d(v) \leq \min\set{t, \card{V_i}-t}$.  For any $S \subseteq V(H)$ with $\card{S} < \min\set{\card{V_1}, \ldots, \card{V_r}}$, there is an independent transversal $I$ of $V_1, \ldots, V_r$ with $I \cap S = \emptyset$.
+Suppose there exists $t \geq 1$ such that for each $i \in \irange{r}$ and each $v \in V_i$ we have $d(v) \leq \min\set{t, \card{V_i}-t}$.  
+For any $S \subseteq V(H)$ with $\card{S} < \min\set{\card{V_1}, \ldots, \card{V_r}}$, there is an independent transversal $I$ of $V_1, \ldots, V_r$ with $I \cap S = \emptyset$.
 \end{theorem}
 
-In fact, a more general statement holds. 
-First we need some notation. 
-Write $\funcsurj{f}{A}{B}$ for a surjective function from $A$ to $B$.  
-Let $G$ be a graph.  
+In fact, an even more general statement holds and the strengthened induction hypothesis simplifies the proof.
+First we need some definitions and notation.  
+Write $\funcsurj{f}{A}{B}$ for a surjective (onto) function from $A$ to $B$.  
+Let $G$ be a graph.  A set of vertices $S \subseteq V(G)$ \emph{dominates} $G$ if each $v \in V(G) \setminus S$ has a neighbor in $S$.
+A set of vertices $S \subseteq V(G)$ \emph{totally dominates} $G$ if each $v \in V(G)$ has a neighbor in $S$.  A set of edges $M \subseteq E(G)$ is
+a \emph{matching} of $G$ if $e_1\cap e_2 = \emptyset$ for all $e_1,e_2 \in M$.  A matching is \emph{induced} if $\size{G[e_1\cup e_2]} = 2$ for all $e_1,e_2 \in M$.
 For a $k$-coloring $\funcsurj{\pi}{V(G)}{\irange{k}}$ of $G$ and a subgraph $H$ of $G$ we say 
 that $I \DefinedAs \set{x_1, \ldots, x_k} \subseteq V(H)$ is an $H$-independent transversal of $\pi$ if $I$ is an independent 
 set in $H$ and $\pi(x_i) = i$ for all $i \in \irange{k}$.
@@ -1146,7 +1164,7 @@ must have $x,y \in T$ lest $T$ be a $G$-independent transversal of $\pi$.
 
 By symmetry we may assume that $\pi(x) = k-1$ and $\pi(y) = k$. Put $X
 \DefinedAs \pi^{-1}(k-1)$, $Y \DefinedAs \pi^{-1}(k)$ and $H \DefinedAs G -
-N(\set{x, y}) - E(X,Y)$. Define $\func{\zeta}{V(H)}{\irange{k-1}}$ by $\zeta(v)
+N(\set{x, y}) - E(X,Y)$. Define $\funcsurj{\zeta}{V(H)}{\irange{k-1}}$ by $\zeta(v)
 \DefinedAs \min\set{\pi(v), k-1}$. Note that since $x,y \in T$, we have
 $\card{\zeta^{-1}(i)} \geq 1$ for each $i \in \irange{k-2}$.  Put $Z \DefinedAs
 \zeta^{-1}(k-1)$. Then $Z \neq \emptyset$ for otherwise $M \DefinedAs \set{xy}$
@@ -1186,83 +1204,92 @@ J$ for each $uv \in M$ with $u \in V_a'$ and $v \in V_b'$.  By our condition, fo
 Choose a root $c$ of $T$. Traversing $T$ in leaf-first order and for each leaf $a$ with parent $b$ picking $|V_a|$ from $\min\set{|V_a|, |V_b|}$ we get that the vertices in $M$ together dominate at most $\sum_{i \in J \setminus \set{c}} \card{V_i}$ vertices in $H$.  Since $\card{S} < \card{V_c}$, $M$ cannot totally dominate $\bigcup_{i \in J} V_i'$, a contradiction.
 \end{proof}
 
-Note that the condition on $S$ can be weakened slightly.  Suppose we have ordered the $V_i$ so that $\card{V_1} \leq \card{V_2} \leq \cdots \leq \card{V_r}$.  Then for any $S \subseteq V(H)$ with $\card{S} < \card{V_2}$ such that $V_1 \not \subseteq S$, there is an independent transversal $I$ of $V_1, \ldots, V_r$ with $I \cap S = \emptyset$.  The proof is the same except when we choose our root $c$, choose it so as to maximize $\card{V_c}$.  
+The condition on $S$ can be weakened slightly.  Suppose we have ordered the $V_i$ so that $\card{V_1} \leq \card{V_2} \leq \cdots \leq \card{V_r}$.  Then for any $S \subseteq V(H)$ with $\card{S} < \card{V_2}$ such that $V_1 \not \subseteq S$, there is an independent transversal $I$ of $V_1, \ldots, V_r$ with $I \cap S = \emptyset$.  The proof is the same except when we choose our root $c$, choose it so as to maximize $\card{V_c}$.  
 Since $\card{J} \geq 2$, we get $\card{V_c} \geq \card{V_2} > \card{S}$ at the end.
 \section{Lists with low degree color graphs}
 
 \section{Hitting all maximum cliques}
+\begin{theorem}\label{KingHittingSet}
+If $G$ is a graph with $\omega(G) > \frac23 (\Delta(G) + 1)$, then $G$ contains
+an independent set $I$ such that $\omega(G - I) < \omega(G)$.
+\end{theorem}
+
 Let $G$ be a graph. For a collection of cliques $\Q$ in $G$, let $X_\Q$ be the intersection graph of $\Q$; that is, the 
-vertex set of $X_\Q$ is $\Q$ and there is an edge between $Q_1, Q_2 \in \Q$ iff $Q_1 \ne Q_2$ and $Q_1$ and $Q_2$ intersect.
+vertex set of $X_\Q$ is $\Q$ and there is an edge between $Q_1, Q_2 \in \Q$ just in case $Q_1 \ne Q_2$ and $Q_1$ and $Q_2$ intersect.
 When $\Q$ is a collection of maximum cliques, we get a lot of information about $X_\Q$.  
 \begin{lemma}\label{HajnalLemma}
-If $G$ is a graph and $\Q$ is a collection of maximum cliques in $G$, then 
-\[\card{\bigcup \Q} + \card{\bigcap \Q} \geq 2\omega(G).\]
+If $G$ is a graph and $\Q$ is a non-empty collection of maximum cliques in $G$, then 
+\begin{equation}\label{HajnalFormula}
+\card{\bigcup \Q} + \card{\bigcap \Q} \geq 2\omega(G).
+\end{equation}
 \end{lemma}
+\begin{proof}
+Suppose there is a graph $G$ and collection $\Q$ of maximum cliques in $G$ for which (\ref{HajnalFormula}) fails. Then we may pick such a $\Q$ with $|\mathcal{Q}|$ as small as possible.  
+Put $r \DefinedAs |\mathcal{Q}|$ and suppose $\mathcal{Q} = \{Q_1, \ldots, Q_r\}$.  
+Consider the set \[W \DefinedAs (Q_1 \cap \bigcup_{i=2}^r Q_i) \cup \bigcap_{i=2}^r Q_i.\]  Plainly, $W$ is a clique.  Thus
+\begin{align*}
+\omega(G) &\geq |W| \\
+&= \card{(Q_1 \cap \bigcup_{i=2}^r Q_i) \cup \bigcap_{i=2}^r Q_i} \\
+&= \card{Q_1 \cap \bigcup_{i=2}^r Q_i} + \card{\bigcap_{i=2}^r Q_i} - \card{\bigcap_{i=1}^r Q_i \cap \bigcup_{i=2}^r Q_i} \\
+&= \card{Q_1} +\card{\bigcup_{i=2}^r Q_i} - \card{\bigcup_{i=1}^r Q_i} + \card{\bigcap_{i=2}^r Q_i} - \card{\bigcap_{i=1}^r Q_i} \\
+&= \omega(G) +\card{\bigcup_{i=2}^r Q_i} + \card{\bigcap_{i=2}^r Q_i} - \card{\bigcup_{i=1}^r Q_i} - \card{\bigcap_{i=1}^r Q_i} \\
+&\geq \omega(G) + 2\omega(G) - \left(\card{\bigcup_{i=1}^r Q_i} + \card{\bigcap_{i=1}^r Q_i}\right) \\
+& > \omega(G),
+\end{align*}
+a contradiction.  Here the final inequality comes from the failure of (\ref{HajnalFormula}) and the penultimate inequality comes from minimality of $|\mathcal{Q}|$ by applying the lemma to $\{Q_2, \ldots, Q_r\}$.
+\end{proof}
 
 \begin{lemma}\label{KostochkaCliqueGraph}
-If $\Q$ is a collection of maximum cliques in a graph $G$ with $\omega(G) > \frac23 (\Delta(G) + 1)$ such that $X_\Q$ is connected, then $\cap \Q \neq \emptyset$. 
+If $\Q$ is a non-empty collection of maximum cliques in a graph $G$ with $\omega(G) > \frac23 (\Delta(G) + 1)$ such that $X_\Q$ is connected, then $\cap \Q \ne \emptyset$. 
 \end{lemma}
 \begin{proof}
-Suppose not and choose a counterexample $\Q \DefinedAs \set{Q_1, \ldots, Q_r}$
-minimizing $r$. Plainly, $r \geq 3$. Let $A$ be a noncutvertex in $X_{\Q}$ and
-$B$ a neighbor of $A$. Put $\fancy{Z} \DefinedAs \Q - \set{A}$. Then
-$X_{\fancy{Z}}$ is connected and hence by minimality of $r$, $\cap \fancy{Z}
-\neq \emptyset$. In particular, $\card{\cup \fancy{Z}} \leq \Delta(G) + 1$.
-By assumption, $\cap\Q=\emptyset$, so $\card{\cap \Q} + \card{\cup \Q} \leq 0 +
-(\card{\cup \fancy{Z}} + \card{A - B}) \leq
-(\Delta(G) + 1) + (\Delta(G)+1 - \omega(G)) < 2\omega(G)$. This contradicts
-Lemma \ref{HajnalLemma}.
+Suppose there is a graph $G$ with $\omega(G) > \frac23 (\Delta(G) + 1)$ and collection $\Q$ of maximum cliques in $G$ for which $X_\Q$ is connected and $\cap \Q = \emptyset$.
+Then we may pick such a $\Q$ with $|\mathcal{Q}|$ as small as possible. Then $|\mathcal{Q}| \ge 2$ since $\cap \Q = \emptyset$. Let $A$ be a noncutvertex in $X_{\Q}$ and
+$B$ a neighbor of $A$. Put $\fancy{Z} \DefinedAs \Q \setminus \set{A}$. Then $\Z$ is non-empty,
+$X_{\fancy{Z}}$ is connected and $\card{\Z} < \card{\Q}$. Hence, by minimality of $|\mathcal{Q}|$, we may apply the lemma to $\Z$ which gives $\cap \fancy{Z}
+\ne \emptyset$. Since a vertex in $\cap \Z$ is adjacent to all other vertices in $\cup \Z$, we conclude $\card{\cup \fancy{Z}} \le \Delta(G) + 1$.
+By assumption, $\cap\Q=\emptyset$, so 
+\begin{align*}
+\card{\cap \Q} + \card{\cup \Q} &\le 0 + (\card{\cup \fancy{Z}} + \card{A \setminus B})\\
+&\le (\Delta(G) + 1) + (\Delta(G)+1 - \omega(G)) \\
+&= 2(\Delta(G) + 1) - \omega(G) \\
+&< 2\omega(G), 
+\end{align*}
+contradicting Lemma \ref{HajnalLemma}.  Here the final inequality holds because $\omega(G) > \frac23 (\Delta(G) + 1)$.
 \end{proof}
 
-\begin{lemma}\label{TwoThirdsEqualityStructure}
-If $\Q$ is a collection of maximum cliques in a graph $G$ with $\omega(G) \ge \frac23 (\Delta(G) + 1)$ such that $X_\Q$ is connected, then either 
-\begin{itemize}
-\item $\cap \Q \ne \emptyset$; or
-\item $\Delta(X_\Q) \le 2$ and if $B, C \in \Q$ are different neighbors of $A \in \Q$, then $B \cap C = \emptyset$ and $\card{A \cap B} = \card{A \cap C} = \frac12 \omega(G)$.
-\end{itemize}
-\end{lemma}
+\begin{proof}[Proof of Theorem \ref{KingHittingSet}]
+Let $\fancy{Q}$ be all the maximum cliques in $G$ and $\fancy{Q}_1, \ldots, \fancy{Q}_k$ the vertex 
+sets of the components of $X_{\fancy{Q}}$.  For $i \in \irange{k}$, put $F_i \DefinedAs \cap \fancy{Q}_i$ and $D_i \DefinedAs \cup \fancy{Q}_i$.
+Since the components of $X_{\fancy{Q}}$ satisfy the hypotheses of 
+Lemma \ref{KostochkaCliqueGraph}, we have $F_i \ne \emptyset$ for all $i \in \irange{k}$.  
 
-\section{Strong coloring}
-\section{When every vertex is in a big clique}
-\section{Historical notes}
+Put $t \DefinedAs \frac13(\Delta(G) + 1)$.  Fix $i \in \irange{k}$.  Each $v \in F_i$ has at most 
+\begin{align*}
+d_G(v) + 1 - \card{D_i} &\le \Delta(G) + 1 - \card{D_i}\\
+&\le \Delta(G) + 1 - \omega(G)\\
+&<t,
+\end{align*}
+neighbors in the rest of the $F_j$. 
 
-\chapter{Kempe chains and vertex shuffling}
-\section{Historical notes}
+Applying Lemma \ref{HajnalLemma} gives $\card{F_i} + \card{D_i} \ge 2\omega(G) > \frac{4}{3}(\Delta(G) + 1)$.  
+Thus each $v \in F_i$ also has at most
+\begin{align*}
+d_G(v) + 1 - \card{D_i} &\le \Delta(G) + 1 - \card{D_i}\\
+&< \Delta(G) + 1 - \parens{\frac{4}{3}(\Delta(G) + 1) - \card{F_i}}\\
+&= \card{F_i} - t,
+\end{align*}
+neighbors in the rest of the $F_j$. 
 
-\chapter{Vertex transitive graphs}
-Let $G$ be a vertex-transitive graph and let $\Q$ be the collection of all
-maximum cliques in $G$.  It is not hard to see that $X_\Q$ is vertex-transitive
-as well; in fact, we have the following.
-
-\begin{observation}\label{transitiveClustering}
-Let $G$ be a vertex-transitive graph and let $\Q$ be the collection of all
-maximum cliques in $G$.  For each component $C$ of $X_\Q$, put $G_C \DefinedAs
-G\brackets{\bigcup V(C)}$.  Then $G_C$ is vertex-transitive for each component
-$C$ of $X_\Q$ and $G_{C_1} \cong G_{C_2}$ for components $C_1$ and $C_2$ of
-$X_\Q$.
-\end{observation}
-
-\begin{lemma}\label{TransitiveClusteringBigCliques}
-Let $G$ be a connected vertex-transitive graph and let $\Q$ be the collection
-of all maximum cliques in $G$.  If $\omega(G) \ge \frac23 \parens{\Delta(G) +
-1}$, then either
-\begin{itemize}
-\item $X_\Q$ is edgeless; or
-\item $X_\Q$ is a cycle and $G$ is the graph obtained from $X_\Q$ by blowing up each vertex to a $K_{\frac12 \omega(G)}$.
-\end{itemize}
-\end{lemma}
-\begin{proof}
-If $\omega(G) > \frac23 \parens{\Delta(G) + 1}$, then $X_\Q$ is edgeless as shown above.  Hence we may assume $\omega(G) = \frac23 \parens{\Delta(G) + 1}$.  
-Let $Z$ be a component of $X_\Q$ and put $\Z \DefinedAs V(Z)$.
-By Lemma \ref{TwoThirdsEqualityStructure}, $\Delta(X_\Z) \le 2$ and if $B, C \in \Z$ are 
-different neighbors of $A \in \Z$, then $B \cap C = \emptyset$ and $\card{A \cap B} = \card{A \cap C} = \frac12 \omega(G)$.  
-By Observation \ref{transitiveClustering}, $X_\Z$ must be a cycle.  But then every vertex in $G_Z$ has 
-$\frac12 \omega(G) + \frac12 \omega(G) + \frac12 \omega(G) - 1 = \Delta(G)$ neighbors in $G_Z$ and thus $G = G_Z$.  
-Hence $X_\Q = X_\Z$ is a cycle and $G$ is the graph obtained from $X_\Q$ by blowing up each vertex to a $K_{\frac12 \omega(G)}$.
+Consider the subgraph $H$ of $G$ with vertex set $\bigcup_{j \in \irange{k}} F_j$ formed by making each $F_j$ edgeless. Applying Theorem \ref{LopsidedTransversal} to $H$ with 
+partition $F_1, \ldots, F_k$ and $S = \emptyset$ gives an independent set $I$ intersecting each $F_i$ and hence every maximum clique in $G$.
+So, we have $\omega(G - I) < \omega(G)$ as desired.
 \end{proof}
 
 \section{Historical notes}
 
+\chapter{Vertex partitions and shuffling}
+\section{Historical notes}
 
 \chapter{Coloring edges}
 It is also useful to consider coloring the edges of a graph so that incident edges receive different colors.  This
