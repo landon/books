@@ -80,6 +80,17 @@ Given a starting location $w \in V(G)$, what is the most efficient way to amass 
 For a sequence $P_1, P_2, \ldots$ of directed paths in $G$ starting at $w$, we are interested in the sequence $s(P_1), s(P_2), \ldots$.  Does it diverge to
 positive infinity, bounce around, or converge to a finite value?
 
+\section{our knowledge of $\pi$}
+If we know $\pi$ fully, then finding an efficient way to amass coins is a static math problem; interesting, but not useful.
+To add our knowledge of $\pi$ to the problem statement, we include a set $X \ni \pi$ of weightings of $G$.  Now we imagine
+that our navigator knows $X$ but not $\pi$.  The navigator's exploration can shrink $X$.  
+There is a tension between coin-greed and explore-greed; smaller $X$ is good for coin-amass-planning, so how much coin to give up locally for exploration?
+Since our navigator knows $X$, she could perform this analysis and find efficient ways to amass coins; another static math problem.  So, we need to
+add time and navigator limits.  Now the navigator has a third greed in tension.  Since our navigator knows her limits, she could perform this 
+analysis and find efficient ways to amass coins; a fourth greed in tension.
+
+
+
 
 
 \end{document}
