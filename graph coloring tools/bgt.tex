@@ -1044,6 +1044,10 @@ If $G$ is $f$-irreducible, then $2\size{G} > f(V(G)) + \mic(G) - |G|$.
 \section{Historical notes}
 
 \chapter{Combinatorial nullstellensatz}\label{combinatorialnullchapter}
+\begin{marginfigure}
+		\includegraphics[width=2.5in]{pictures/nicehat.jpg}
+		\caption{Hilbert had good taste in hats.}
+\end{marginfigure}
 Fix an arbitrary field $\mathbb{F}$. We write $f_{k_1, \ldots, k_n}$ for the coefficient of $x_1^{k_1}\cdots x_n^{k_n}$ in the polynomial $f \in \mathbb{F}[x_1, \ldots, x_n]$. 
 \begin{lemma}
 Suppose $f \in \mathbb{F}[x_1, \ldots, x_n]$ and $k_1, \ldots, k_n \in \IN$ with $\sum_{i \in \irange{n}} k_i = \deg(f)$.  If $f_{k_1, \ldots, k_n} \ne 0$, then for any $A_1, \ldots, A_n \subseteq \mathbb{F}$ 
@@ -1329,6 +1333,7 @@ If $\card{\bigcup_{i \in \irange{k}} A_i} \ge k$, then there is nonempty $I \sub
 for all $i \in \irange{k} \setminus I$.
 \end{corollary}
 \begin{proof}
+Immediate from Lemma \ref{HallTheoremLemma}.
 \end{proof}
 
 \begin{theorem}
@@ -1366,15 +1371,9 @@ to decide whether or not edge coloring a given graph $G$ requires $\Delta(G) + 1
 Deciding whether or not edge coloring a given graph $G$ requires $\Delta(G) + 1$ colors is hard supposing other things we think are hard are actually hard.
 \end{theorem}
 
-\section*{fans as a greedy strategy}
-\section*{acceptable paths}
-\section*{acceptable trees}
-\section*{edge list coloring}
 \section{Historical notes}
+This is not Vizing's proof.
 \backmatter
 \appendix
-\setboolean{@mainmatter}{true}
-\chapter{Basic probability}
-\chapter{Notation}
 \printindex
 \end{document}

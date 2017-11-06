@@ -28,8 +28,4 @@
 \contentsline {section}{Historical notes}{29}{section*.29}
 \contentsline {chapter}{Coloring edges}{30}{chapter*.30}
 \contentsline {section}{Historical notes}{32}{section*.31}
-\ttl@change@i {\@ne }{chapter}{0em}{\vspace {1.5\baselineskip }\begin {fullwidth}\LARGE \rmfamily \itshape }{\hspace *{0em}\appendixname ~\thecontentslabel : }{\hspace *{0em}}{\rmfamily \upshape \qquad \thecontentspage }\relax 
-\ttl@change@v {chapter}{}{}{\end {fullwidth}}\relax 
-\contentsline {chapter}{\numberline {A}Basic probability}{33}{appendix.A}
-\contentsline {chapter}{\numberline {B}Notation}{34}{appendix.B}
 \contentsfinish 
