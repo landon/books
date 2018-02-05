@@ -1,0 +1,48 @@
+graph G {
+	graph [_draw_="c 9 -#fffffe00 C 7 -#ffffff P 4 -79.73 -111.49 -79.73 115.98 71.22 115.98 71.22 -111.49 ",
+		bb="-79.732,-111.49,71.222,115.98",
+		overlap=false,
+		sep=0.0,
+		splines=true,
+		xdotversion=1.7
+	];
+	node [color=black,
+		fixedsize=true,
+		fontname="Latin Modern Math",
+		fontsize=42,
+		height=.92,
+		label="\N",
+		penwidth=1,
+		shape=circle,
+		width=.92
+	];
+	edge [color=black,
+		penwidth=6,
+		style=bold
+	];
+	0	 [_draw_="c 7 -#000000 C 7 -#ff0000 E -46.73 -78.49 33 33 ",
+		fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="-46.732,-78.492",
+		style=filled,
+		width=0.91667];
+	2	 [_draw_="c 7 -#000000 C 7 -#0000ff E 8.51 -4.48 33 33 ",
+		fillcolor=blue,
+		height=0.91667,
+		label="",
+		pos="8.5101,-4.4846",
+		style=filled,
+		width=0.91667];
+	0 -- 2	 [_draw_="S 15 -setlinewidth(6) c 7 -#000000 B 4 -26.79 -51.77 -21.84 -45.15 -16.54 -38.05 -11.59 -31.41 ",
+		pos="-26.789,-51.774 -21.844,-45.149 -16.542,-38.047 -11.59,-31.412"];
+	1	 [_draw_="c 7 -#000000 C 7 -#ff0000 E 38.22 82.98 33 33 ",
+		fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="38.222,82.977",
+		style=filled,
+		width=0.91667];
+	1 -- 2	 [_draw_="S 15 -setlinewidth(6) c 7 -#000000 B 4 27.5 51.4 24.8 43.47 21.91 34.97 19.22 27.04 ",
+		pos="27.495,51.401 24.803,43.474 21.913,34.969 19.221,27.045"];
+}

@@ -1,0 +1,64 @@
+graph G {
+	graph [bb="-138.69,-111,173.16,143.48",
+		overlap=false,
+		sep=0.0,
+		splines=true
+	];
+	node [color=black,
+		fixedsize=true,
+		fontname="Latin Modern Math",
+		fontsize=42,
+		height=.92,
+		label="\N",
+		penwidth=1,
+		shape=circle,
+		width=.92
+	];
+	edge [color=black,
+		penwidth=6,
+		style=bold
+	];
+	0	 [fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="-105.69,63.266",
+		style=filled,
+		width=0.91667];
+	3	 [fillcolor=blue,
+		height=0.91667,
+		label="",
+		pos="-31.681,110.48",
+		style=filled,
+		width=0.91667];
+	0 -- 3	 [pos="-77.71,81.114 -71.815,84.874 -65.596,88.842 -59.7,92.603"];
+	5	 [fillcolor=green,
+		height=0.91667,
+		label="",
+		pos="-23.928,15.951",
+		style=filled,
+		width=0.91667];
+	0 -- 5	 [pos="-77.093,46.717 -69.172,42.134 -60.574,37.157 -52.646,32.57"];
+	1	 [fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="-30.662,-77.996",
+		style=filled,
+		width=0.91667];
+	4	 [fillcolor=blue,
+		height=0.91667,
+		label="",
+		pos="51.799,-40.154",
+		style=filled,
+		width=0.91667];
+	1 -- 4	 [pos="-0.42484,-64.12 6.7457,-60.83 14.395,-57.319 21.565,-54.029"];
+	1 -- 5	 [pos="-28.288,-44.874 -27.644,-35.893 -26.947,-26.171 -26.303,-17.189"];
+	2	 [fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="140.16,-71.542",
+		style=filled,
+		width=0.91667];
+	2 -- 4	 [pos="108.76,-60.387 100.43,-57.427 91.428,-54.231 83.1,-51.273"];
+	3 -- 5	 [pos="-28.97,77.416 -28.219,68.259 -27.403,58.317 -26.651,49.152"];
+	4 -- 5	 [pos="24.887,-20.216 17.66,-14.861 9.8505,-9.0756 2.6422,-3.735"];
+}

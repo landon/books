@@ -1,0 +1,39 @@
+graph G {
+	graph [_draw_="c 9 -#fffffe00 C 7 -#ffffff P 4 -61.99 -70 -61.99 70 61.99 70 61.99 -70 ",
+		bb="-61.988,-70.004,61.988,70.004",
+		overlap=false,
+		sep=0.0,
+		splines=true,
+		xdotversion=1.7
+	];
+	node [color=black,
+		fixedsize=true,
+		fontname="Latin Modern Math",
+		fontsize=42,
+		height=.92,
+		label="\N",
+		penwidth=1,
+		shape=circle,
+		width=.92
+	];
+	edge [color=black,
+		penwidth=6,
+		style=bold
+	];
+	0	 [_draw_="c 7 -#000000 C 7 -#ff0000 E -28.99 -37 33 33 ",
+		fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="-28.988,-37.004",
+		style=filled,
+		width=0.91667];
+	1	 [_draw_="c 7 -#000000 C 7 -#0000ff E 28.99 37 33 33 ",
+		fillcolor=blue,
+		height=0.91667,
+		label="",
+		pos="28.988,37.004",
+		style=filled,
+		width=0.91667];
+	0 -- 1	 [_draw_="S 15 -setlinewidth(6) c 7 -#000000 B 4 -8.38 -10.7 -2.92 -3.72 2.99 3.81 8.45 10.79 ",
+		pos="-8.3847,-10.703 -2.9168,-3.7233 2.9867,3.8125 8.4511,10.788"];
+}

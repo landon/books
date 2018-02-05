@@ -1,0 +1,66 @@
+graph G {
+	graph [_draw_="c 9 -#fffffe00 C 7 -#ffffff P 4 -107.23 -107.04 -107.23 107.59 107.33 107.59 107.33 -107.04 ",
+		bb="-107.23,-107.04,107.33,107.59",
+		overlap=false,
+		sep=0.0,
+		splines=true,
+		xdotversion=1.7
+	];
+	node [color=black,
+		fixedsize=true,
+		fontname="Latin Modern Math",
+		fontsize=42,
+		height=.92,
+		label="\N",
+		penwidth=1,
+		shape=circle,
+		width=.92
+	];
+	edge [color=black,
+		penwidth=6,
+		style=bold
+	];
+	0	 [_draw_="c 7 -#000000 C 7 -#ff0000 E -58.51 -74.04 33 33 ",
+		fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="-58.511,-74.038",
+		style=filled,
+		width=0.91667];
+	4	 [_draw_="c 7 -#000000 C 7 -#0000ff E 0.27 -0.03 33 33 ",
+		fillcolor=blue,
+		height=0.91667,
+		label="",
+		pos="0.2738,-0.030286",
+		style=filled,
+		width=0.91667];
+	0 -- 4	 [_draw_="S 15 -setlinewidth(6) c 7 -#000000 B 4 -37.95 -48.15 -32.26 -40.98 -26.07 -33.2 -20.37 -26.02 ",
+		pos="-37.951,-48.153 -32.256,-40.984 -26.074,-33.201 -20.374,-26.025"];
+	1	 [_draw_="c 7 -#000000 C 7 -#ff0000 E -74.23 58.11 33 33 ",
+		fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="-74.235,58.106",
+		style=filled,
+		width=0.91667];
+	1 -- 4	 [_draw_="S 15 -setlinewidth(6) c 7 -#000000 B 4 -48.18 37.77 -40.96 32.14 -33.12 26.03 -25.9 20.39 ",
+		pos="-48.175,37.773 -40.957,32.141 -33.121,26.027 -25.897,20.39"];
+	2	 [_draw_="c 7 -#000000 C 7 -#ff0000 E 74.33 -58.63 33 33 ",
+		fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="74.328,-58.633",
+		style=filled,
+		width=0.91667];
+	2 -- 4	 [_draw_="S 15 -setlinewidth(6) c 7 -#000000 B 4 48.43 -38.14 41.25 -32.46 33.47 -26.3 26.28 -20.61 ",
+		pos="48.427,-38.136 41.253,-32.459 33.465,-26.296 26.285,-20.614"];
+	3	 [_draw_="c 7 -#000000 C 7 -#ff0000 E 58.14 74.59 33 33 ",
+		fillcolor=red,
+		height=0.91667,
+		label="",
+		pos="58.145,74.594",
+		style=filled,
+		width=0.91667];
+	3 -- 4	 [_draw_="S 15 -setlinewidth(6) c 7 -#000000 B 4 37.9 48.49 32.3 41.27 26.21 33.42 20.6 26.18 ",
+		pos="37.904,48.494 32.298,41.265 26.212,33.417 20.601,26.181"];
+}
