@@ -599,8 +599,8 @@ In the latter case, let $X$ be a $\Delta(G)$-clique in $G-S$.
 
 Since $S$ is maximal and $\omega(G) \le \Delta(G)$, there are $x_1, x_2 \in X$ and $y_1, y_2 \in S$ such that $x_1$ is adjacent to $y_1$ and $x_2$ is adjacent to $y_2$.
 Construct a graph $H$ from $G-X$ by adding the edge $y_1y_2$.  Since $\card{H} < \card{G}$, applying the theorem to $H$ shows that $\omega(H) > \Delta(G)$ or $\chi(H) \le \Delta(G)$.
-Suppose $\chi(H) \le \Delta(G)$.  Then there is a $\Delta(G)$-coloring of $G-X$ where $y_1$ and $y_2$ receive different colors, say red and blue respectively.
 
+Suppose $\chi(H) \le \Delta(G)$.  Then there is a $\Delta(G)$-coloring of $G-X$ where $y_1$ and $y_2$ receive different colors, say red and blue respectively.
 Pick the first vertex $z$ in a shortest path $P$ from $x_1$ to $x_2$ in $X$ that has a blue colored neighbor in $V(H)$. 
 Each vertex in $X$ has $\Delta(G)-1$ neighbors in $X$ and hence at most one neighbor in $V(H)$.  So, $z \ne x_1$ since $x_1$ already has a red colored neighbor in $V(H)$.
 Let $w$ be be the vertex preceding $z$ on $P$ (it could be that $w = x_1$). Then $w$ has no blue colored neighbor.  Since $X$ is the vertex set of a cycle or a 
