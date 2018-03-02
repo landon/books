@@ -748,9 +748,7 @@ has an arrow to $v$ or is in $G-I$ and hence has a back arrow to $v$, a contradi
 \end{proof}
 
 An acylic oriented graph is plainly kernel-perfect, so Theorem \ref{KernelPerfectListBound} generalizes Theorem \ref{SecondListBound}.  
-But this is not the only possible generalization of acylic that works, in the \nameref{combinatorialnullchapter} chapter we'll present 
-another based on polynomials.
-This second generalization of acyclic does not generalize kernel-perfection and kernel-perfection does not generalize it.
+But this is not the only possible generalization of acylic that works, in the \nameref{combinatorialnullchapter} chapter we'll find another such generalization.
 
 \begin{question}\label{KernelPerfectQuestion}
 Lemma \ref{KostochkaYanceyKernelLemma} says that if we take a graph $G$ with an independent set $I$ and direct all the edges of $G-I$ both ways and the edges 
@@ -844,201 +842,31 @@ We will understand the case of equality completely in the \nameref{KernelMagicCh
 \end{tikzpicture}
 \caption{The Petersen graph.}
 \end{marginfigure}
-\chapter{Flows}
-Using Theorem \ref{KernelPerfectSuperListBound} and Lemma \ref{KostochkaYanceyKernelLemma}, we will prove an easily-applicable sufficient condition for a graph to be $L$-colorable.  
-But first, we need a general lemma that gives graph orientations with specified constraints on their out-degrees.  This lemma can be proved directly, 
-but a detour into the theory of flows will give us the lemma and other results for free (modulo computation).
 
-Let $V$ be a finite set.  A \emph{network} on $V$ is a function $\func{f}{V\times V}{\IQ_{\ge 0}}$.  For a network $f$ and $X,Y \subseteq V$, put
-\[\card{X,Y}_f \DefinedAs \sum_{(x,y) \in X\times Y} f(x,y).\]
-If $f$ and $g$ are networks on $V$, then $f \le g$ just in case $f(u,v) \le g(u,v)$ for all $(u,v)\in V\times V$.
-Let $s,t \in V$ be two distinguished vertices.  The \emph{capacity} of a network $f$, written $\card{f}$, is the minimum of $\card{X, V\setminus X}_f$ over all $X \subseteq V\setminus\set{t}$ with $s \in X$.
 
-We call a network $f$ a \emph{flow} if $\card{\set{v},V}_f = \card{V,\set{v}}_f$ for all $v \in V \setminus \set{s,t}$.
-The \emph{value} of a flow $f$ is $\size{f} \DefinedAs \card{\set{s},V}_f - \card{V,\set{s}}_f$.
+\chapter{List coloring complete graphs}
+The following gives a sufficient condition for a graph $G$ to be $L$-colorable that is extremely useful in many different contexts. 
+Since any coloring of $K_r$ must use $r$ colors, this condition is also necessary when $G$ is complete.
 
-\begin{lemma}\label{FlowValues}
-If $f$ is a flow, then $\size{f} = \card{X, V}_f - \card{V, X}_f$ for every $X \subseteq V\setminus\set{t}$ with $s \in X$.
-\end{lemma}
-\begin{proof}
-\begin{align*}
-\card{X, V}_f - \card{V, X}_f &= \card{\set{s}, V}_f + \card{X\setminus\set{s}, V}_f - \card{V, \set{s}}_f - \card{V, X\setminus\set{s}}_f\\
-&= \size{f} + \card{X\setminus\set{s}, V}_f - \card{V, X\setminus\set{s}}_f\\
-&= \size{f}.
-\end{align*}
-\end{proof}
-
-\begin{lemma}\label{FlowAtMostCapacity}
-If $f \le g$ where $f$ is a flow on $V$ and $g$ is a network on $V$, then $\size{f} \le \card{g}$.
-\end{lemma}
-\begin{proof}
-Pick $X \subseteq V\setminus\set{t}$ with $s \in X$ such that $\card{X, V\setminus X}_g = \card{g}$.  Then, by Lemma \ref{FlowValues}, 
-\begin{align*}
-\size{f} &= \card{X, V}_f - \card{V, X}_f \\
-&= \card{X, V\setminus X}_f + \card{X,X}_f - \card{V\setminus X, X}_f - \card{X,X}_f \\
-&= \card{X, V\setminus X}_f - \card{V\setminus X, X}_f\\
-&\le \card{X, V\setminus X}_g \\
-&= \card{g}.
-\end{align*}
-\end{proof}
-
-\begin{theorem}\label{MaxFlowMinCut}
-If $g$ is a network on $V$, then there exists a flow $f$ on $V$ with $f \le g$ such that $\size{f} = \card{g}$.
-Moreover, if $g$ takes only integer values, then the flow $f$ can be chosen to as well.
-\end{theorem}
-\begin{proof}
-Let $g$ be a network on $V$ and choose a flow $f \le g$ maximizing $\size{f}$.  By Lemma \ref{FlowAtMostCapacity}, $\size{f} \le \card{g}$.
-Let $X \subseteq V$ be the set of all $v \in V$ for which there is a sequence of distinct vertices $s = x_0, x_1, x_2, \ldots, x_n = v$ such that for each $0 \le i < n$, either
-$f(x_i, x_{i+1}) < g(x_i, x_{i+1})$ or $f(x_{i+1}, x_i) > 0$.  Plainly $s \in X$.
-
-Suppose $t \in X$ and let $s = x_0, x_1, x_2, \ldots, x_n = t$ be a sequence witnessing this fact.  
-Choose $\epsilon > 0$ such that for each $0 \le i < n$, either $f(x_i, x_{i+1}) \le g(x_i, x_{i+1}) - \epsilon$ or $f(x_{i+1}, x_i) \ge \epsilon$.  Modify $f$ to get $f'$
-by setting $f'(x_i, x_{i+1}) = f(x_i, x_{i+1}) + \epsilon$ if $f(x_i, x_{i+1}) \le g(x_i, x_{i+1}) - \epsilon$ and $f'(x_{i+1}, x_i) = f(x_{i+1}, x_i) -\epsilon$ otherwise.
-Then $f'$ is a flow with $f' \le g$ and $\size{f'} > \size{f}$, violating maximality of $\size{f}$.
-
-So, $t \not \in X$.  Since $v \in V \setminus X$ is not in $X$, we must have $f(x, v) = g(x,v)$ and $f(v,x) = 0$ for all $x \in X$.  Hence
-\begin{align*}
-\size{f} &= \card{X, V}_f - \card{V, X}_f \\
-&= \card{X, X}_f + \card{X, V\setminus X}_f - \card{X, X}_f - \card{V\setminus X, X}_f\\
-&= \card{X, V\setminus X}_f - \card{V\setminus X, X}_f\\
-&= \card{X, V\setminus X}_g\\
-&\ge \card{g}.
-\end{align*}
-\end{proof}
-
-\section{Hall's theorem}
-As our first application of Theorem \ref{MaxFlowMinCut}, we give a sufficient condition for a graph $G$ to be $L$-colorable.  This 
-condition is also necessary when $G$ is complete.
-\begin{lemma}\label{HallTheoremLemma}
+\begin{lemma}\label{HallTheoremLemmaA}
 If $L$ is a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$, then $G$ is $L$-colorable.
 \end{lemma}
 \begin{proof}
-Let $L$ be a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$.  
-We define a network $g$ on the set $Z \DefinedAs \set{s,t} \cup V(G) \cup L(V(G))$ by
-\[g(a, b) \DefinedAs  \begin{cases} 
-      1 & a = s \text{ and } b \in  V(G)\\
-	  1 & a \in V(G) \text{ and } b \in L(a),\\
-      1 & a \in L(V(G)) \text{ and } b=t,\\
-      0 & \text{otherwise} .
-   \end{cases}
-\]
-First, we compute the capacity of $g$. Let $X \subseteq Z \setminus \set{t}$ with $s \in X$.  If $P = X \cap L(V(G))$ and $Q = X \cap V(G)$, then
-\begin{align*}
-\card{X, Z\setminus X}_g &= \card{P, Z\setminus X}_g + \card{Q, Z\setminus X}_g + \card{\set{s}, Z\setminus X}_g\\
-&=\card{P} + \card{Q, Z\setminus X}_g + \card{V(G)\setminus Q}\\
-&\ge\card{P} + \card{L(Q) \setminus P} + \card{V(G)\setminus Q}\\
-&\ge\card{L(Q)} + \card{G} - \card{Q}\\
-&\ge \card{G}.
-\end{align*}
-The final inequality holds due to our assumption $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$. 
-Hence $\card{g} \ge \card{G}$.  By Theorem \ref{MaxFlowMinCut}, there is a flow $f$ on $Z$ with $f \le g$ such that $\size{f} = \card{g}$.  But then
-\begin{align*}
-\card{\set{s}, V(G)}_f &=  \card{\set{s}, Z}_f \\
-&= \card{\set{s}, Z}_f - \card{Z, \set{s}}_f\\
-&=\size{f}\\
-&= \card{g}\\
-&\ge\card{G}.
-\end{align*}
-Hence $f(s,v) = 1$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \in V(G)$, there is $c_v \in L(V(G))$ such that $g(v, c_v) \ge f(v, c_v) = 1$ and hence $c_v \in L(v)$.
-Coloring each $v \in V(G)$ with $c_v$ gives an $L$-coloring of $G$ since if $c_v = c_w$, the fact that $f$ is a flow implies 
-$\card{Z, \set{c_v}}_f = \card{\set{c_v}, Z}_f = f(c_v, t) = 1$ and hence $v = w$.
 \end{proof}
 
-Hall's theorem can be expressed in many forms, here is a more standard way that is readily seen to be equivalent to Lemma \ref{HallTheoremLemma}. A \emph{transversal} in a collection 
+Hall's theorem can be expressed in many forms, here is a more standard way that is readily seen to be equivalent to Lemma \ref{HallTheoremLemmaA}. A \emph{transversal} in a collection 
 of finite sets $\set{A_i}_{i \in \irange{k}}$ is a set $X \subseteq \bigcup_{i \in \irange{k}} A_i$ with $\card{X} = k$ such that $\card{X \cap A_i} = 1$
-for all $i \in \irange{k}$.
+for all $i \in \irange{k}$.  Equivalently, $X$ is formed by picking one element from each $A_i$ where the chosen elements are pairwise distinct.
 \begin{HallsTheorem}
 $\set{A_i}_{i \in \irange{k}}$ has a transversal just in case $\card{\bigcup_{i \in I} A_i} \ge \card{I}$ for all $I \subseteq \irange{k}$.
 \end{HallsTheorem}
 
-\section{Orientations with prescribed degrees}
-If $G$ is an oriented graph, the \emph{in-degree} of a vertex $v \in V(G)$, written $d^-(v)$, is the number of arrows
-pointing into $v$.  For $\func{h}{A}{\IN}$ and $S \subseteq A$, put $h(S) \DefinedAs \sum_{x \in S} h(x)$.
-
-\begin{lemma}\label{InOrientations} If $G$ is a graph and $\func{h}{V(G)}{\IN}$,
-then $G$ has an orientation such that $d^{-}(v)\ge h(v)$ for all $v\in V(G)$ just in case
-\begin{equation}
-\size{S}+\size{S,V(G)\setminus S}\ge h(S),
-\end{equation}
-for every $S \subseteq V(G)$.
-\end{lemma}
+\begin{corollary}\label{TransversalCorollary}
+If $\card{\bigcup_{i \in \irange{k}} A_i} \ge k$, then there is nonempty $I \subseteq \irange{k}$ such that $\set{A_i}_{i \in I}$ has a transversal $X$ where $X \cap A_i = \emptyset$
+for all $i \in \irange{k} \setminus I$.
+\end{corollary}
 \begin{proof}
-An easy computation shows that if $G$ has an orientation with $d^{-}(v)\ge h(v)$ for all $v\in V(G)$, then (1) holds. 
-
-For the other implication, we define a network $g$ on the set $Z \DefinedAs \set{s,t} \cup V(G) \cup E(G)$ by
-\[g(a, b) \DefinedAs  \begin{cases} 
-      h(b) & a = s \text{ and } b \in  V(G)\\
-	  1 & a \in V(G) \text{ and } b \in E(a),\\
-      1 & a \in E(G) \text{ and } b = t,\\
-      0 & \text{otherwise} .
-   \end{cases}
-\]
-First, we compute the capacity of $g$. Let $X \subseteq Z \setminus \set{t}$ with $s \in X$.  If $P = X \cap E(G)$ and $Q = X \cap V(G)$, then
-\begin{align*}
-\card{X, Z\setminus X}_g &= \card{P, Z\setminus X}_g + \card{Q, Z\setminus X}_g + \card{\set{s}, Z\setminus X}_g\\
-&=\card{P} + \card{Q, Z\setminus X}_g + h\parens{V(G)\setminus Q}\\
-&\ge\card{P} + 2\size{Q} + \size{Q, V(G)\setminus Q} - 2\card{E(Q) \cap P} - \card{E(Q, V(G)\setminus Q) \cap P} + h\parens{V(G)\setminus Q}\\
-&\ge\card{P} + 2\size{Q} + \size{Q, V(G)\setminus Q} -\size{Q} - \card{P} + h\parens{V(G)\setminus Q}\\
-&= \size{Q} + \size{Q, V(G)\setminus Q} + h\parens{V(G)\setminus Q}\\
-&\ge h(Q) + h\parens{V(G)\setminus Q}\\
-&= h(V(G)).
-\end{align*}
-The penultimate inequality holds due to (1).
-Hence $\card{g} \ge h(V(G))$.  By Theorem \ref{MaxFlowMinCut}, there is a flow $f$ on $Z$ with $f \le g$ such that $\size{f} = \card{g}$.  But then
-\begin{align*}
-\card{\set{s}, V(G)}_f &=  \card{\set{s}, Z}_f \\
-&= \card{\set{s}, Z}_f - \card{Z, \set{s}}_f\\
-&=\size{f}\\
-&= \card{g}\\
-&\ge h(V(G)).
-\end{align*}
-Hence $f(s,v) = h(v)$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \in V(G)$, there is $I(v) \subseteq E(G)$ with $\card{I(v)} = h(v)$ such that $f(v, e) = 1$ for all $e \in I(v)$.
-Now $I(v) \cap I(w) = \emptyset$ for different $v,w \in V(G)$ since otherwise, $e \in I(v) \cap I(w)$ would have $f(e, t) \ge 2 > g(e, t)$.  So, we can define our desired orientation of $G$
-by directing all edges in $I(v)$ into $v$ for all $v \in V(G)$ and then directing any unoriented edges arbitrarily. 
 \end{proof}
-
-\begin{exercise}
-Carry out the computation mentioned at the start of the proof of Lemma \ref{InOrientations}. 
-\end{exercise}
-
-The proofs of Lemma \ref{HallTheoremLemma} and Lemma \ref{InOrientations} look so similar we might suspect there is some relation between the two lemmas.
-\begin{exercise}
-Show that Lemma \ref{InOrientations} follows from Lemma \ref{HallTheoremLemma}.  Hint: split each $b \in V(G)$ into $h(b)$ copies of itself.
-\end{exercise}
-
-\begin{exercise}
-Prove Lemma \ref{HallTheoremLemma} without using flows.
-\end{exercise}
-
-\begin{exercise}
-Give another proof of Lemma \ref{InOrientations} by starting with an arbitrary orientation and repeatedly reversing paths that ``improve'' the orientation.
-Note the similarity to the proof of Theorem \ref{MaxFlowMinCut}.
-\end{exercise}
-
-%\section{Menger's theorem}
-%Recall that a graph $G$ is \emph{connected} if for all $x,y \in V(G)$, there is a path from $x$ to $y$.  Intuitively, $G$ is ``even more connected'' if there are multiple such paths for all $x,y \in V(G)$.
-%We can make this precise in two closely related ways.  A graph $G$ is \emph{$k$-edge-connected} if for all $x,y \in V(G)$, there are $k$ paths from $x$ to $y$ such that each edge of $G$ is in at most 
-%one of the paths (we say this collection of paths is \emph{edge-disjoint}). A graph $G$ is \emph{$k$-vertex-connected} if for all $x,y \in V(G)$, there are $k$ paths from $x$ to $y$ 
-%such that each $v \in V(G) \setminus \set{x,y}$ is in at most one of the paths (we say this collection of paths is \emph{vertex-disjoint}).  
-%
-%First, we investigate edge-connectivity. If $G-F$ is not connected for some $F \subseteq E(G)$, then there must be $x,y \in V(G)$ such that each path from $x$ to $y$ contains an edge in $F$.
-%In particular, for any edge-disjoint collection of paths $\P$ from $x$ to $y$, we have $\card{\P} \le \card{F}$.  Menger's theorem is that the converse also holds.
-%
-%\begin{theorem}\label{MengerEdge}
-%A graph $G$ is $k$-edge-connected just in case $G - F$ is connected for every $F \subseteq E(G)$ with $\card{F} < k$.
-%\end{theorem}
-%\begin{proof}
-%One implication is trivial as discussed above.  For the other implication, suppose $G - F$ is connected for every $F \subseteq E(G)$ with $\card{F} < k$
-%and let $s,t \in V(G)$.  We need to find an edge-disjoint collection of $k$ paths from $s$ to $t$.
-%\end{proof}
-%
-%\begin{theorem}\label{MengerVertex}
-%A graph $G$ is $k$-vertex-connected just in case $G - S$ is connected for every $S \subseteq V(G)$ with $\card{S} < k$.
-%\end{theorem}
-%\begin{proof}
-%\end{proof}
-
-\section{Historical notes}
 
 \chapter{Kernel magic}\label{KernelMagicChapter}
 
@@ -1339,14 +1167,6 @@ For bipartite graphs we were able to repair an almost correct coloring by swappi
 general case we don't have the same control over a path between two vertices, but we can exert some measure of control over paths leaving and entering a larger structure. 
 The larger structure we use here is the whole neighborhood of a vertex.
 
-\begin{corollary}\label{TransversalCorollary}
-If $\card{\bigcup_{i \in \irange{k}} A_i} \ge k$, then there is nonempty $I \subseteq \irange{k}$ such that $\set{A_i}_{i \in I}$ has a transversal $X$ where $X \cap A_i = \emptyset$
-for all $i \in \irange{k} \setminus I$.
-\end{corollary}
-\begin{proof}
-Immediate from Lemma \ref{HallTheoremLemma}.
-\end{proof}
-
 \begin{theorem}
 If $G$ is a graph, then $G$ is $\parens{\Delta(G) + 1}$-edge-colorable.
 \end{theorem}
@@ -1384,6 +1204,199 @@ Deciding whether or not edge coloring a given graph $G$ requires $\Delta(G) + 1$
 
 \section{Historical notes}
 This is not Vizing's proof.
+
+\chapter{Maximum flows versus minimum cuts}
+Let $V$ be a finite set.  A \emph{network} on $V$ is a function $\func{f}{V\times V}{\IQ_{\ge 0}}$.  For a network $f$ and $X,Y \subseteq V$, put
+\[\card{X,Y}_f \DefinedAs \sum_{(x,y) \in X\times Y} f(x,y).\]
+If $f$ and $g$ are networks on $V$, then $f \le g$ just in case $f(u,v) \le g(u,v)$ for all $(u,v)\in V\times V$.
+Let $s,t \in V$ be two distinguished vertices.  The \emph{capacity} of a network $f$, written $\card{f}$, is the minimum of $\card{X, V\setminus X}_f$ over all $X \subseteq V\setminus\set{t}$ with $s \in X$.
+
+We call a network $f$ a \emph{flow} if $\card{\set{v},V}_f = \card{V,\set{v}}_f$ for all $v \in V \setminus \set{s,t}$.
+The \emph{value} of a flow $f$ is $\size{f} \DefinedAs \card{\set{s},V}_f - \card{V,\set{s}}_f$.
+
+\begin{lemma}\label{FlowValues}
+If $f$ is a flow, then $\size{f} = \card{X, V}_f - \card{V, X}_f$ for every $X \subseteq V\setminus\set{t}$ with $s \in X$.
+\end{lemma}
+\begin{proof}
+\begin{align*}
+\card{X, V}_f - \card{V, X}_f &= \card{\set{s}, V}_f + \card{X\setminus\set{s}, V}_f - \card{V, \set{s}}_f - \card{V, X\setminus\set{s}}_f\\
+&= \size{f} + \card{X\setminus\set{s}, V}_f - \card{V, X\setminus\set{s}}_f\\
+&= \size{f}.
+\end{align*}
+\end{proof}
+
+\begin{lemma}\label{FlowAtMostCapacity}
+If $f \le g$ where $f$ is a flow on $V$ and $g$ is a network on $V$, then $\size{f} \le \card{g}$.
+\end{lemma}
+\begin{proof}
+Pick $X \subseteq V\setminus\set{t}$ with $s \in X$ such that $\card{X, V\setminus X}_g = \card{g}$.  Then, by Lemma \ref{FlowValues}, 
+\begin{align*}
+\size{f} &= \card{X, V}_f - \card{V, X}_f \\
+&= \card{X, V\setminus X}_f + \card{X,X}_f - \card{V\setminus X, X}_f - \card{X,X}_f \\
+&= \card{X, V\setminus X}_f - \card{V\setminus X, X}_f\\
+&\le \card{X, V\setminus X}_g \\
+&= \card{g}.
+\end{align*}
+\end{proof}
+
+\begin{theorem}\label{MaxFlowMinCut}
+If $g$ is a network on $V$, then there exists a flow $f$ on $V$ with $f \le g$ such that $\size{f} = \card{g}$.
+Moreover, if $g$ takes only integer values, then the flow $f$ can be chosen to as well.
+\end{theorem}
+\begin{proof}
+Let $g$ be a network on $V$ and choose a flow $f \le g$ maximizing $\size{f}$.  By Lemma \ref{FlowAtMostCapacity}, $\size{f} \le \card{g}$.
+Let $X \subseteq V$ be the set of all $v \in V$ for which there is a sequence of distinct vertices $s = x_0, x_1, x_2, \ldots, x_n = v$ such that for each $0 \le i < n$, either
+$f(x_i, x_{i+1}) < g(x_i, x_{i+1})$ or $f(x_{i+1}, x_i) > 0$.  Plainly $s \in X$.
+
+Suppose $t \in X$ and let $s = x_0, x_1, x_2, \ldots, x_n = t$ be a sequence witnessing this fact.  
+Choose $\epsilon > 0$ such that for each $0 \le i < n$, either $f(x_i, x_{i+1}) \le g(x_i, x_{i+1}) - \epsilon$ or $f(x_{i+1}, x_i) \ge \epsilon$.  Modify $f$ to get $f'$
+by setting $f'(x_i, x_{i+1}) = f(x_i, x_{i+1}) + \epsilon$ if $f(x_i, x_{i+1}) \le g(x_i, x_{i+1}) - \epsilon$ and $f'(x_{i+1}, x_i) = f(x_{i+1}, x_i) -\epsilon$ otherwise.
+Then $f'$ is a flow with $f' \le g$ and $\size{f'} > \size{f}$, violating maximality of $\size{f}$.
+
+So, $t \not \in X$.  Since $v \in V \setminus X$ is not in $X$, we must have $f(x, v) = g(x,v)$ and $f(v,x) = 0$ for all $x \in X$.  Hence
+\begin{align*}
+\size{f} &= \card{X, V}_f - \card{V, X}_f \\
+&= \card{X, X}_f + \card{X, V\setminus X}_f - \card{X, X}_f - \card{V\setminus X, X}_f\\
+&= \card{X, V\setminus X}_f - \card{V\setminus X, X}_f\\
+&= \card{X, V\setminus X}_g\\
+&\ge \card{g}.
+\end{align*}
+\end{proof}
+
+\section{Hall's theorem}
+As our first application of Theorem \ref{MaxFlowMinCut}, we give a sufficient condition for a graph $G$ to be $L$-colorable.  This 
+condition is also necessary when $G$ is complete.
+\begin{lemma}\label{HallTheoremLemma}
+If $L$ is a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$, then $G$ is $L$-colorable.
+\end{lemma}
+\begin{proof}
+Let $L$ be a list assignment on a graph $G$ such that $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$.  
+We define a network $g$ on the set $Z \DefinedAs \set{s,t} \cup V(G) \cup L(V(G))$ by
+\[g(a, b) \DefinedAs  \begin{cases} 
+      1 & a = s \text{ and } b \in  V(G)\\
+	  1 & a \in V(G) \text{ and } b \in L(a),\\
+      1 & a \in L(V(G)) \text{ and } b=t,\\
+      0 & \text{otherwise} .
+   \end{cases}
+\]
+First, we compute the capacity of $g$. Let $X \subseteq Z \setminus \set{t}$ with $s \in X$.  If $P = X \cap L(V(G))$ and $Q = X \cap V(G)$, then
+\begin{align*}
+\card{X, Z\setminus X}_g &= \card{P, Z\setminus X}_g + \card{Q, Z\setminus X}_g + \card{\set{s}, Z\setminus X}_g\\
+&=\card{P} + \card{Q, Z\setminus X}_g + \card{V(G)\setminus Q}\\
+&\ge\card{P} + \card{L(Q) \setminus P} + \card{V(G)\setminus Q}\\
+&\ge\card{L(Q)} + \card{G} - \card{Q}\\
+&\ge \card{G}.
+\end{align*}
+The final inequality holds due to our assumption $\card{L(S)} \ge \card{S}$ for all $S \subseteq V(G)$. 
+Hence $\card{g} \ge \card{G}$.  By Theorem \ref{MaxFlowMinCut}, there is a flow $f$ on $Z$ with $f \le g$ such that $\size{f} = \card{g}$.  But then
+\begin{align*}
+\card{\set{s}, V(G)}_f &=  \card{\set{s}, Z}_f \\
+&= \card{\set{s}, Z}_f - \card{Z, \set{s}}_f\\
+&=\size{f}\\
+&= \card{g}\\
+&\ge\card{G}.
+\end{align*}
+Hence $f(s,v) = 1$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \in V(G)$, there is $c_v \in L(V(G))$ such that $g(v, c_v) \ge f(v, c_v) = 1$ and hence $c_v \in L(v)$.
+Coloring each $v \in V(G)$ with $c_v$ gives an $L$-coloring of $G$ since if $c_v = c_w$, the fact that $f$ is a flow implies 
+$\card{Z, \set{c_v}}_f = \card{\set{c_v}, Z}_f = f(c_v, t) = 1$ and hence $v = w$.
+\end{proof}
+
+Hall's theorem can be expressed in many forms, here is a more standard way that is readily seen to be equivalent to Lemma \ref{HallTheoremLemma}. A \emph{transversal} in a collection 
+of finite sets $\set{A_i}_{i \in \irange{k}}$ is a set $X \subseteq \bigcup_{i \in \irange{k}} A_i$ with $\card{X} = k$ such that $\card{X \cap A_i} = 1$
+for all $i \in \irange{k}$.
+\begin{HallsTheorem}
+$\set{A_i}_{i \in \irange{k}}$ has a transversal just in case $\card{\bigcup_{i \in I} A_i} \ge \card{I}$ for all $I \subseteq \irange{k}$.
+\end{HallsTheorem}
+
+\section{Orientations with prescribed degrees}
+If $G$ is an oriented graph, the \emph{in-degree} of a vertex $v \in V(G)$, written $d^-(v)$, is the number of arrows
+pointing into $v$.  For $\func{h}{A}{\IN}$ and $S \subseteq A$, put $h(S) \DefinedAs \sum_{x \in S} h(x)$.
+
+\begin{lemma}\label{InOrientations} If $G$ is a graph and $\func{h}{V(G)}{\IN}$,
+then $G$ has an orientation such that $d^{-}(v)\ge h(v)$ for all $v\in V(G)$ just in case
+\begin{equation}
+\size{S}+\size{S,V(G)\setminus S}\ge h(S),
+\end{equation}
+for every $S \subseteq V(G)$.
+\end{lemma}
+\begin{proof}
+An easy computation shows that if $G$ has an orientation with $d^{-}(v)\ge h(v)$ for all $v\in V(G)$, then (1) holds. 
+
+For the other implication, we define a network $g$ on the set $Z \DefinedAs \set{s,t} \cup V(G) \cup E(G)$ by
+\[g(a, b) \DefinedAs  \begin{cases} 
+      h(b) & a = s \text{ and } b \in  V(G)\\
+	  1 & a \in V(G) \text{ and } b \in E(a),\\
+      1 & a \in E(G) \text{ and } b = t,\\
+      0 & \text{otherwise} .
+   \end{cases}
+\]
+First, we compute the capacity of $g$. Let $X \subseteq Z \setminus \set{t}$ with $s \in X$.  If $P = X \cap E(G)$ and $Q = X \cap V(G)$, then
+\begin{align*}
+\card{X, Z\setminus X}_g &= \card{P, Z\setminus X}_g + \card{Q, Z\setminus X}_g + \card{\set{s}, Z\setminus X}_g\\
+&=\card{P} + \card{Q, Z\setminus X}_g + h\parens{V(G)\setminus Q}\\
+&\ge\card{P} + 2\size{Q} + \size{Q, V(G)\setminus Q} - 2\card{E(Q) \cap P} - \card{E(Q, V(G)\setminus Q) \cap P} + h\parens{V(G)\setminus Q}\\
+&\ge\card{P} + 2\size{Q} + \size{Q, V(G)\setminus Q} -\size{Q} - \card{P} + h\parens{V(G)\setminus Q}\\
+&= \size{Q} + \size{Q, V(G)\setminus Q} + h\parens{V(G)\setminus Q}\\
+&\ge h(Q) + h\parens{V(G)\setminus Q}\\
+&= h(V(G)).
+\end{align*}
+The penultimate inequality holds due to (1).
+Hence $\card{g} \ge h(V(G))$.  By Theorem \ref{MaxFlowMinCut}, there is a flow $f$ on $Z$ with $f \le g$ such that $\size{f} = \card{g}$.  But then
+\begin{align*}
+\card{\set{s}, V(G)}_f &=  \card{\set{s}, Z}_f \\
+&= \card{\set{s}, Z}_f - \card{Z, \set{s}}_f\\
+&=\size{f}\\
+&= \card{g}\\
+&\ge h(V(G)).
+\end{align*}
+Hence $f(s,v) = h(v)$ for all $v \in V(G)$.  Since $f$ is a flow, for each $v \in V(G)$, there is $I(v) \subseteq E(G)$ with $\card{I(v)} = h(v)$ such that $f(v, e) = 1$ for all $e \in I(v)$.
+Now $I(v) \cap I(w) = \emptyset$ for different $v,w \in V(G)$ since otherwise, $e \in I(v) \cap I(w)$ would have $f(e, t) \ge 2 > g(e, t)$.  So, we can define our desired orientation of $G$
+by directing all edges in $I(v)$ into $v$ for all $v \in V(G)$ and then directing any unoriented edges arbitrarily. 
+\end{proof}
+
+\begin{exercise}
+Carry out the computation mentioned at the start of the proof of Lemma \ref{InOrientations}. 
+\end{exercise}
+
+The proofs of Lemma \ref{HallTheoremLemma} and Lemma \ref{InOrientations} look so similar we might suspect there is some relation between the two lemmas.
+\begin{exercise}
+Show that Lemma \ref{InOrientations} follows from Lemma \ref{HallTheoremLemma}.  Hint: split each $b \in V(G)$ into $h(b)$ copies of itself.
+\end{exercise}
+
+\begin{exercise}
+Prove Lemma \ref{HallTheoremLemma} without using flows.
+\end{exercise}
+
+\begin{exercise}
+Give another proof of Lemma \ref{InOrientations} by starting with an arbitrary orientation and repeatedly reversing paths that ``improve'' the orientation.
+Note the similarity to the proof of Theorem \ref{MaxFlowMinCut}.
+\end{exercise}
+
+%\section{Menger's theorem}
+%Recall that a graph $G$ is \emph{connected} if for all $x,y \in V(G)$, there is a path from $x$ to $y$.  Intuitively, $G$ is ``even more connected'' if there are multiple such paths for all $x,y \in V(G)$.
+%We can make this precise in two closely related ways.  A graph $G$ is \emph{$k$-edge-connected} if for all $x,y \in V(G)$, there are $k$ paths from $x$ to $y$ such that each edge of $G$ is in at most 
+%one of the paths (we say this collection of paths is \emph{edge-disjoint}). A graph $G$ is \emph{$k$-vertex-connected} if for all $x,y \in V(G)$, there are $k$ paths from $x$ to $y$ 
+%such that each $v \in V(G) \setminus \set{x,y}$ is in at most one of the paths (we say this collection of paths is \emph{vertex-disjoint}).  
+%
+%First, we investigate edge-connectivity. If $G-F$ is not connected for some $F \subseteq E(G)$, then there must be $x,y \in V(G)$ such that each path from $x$ to $y$ contains an edge in $F$.
+%In particular, for any edge-disjoint collection of paths $\P$ from $x$ to $y$, we have $\card{\P} \le \card{F}$.  Menger's theorem is that the converse also holds.
+%
+%\begin{theorem}\label{MengerEdge}
+%A graph $G$ is $k$-edge-connected just in case $G - F$ is connected for every $F \subseteq E(G)$ with $\card{F} < k$.
+%\end{theorem}
+%\begin{proof}
+%One implication is trivial as discussed above.  For the other implication, suppose $G - F$ is connected for every $F \subseteq E(G)$ with $\card{F} < k$
+%and let $s,t \in V(G)$.  We need to find an edge-disjoint collection of $k$ paths from $s$ to $t$.
+%\end{proof}
+%
+%\begin{theorem}\label{MengerVertex}
+%A graph $G$ is $k$-vertex-connected just in case $G - S$ is connected for every $S \subseteq V(G)$ with $\card{S} < k$.
+%\end{theorem}
+%\begin{proof}
+%\end{proof}
+
+\section{Historical notes}
+
 \backmatter
 \appendix
 \printindex
